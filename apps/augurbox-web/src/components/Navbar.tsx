@@ -22,6 +22,12 @@ export default function Navbar() {
               HOME
             </Link>
             <Link 
+              href="/reading" 
+              className="text-text-dim hover:text-foreground px-4 py-2 border border-transparent hover:border-border rounded-none text-xs font-mono uppercase tracking-wider transition-all duration-300"
+            >
+              READING
+            </Link>
+            <Link 
               href="/cards" 
               className="text-text-dim hover:text-foreground px-4 py-2 border border-transparent hover:border-border rounded-none text-xs font-mono uppercase tracking-wider transition-all duration-300"
             >

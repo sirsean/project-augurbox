@@ -1,39 +1,46 @@
-import { readFileSync, readdirSync } from 'fs';
-import { join } from 'path';
-import yaml from 'js-yaml';
 import type { Card, CardsByType, CardSuit } from '@/types/card';
+import { cards as allCardsData, type Card as RawCard } from '../../../../data/cards';
 
-const cardsDataPath = join(process.cwd(), 'data', 'cards');
+// Re-export the Card type for convenience
+export type { Card } from '@/types/card';
+
+// Convert the data/cards.ts format to match our Card interface
+function convertCardData(rawCard: RawCard): Card {
+  return {
+    id: rawCard.id,
+    code: rawCard.code,
+    name: rawCard.name,
+    description: rawCard.description,
+    type: rawCard.code.startsWith('MAJ_') ? 'major' : 'minor',
+    suit: rawCard.code.startsWith('CUPS_') ? 'cups' :
+          rawCard.code.startsWith('WANDS_') ? 'wands' :
+          rawCard.code.startsWith('SWORDS_') ? 'swords' :
+          rawCard.code.startsWith('PENTACLES_') ? 'pentacles' : undefined,
+    number: rawCard.code.startsWith('MAJ_') ? 
+            parseInt(rawCard.code.split('_')[1]) :
+            rawCard.code.includes('ACE') ? 1 :
+            rawCard.code.includes('PAGE') ? 'page' :
+            rawCard.code.includes('KNIGHT') ? 'knight' :
+            rawCard.code.includes('QUEEN') ? 'queen' :
+            rawCard.code.includes('KING') ? 'king' :
+            parseInt(rawCard.code.split('_')[1]) || 0,
+    image: `/cards/${rawCard.code}.png`,
+    prompt: rawCard.prompt,
+    meanings: {
+      upright: [rawCard.description],
+      reversed: [`Opposition to ${rawCard.description.toLowerCase()}`]
+    },
+    keywords: rawCard.description.split(', ')
+  };
+}
 
 export function getAllCards(): Card[] {
-  try {
-    const files = readdirSync(cardsDataPath).filter(file => file.endsWith('.yaml'));
-    const cards: Card[] = [];
-
-    for (const file of files) {
-      const filePath = join(cardsDataPath, file);
-      const fileContent = readFileSync(filePath, 'utf8');
-      const cardData = yaml.load(fileContent) as Card;
-      cards.push(cardData);
-    }
-
-    // Sort cards by ID to maintain consistent order
-    return cards.sort((a, b) => a.id - b.id);
-  } catch (error) {
-    console.error('Error loading cards:', error);
-    return [];
-  }
+  return allCardsData.map(convertCardData);
 }
 
 export function getCardByCode(code: string): Card | null {
-  try {
-    const filePath = join(cardsDataPath, `${code}.yaml`);
-    const fileContent = readFileSync(filePath, 'utf8');
-    return yaml.load(fileContent) as Card;
-  } catch (error) {
-    console.error(`Error loading card ${code}:`, error);
-    return null;
-  }
+  const rawCard = allCardsData.find(card => card.code === code);
+  return rawCard ? convertCardData(rawCard) : null;
 }
 
 export function getCardsByType(): CardsByType {

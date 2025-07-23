@@ -6,7 +6,7 @@ export interface Card {
   prompt: string;     // full descriptive prompt
 }
 
-const cards: Card[] = [
+export const cards: Card[] = [
   // Major Arcana (22 cards)
   {
     id: 0,

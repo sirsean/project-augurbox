@@ -20,7 +20,7 @@ export default async function CardPage({ params }: Props) {
 
   const cardTypeDisplay = card.type === 'major' 
     ? 'Major Arcana' 
-    : `Minor Arcana - ${getSuitDisplayName(card.suit as any)}`;
+    : `Minor Arcana${card.suit ? ` - ${getSuitDisplayName(card.suit)}` : ''}`;
 
   return (
     <div className="min-h-screen bg-surface grain" style={{background: 'linear-gradient(135deg, #0d0f12 0%, #151821 50%, #1a1d26 100%)'}}>

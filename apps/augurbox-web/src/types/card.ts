@@ -4,7 +4,7 @@ export interface Card {
   name: string;
   description: string;
   type: 'major' | 'minor';
-  suit?: string;
+  suit?: CardSuit;
   number: number | string;
   image: string;
   prompt: string;

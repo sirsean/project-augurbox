@@ -1,0 +1,16 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "globals": {
+    "document": "readonly",
+    "window": "readonly",
+    "setTimeout": "readonly",
+    "clearTimeout": "readonly", 
+    "setInterval": "readonly",
+    "clearInterval": "readonly"
+  }
+}

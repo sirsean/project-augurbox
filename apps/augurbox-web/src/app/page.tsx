@@ -39,13 +39,21 @@ export default function Home() {
         </div>
 
         <div className="space-y-4">
-          <Link
-            href="/cards"
-            className="inline-block bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-4 px-8 rounded-none text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20"
-          >
-            ▶ ACCESS ARCHIVE
-          </Link>
-          <div className="text-text-dim font-mono text-xs">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/reading"
+              className="inline-block bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-4 px-8 rounded-none text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20"
+            >
+              ▶ INITIALIZE READING
+            </Link>
+            <Link
+              href="/cards"
+              className="inline-block bg-surface-secondary hover:bg-surface-secondary/80 border border-border text-foreground font-mono font-bold py-4 px-8 rounded-none text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20"
+            >
+              ◉ ACCESS ARCHIVE
+            </Link>
+          </div>
+          <div className="text-text-dim font-mono text-xs text-center">
             <p>INITIALIZE DIVINATION PROTOCOL</p>
           </div>
         </div>
