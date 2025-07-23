@@ -1,0 +1,26 @@
+# Knight of Wands
+id: 33
+code: WANDS_KNIGHT
+name: Knight of Wands
+description: Energy, passion, adventurous, impulsive
+type: minor
+suit: wands
+number: knight
+image: /cards/WANDS_KNIGHT.png
+
+# Full card description/meaning
+prompt: "A cyber-knight in bio-mechanical armor rides a rearing synthetic steed, holding a plasma wand like an energy lance. The mount's LED eyes glow with electric fire as it prepares to charge forward through the digital battlefield. The knight's armor is etched with salamander circuits that pulse with energy. The scene represents passionate digital action, cyber adventure, and the impulsive energy that drives bold technological ventures."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Energy, passion, adventurous, impulsive
+  reversed:
+    - "Opposition to energy, passion, adventurous, impulsive"
+
+# Keywords for quick reference
+keywords:
+  - Energy
+  - passion
+  - adventurous
+  - impulsive

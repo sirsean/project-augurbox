@@ -1,0 +1,25 @@
+# Justice
+id: 11
+code: MAJ_11
+name: Justice
+description: Justice, fairness, truth, cause and effect
+type: major
+number: 11
+image: /cards/MAJ_11.png
+
+# Full card description/meaning
+prompt: A figure in weathered judicial robes sits between two towering server racks, holding a plasma sword and digital scales that process data streams in real-time. The sword points upward toward a holographic constellation representing higher algorithmic ideals, while the scales weigh digital actions and their cascading consequences through the network. The cubic crown on their head displays scrolling code representing well-ordered logic and impartial digital judgment.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Justice, fairness, truth, cause and effect
+  reversed:
+    - "Opposition to justice, fairness, truth, cause and effect"
+
+# Keywords for quick reference
+keywords:
+  - Justice
+  - fairness
+  - truth
+  - cause and effect

@@ -1,0 +1,24 @@
+# The Hermit
+id: 9
+code: MAJ_09
+name: The Hermit
+description: Soul searching, seeking inner guidance, solitude
+type: major
+number: 9
+image: /cards/MAJ_09.png
+
+# Full card description/meaning
+prompt: A cloaked figure stands alone atop a transmission tower peak amid a landscape of electronic debris, holding aloft a makeshift lantern containing a six-pointed LED star powered by scavenged batteries. The harsh light cuts through digital static, illuminating pathways through the electronic wasteland for other travelers while the hermit seeks inner wisdom through solitary communion with the vast data streams. Their walking staff, fashioned from antenna and cable, represents support found in spiritual discipline within the digital wilderness.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Soul searching, seeking inner guidance, solitude
+  reversed:
+    - "Opposition to soul searching, seeking inner guidance, solitude"
+
+# Keywords for quick reference
+keywords:
+  - Soul searching
+  - seeking inner guidance
+  - solitude

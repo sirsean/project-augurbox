@@ -1,0 +1,24 @@
+# The World
+id: 21
+code: MAJ_21
+name: The World
+description: Completion, accomplishment, travel
+type: major
+number: 21
+image: /cards/MAJ_21.png
+
+# Full card description/meaning
+prompt: A dancing figure is surrounded by an oval wreath, representing completion and cosmic consciousness. In each corner appears a symbol of the four elements - angel (air), eagle (water), lion (fire), and bull (earth). The figure holds two wands, symbolizing balance between opposing forces and mastery over all elements.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Completion, accomplishment, travel
+  reversed:
+    - "Opposition to completion, accomplishment, travel"
+
+# Keywords for quick reference
+keywords:
+  - Completion
+  - accomplishment
+  - travel

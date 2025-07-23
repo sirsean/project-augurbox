@@ -1,0 +1,26 @@
+# Three of Pentacles
+id: 66
+code: PENTACLES_03
+name: Three of Pentacles
+description: Teamwork, collaboration, building, learning
+type: minor
+suit: pentacles
+number: 3
+image: /cards/PENTACLES_03.png
+
+# Full card description/meaning
+prompt: A cyber-craftsperson works on a digital cathedral made of hardlight while two figures - one holding holographic blueprints and another observing through augmented reality - discuss the project. Three pentacles are projected into the virtual stone above, representing skilled tech teamwork, collaborative coding, and the building of something lasting through combined digital expertise and networked effort.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Teamwork, collaboration, building, learning
+  reversed:
+    - "Opposition to teamwork, collaboration, building, learning"
+
+# Keywords for quick reference
+keywords:
+  - Teamwork
+  - collaboration
+  - building
+  - learning

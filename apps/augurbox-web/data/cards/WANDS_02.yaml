@@ -1,0 +1,25 @@
+# Two of Wands
+id: 23
+code: WANDS_02
+name: Two of Wands
+description: Future planning, making decisions, personal power
+type: minor
+suit: wands
+number: 2
+image: /cards/WANDS_02.png
+
+# Full card description/meaning
+prompt: "A figure stands atop a fortified digital outpost, holding a virtual globe in one hand and a glowing data wand in the other, surveying a sprawling cyber landscape. A second holographic wand hovers beside them, representing strategic foresight and digital vision. The scene encapsulates planning for future technological paths, making decisions at the crossroads of innovation, and wielding the power to code one's digital destiny."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Future planning, making decisions, personal power
+  reversed:
+    - "Opposition to future planning, making decisions, personal power"
+
+# Keywords for quick reference
+keywords:
+  - Future planning
+  - making decisions
+  - personal power

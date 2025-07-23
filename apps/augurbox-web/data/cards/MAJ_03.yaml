@@ -1,0 +1,25 @@
+# The Empress
+id: 3
+code: MAJ_03
+name: The Empress
+description: Femininity, beauty, nature, abundance
+type: major
+number: 3
+image: /cards/MAJ_03.png
+
+# Full card description/meaning
+prompt: A nurturing sovereign reclines on a throne intertwined with neon Venus symbols, enveloped by virtual gardens of lush, pixelated flora and flowing streams of binary water. Her crown, an array of LED stars forming cosmic constellations, complements a holographic robe adorned with synthetic pomegranates. Golden wheat, represented in luminous digital sprites, blooms at her feet, signifying the fertile abundance born from creative digital artistry and nurturing innovation.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Femininity, beauty, nature, abundance
+  reversed:
+    - "Opposition to femininity, beauty, nature, abundance"
+
+# Keywords for quick reference
+keywords:
+  - Femininity
+  - beauty
+  - nature
+  - abundance

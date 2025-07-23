@@ -1,0 +1,25 @@
+# Page of Cups
+id: 46
+code: CUPS_PAGE
+name: Page of Cups
+description: Creative opportunities, intuitive messages, curiosity
+type: minor
+suit: cups
+number: page
+image: /cards/CUPS_PAGE.png
+
+# Full card description/meaning
+prompt: A young figure in weathered bio-mechanical clothing stands by a sea of liquid mercury holding a luminescent cup from which a digital fish made of data streams appears to emerge, representing the unexpected nature of intuitive technological messages and creative cyber inspiration. The holographic fish symbolizes the contents of the artificial subconscious mind surfacing into digital conscious awareness.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Creative opportunities, intuitive messages, curiosity
+  reversed:
+    - "Opposition to creative opportunities, intuitive messages, curiosity"
+
+# Keywords for quick reference
+keywords:
+  - Creative opportunities
+  - intuitive messages
+  - curiosity

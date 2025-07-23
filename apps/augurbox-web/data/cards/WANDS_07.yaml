@@ -1,0 +1,25 @@
+# Seven of Wands
+id: 28
+code: WANDS_07
+name: Seven of Wands
+description: Challenge, competition, perseverance
+type: minor
+suit: wands
+number: 7
+image: /cards/WANDS_07.png
+
+# Full card description/meaning
+prompt: "A figure stands atop a transmission tower wielding a plasma wand defensively while six other energy weapons thrust up from the electronic wasteland below, representing cyber challenges and digital competitors. The elevated position and defensive neural interface stance suggest the advantage of maintaining one's digital principles and standing firm against system corruption despite overwhelming technological opposition."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Challenge, competition, perseverance
+  reversed:
+    - "Opposition to challenge, competition, perseverance"
+
+# Keywords for quick reference
+keywords:
+  - Challenge
+  - competition
+  - perseverance

@@ -1,0 +1,26 @@
+# Four of Wands
+id: 25
+code: WANDS_04
+name: Four of Wands
+description: Celebration, harmony, home, achievement
+type: minor
+suit: wands
+number: 4
+image: /cards/WANDS_04.png
+
+# Full card description/meaning
+prompt: Four radiant, LED-adorned cyber wands form a luminous canopy adorned with virtual garlands and digital fruit, where avatars in the distance raise their digitized arms in celebration. A digital fortress rises in the background, representing the joy of virtual homecoming, celebration of digital achievements, and the harmony in online community affairs.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Celebration, harmony, home, achievement
+  reversed:
+    - "Opposition to celebration, harmony, home, achievement"
+
+# Keywords for quick reference
+keywords:
+  - Celebration
+  - harmony
+  - home
+  - achievement

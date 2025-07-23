@@ -1,0 +1,26 @@
+# Nine of Wands
+id: 30
+code: WANDS_09
+name: Nine of Wands
+description: Resilience, courage, persistence, test of faith
+type: minor
+suit: wands
+number: 9
+image: /cards/WANDS_09.png
+
+# Full card description/meaning
+prompt: A battle-scarred figure leans on a makeshift neural staff, looking warily behind at eight glowing wands standing upright like a digital perimeter fence. Despite obvious cyber-combat wounds and flickering implants, they remain alert and ready for the next system breach. The scene represents perseverance through technological trials, maintaining digital vigilance, and the strength gained through surviving cyber warfare.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Resilience, courage, persistence, test of faith
+  reversed:
+    - "Opposition to resilience, courage, persistence, test of faith"
+
+# Keywords for quick reference
+keywords:
+  - Resilience
+  - courage
+  - persistence
+  - test of faith

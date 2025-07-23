@@ -1,0 +1,26 @@
+# Five of Swords
+id: 54
+code: SWORDS_05
+name: Five of Swords
+description: Defeat, surrender, walking away, self-interest
+type: minor
+suit: swords
+number: 5
+image: /cards/SWORDS_05.png
+
+# Full card description/meaning
+prompt: A figure in battle-worn tech armor holds three plasma swords while looking at two others walking away dejectedly through the electronic wasteland, their energy weapons abandoned on the ground, flickering and dying. The sky is cloudy with digital static and turbulent data streams, representing cyber conflict where victory comes at too high a computational cost and the hollow nature of winning through algorithmic self-interest alone.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Defeat, surrender, walking away, self-interest
+  reversed:
+    - "Opposition to defeat, surrender, walking away, self-interest"
+
+# Keywords for quick reference
+keywords:
+  - Defeat
+  - surrender
+  - walking away
+  - self-interest

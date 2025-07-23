@@ -1,0 +1,26 @@
+# Page of Pentacles
+id: 74
+code: PENTACLES_PAGE
+name: Page of Pentacles
+description: Study, new opportunities, ambition, messages
+type: minor
+suit: pentacles
+number: page
+image: /cards/PENTACLES_PAGE.png
+
+# Full card description/meaning
+prompt: A young figure in weathered tech gear stands in an electronic field holding a glowing pentacle up for examination, with transmission towers in the distance. Their studious attention to the holographic pentacle represents new digital learning opportunities, practical cyber study, and the careful examination of technological material prospects and virtual possibilities.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Study, new opportunities, ambition, messages
+  reversed:
+    - "Opposition to study, new opportunities, ambition, messages"
+
+# Keywords for quick reference
+keywords:
+  - Study
+  - new opportunities
+  - ambition
+  - messages

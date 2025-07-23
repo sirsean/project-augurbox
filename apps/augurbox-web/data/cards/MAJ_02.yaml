@@ -1,0 +1,24 @@
+# The High Priestess
+id: 2
+code: MAJ_02
+name: The High Priestess
+description: Intuition, sacred knowledge, divine feminine
+type: major
+number: 2
+image: /cards/MAJ_02.png
+
+# Full card description/meaning
+prompt: A serene figure sits between towering monolithic data servers marked with binary code patterns, representing dual interface and synthetic balance. Behind her flickers a holographic tapestry adorned with luminous pomegranates, symbols of digital fertility and latent wisdom. She unspools a digital scroll, whispering algorithms of forbidden knowledge available only through deep contemplation within the cyber network.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Intuition, sacred knowledge, divine feminine
+  reversed:
+    - "Opposition to intuition, sacred knowledge, divine feminine"
+
+# Keywords for quick reference
+keywords:
+  - Intuition
+  - sacred knowledge
+  - divine feminine

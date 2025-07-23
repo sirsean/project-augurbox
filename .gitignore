@@ -1,0 +1,29 @@
+# Environment variables
+.env
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Generated content
+generated/

@@ -1,0 +1,25 @@
+# The Emperor
+id: 4
+code: MAJ_04
+name: The Emperor
+description: Authority, father figure, structure, control
+type: major
+number: 4
+image: /cards/MAJ_04.png
+
+# Full card description/meaning
+prompt: A commanding ruler is seated on a throne constructed from repurposed industrial machinery, encircled by augmented reality ram head symbols that exude digital masculine vigor. In his grasp, an illuminated scepter crowned with an ankh circuit symbolizes authority and synthetic life. Behind, virtual barren landscapes display his influence over post-apocalyptic realms through ironclad order, strategic discipline, and cybernetic governance.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Authority, father figure, structure, control
+  reversed:
+    - "Opposition to authority, father figure, structure, control"
+
+# Keywords for quick reference
+keywords:
+  - Authority
+  - father figure
+  - structure
+  - control

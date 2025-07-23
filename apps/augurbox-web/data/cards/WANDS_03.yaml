@@ -1,0 +1,25 @@
+# Three of Wands
+id: 24
+code: WANDS_03
+name: Three of Wands
+description: Expansion, foresight, overseas opportunities
+type: minor
+suit: wands
+number: 3
+image: /cards/WANDS_03.png
+
+# Full card description/meaning
+prompt: A figure stands on a digital precipice overlooking a vast ocean of data streams, watching virtual ships sail toward the horizon. Three luminescent wands stand embedded in the cyber soil beside them, marking boundaries of exploration. The scene symbolizes the expansion of digital horizons, tech trade and enterprise, and the foresight needed to navigate upcoming technological opportunities.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Expansion, foresight, overseas opportunities
+  reversed:
+    - "Opposition to expansion, foresight, overseas opportunities"
+
+# Keywords for quick reference
+keywords:
+  - Expansion
+  - foresight
+  - overseas opportunities

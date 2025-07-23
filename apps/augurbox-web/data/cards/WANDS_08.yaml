@@ -1,0 +1,26 @@
+# Eight of Wands
+id: 29
+code: WANDS_08
+name: Eight of Wands
+description: Speed, action, air travel, movement
+type: minor
+suit: wands
+number: 8
+image: /cards/WANDS_08.png
+
+# Full card description/meaning
+prompt: Eight luminescent data wands streak through the digital atmosphere like plasma arrows against a clear virtual sky, suggesting rapid data transmission and swift technological action. Below them lies a serene cyber landscape with streams of liquid light, representing the swift resolution of network delays and the rapid progress of digital projects and quantum communications.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Speed, action, air travel, movement
+  reversed:
+    - "Opposition to speed, action, air travel, movement"
+
+# Keywords for quick reference
+keywords:
+  - Speed
+  - action
+  - air travel
+  - movement

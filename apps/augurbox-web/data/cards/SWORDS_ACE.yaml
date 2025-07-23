@@ -1,0 +1,25 @@
+# Ace of Swords
+id: 50
+code: SWORDS_ACE
+name: Ace of Swords
+description: New ideas, mental clarity, breakthrough
+type: minor
+suit: swords
+number: 1
+image: /cards/SWORDS_ACE.png
+
+# Full card description/meaning
+prompt: A cybernetic hand emerges from a smoggy data cloud grasping a plasma sword crowned with a holographic wreath, representing victory through digital mental clarity and algorithmic truth. Transmission towers appear in the distance, symbolizing the challenges that can be overcome through clear cyber thinking and the cutting power of digital truth and computational logic.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - New ideas, mental clarity, breakthrough
+  reversed:
+    - "Opposition to new ideas, mental clarity, breakthrough"
+
+# Keywords for quick reference
+keywords:
+  - New ideas
+  - mental clarity
+  - breakthrough

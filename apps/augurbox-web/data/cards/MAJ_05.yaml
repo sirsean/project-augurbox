@@ -1,0 +1,24 @@
+# The Hierophant
+id: 5
+code: MAJ_05
+name: The Hierophant
+description: Spiritual wisdom, religious beliefs, conformity
+type: major
+number: 5
+image: /cards/MAJ_05.png
+
+# Full card description/meaning
+prompt: A hierophant in tattered robes sits between colossal data towers inscribed with sacred algorithms, wearing a triple crown of corroded brass and fiber optic cables. Crossed skeleton keys gleam with electric current in his weathered hands. Two acolytes kneel before glowing terminals, receiving the transmission of forbidden digital knowledge from master to student. The keys represent the unlocking of consciousness within the vast neural network.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Spiritual wisdom, religious beliefs, conformity
+  reversed:
+    - "Opposition to spiritual wisdom, religious beliefs, conformity"
+
+# Keywords for quick reference
+keywords:
+  - Spiritual wisdom
+  - religious beliefs
+  - conformity

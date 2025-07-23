@@ -1,0 +1,26 @@
+# Five of Pentacles
+id: 68
+code: PENTACLES_05
+name: Five of Pentacles
+description: Financial loss, poverty, lack, isolation
+type: minor
+suit: pentacles
+number: 5
+image: /cards/PENTACLES_05.png
+
+# Full card description/meaning
+prompt: Two figures in tattered tech gear walk through digital snow past an illuminated data sanctuary window showing five glowing pentacles. Despite their apparent cyber poverty and system hardship, help and digital spiritual sustenance are available nearby through the network if they choose to access it. The scene represents technological material hardship but also the availability of online assistance and community support.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Financial loss, poverty, lack, isolation
+  reversed:
+    - "Opposition to financial loss, poverty, lack, isolation"
+
+# Keywords for quick reference
+keywords:
+  - Financial loss
+  - poverty
+  - lack
+  - isolation

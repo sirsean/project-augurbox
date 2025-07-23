@@ -1,0 +1,25 @@
+# Ten of Wands
+id: 31
+code: WANDS_10
+name: Ten of Wands
+description: Burden, extra responsibility, hard work
+type: minor
+suit: wands
+number: 10
+image: /cards/WANDS_10.png
+
+# Full card description/meaning
+prompt: A bent figure struggles under the weight of ten heavy data wands crackling with electric energy while walking toward a distant digital outpost or cyber settlement. The technological burden seems almost too much to bear, yet the virtual destination glows on the horizon. The scene represents the heavy digital responsibilities that come with tech success and the determination to see complex coding projects through to completion.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Burden, extra responsibility, hard work
+  reversed:
+    - "Opposition to burden, extra responsibility, hard work"
+
+# Keywords for quick reference
+keywords:
+  - Burden
+  - extra responsibility
+  - hard work

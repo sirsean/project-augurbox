@@ -1,0 +1,26 @@
+# Page of Swords
+id: 60
+code: SWORDS_PAGE
+name: Page of Swords
+description: Curiosity, new ideas, vigilance, messages
+type: minor
+suit: swords
+number: page
+image: /cards/SWORDS_PAGE.png
+
+# Full card description/meaning
+prompt: A young figure in weathered tech gear stands on uneven electronic ground holding an energy sword aloft while looking alertly around. Data clouds and mechanical birds fill the digital sky, representing the active, curious cyber mind ready to defend digital ideas or deliver encrypted messages. The uneven electronic terrain suggests the need for mental algorithmic agility and technological balance.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Curiosity, new ideas, vigilance, messages
+  reversed:
+    - "Opposition to curiosity, new ideas, vigilance, messages"
+
+# Keywords for quick reference
+keywords:
+  - Curiosity
+  - new ideas
+  - vigilance
+  - messages

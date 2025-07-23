@@ -1,0 +1,25 @@
+# The Devil
+id: 15
+code: MAJ_15
+name: The Devil
+description: Bondage, addiction, sexuality, materialism
+type: major
+number: 15
+image: /cards/MAJ_15.png
+
+# Full card description/meaning
+prompt: "A horned figure with cyber-implants perches atop a black server cube while two chained figures with neural interface ports stand below. The digital chains flicker with data streams, showing that bondage is often self-imposed through technological dependency and virtual addictions. The inverted pentagram glows with corrupted code representing consciousness trapped in the digital matrix, but the scene suggests liberation is possible through awareness of the system's control."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Bondage, addiction, sexuality, materialism
+  reversed:
+    - "Opposition to bondage, addiction, sexuality, materialism"
+
+# Keywords for quick reference
+keywords:
+  - Bondage
+  - addiction
+  - sexuality
+  - materialism

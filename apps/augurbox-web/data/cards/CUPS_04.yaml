@@ -1,0 +1,25 @@
+# Four of Cups
+id: 39
+code: CUPS_04
+name: Four of Cups
+description: Contemplation, apathy, reevaluation
+type: minor
+suit: cups
+number: 4
+image: /cards/CUPS_04.png
+
+# Full card description/meaning
+prompt: A figure sits under a bio-mechanical tree with neural interface ports, three glowing cups on the electronic ground before them, while a cybernetic hand from a data cloud offers a fourth cup pulsing with digital energy. The figure appears lost in digital contemplation or cyber meditation, perhaps considering new technological opportunities or reevaluating current system configurations. The scene suggests a pause for digital reflection.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Contemplation, apathy, reevaluation
+  reversed:
+    - "Opposition to contemplation, apathy, reevaluation"
+
+# Keywords for quick reference
+keywords:
+  - Contemplation
+  - apathy
+  - reevaluation

@@ -1,0 +1,25 @@
+# Six of Cups
+id: 41
+code: CUPS_06
+name: Six of Cups
+description: Revisiting the past, childhood memories, innocence
+type: minor
+suit: cups
+number: 6
+image: /cards/CUPS_06.png
+
+# Full card description/meaning
+prompt: A cyber-child in patched bio-mechanical clothing offers a cup filled with a holographic flower to another smaller child in what appears to be a digital courtyard or virtual garden setting. Six cups filled with pixelated flowers surround them, representing digital nostalgia, innocent pleasures in the virtual realm, and the simple joys of childhood memories preserved in the data stream.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Revisiting the past, childhood memories, innocence
+  reversed:
+    - "Opposition to revisiting the past, childhood memories, innocence"
+
+# Keywords for quick reference
+keywords:
+  - Revisiting the past
+  - childhood memories
+  - innocence

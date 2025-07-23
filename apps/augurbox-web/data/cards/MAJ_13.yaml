@@ -1,0 +1,25 @@
+# Death
+id: 13
+code: MAJ_13
+name: Death
+description: Endings, beginnings, change, transformation
+type: major
+number: 13
+image: /cards/MAJ_13.png
+
+# Full card description/meaning
+prompt: A bio-mechanical skeleton clad in corroded black armor rides a ghost-white synthetic horse, its chassis gleaming with ceramic plates. The rider carries a tattered black flag bearing a white rose symbol etched in bioluminescent circuits. Before the horse lie deactivated android figures representing the obsolescence of old systems, while in the distance a new sun rises between twin data towers, promising digital rebirth and technological transformation through necessary systemic endings.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Endings, beginnings, change, transformation
+  reversed:
+    - "Opposition to endings, beginnings, change, transformation"
+
+# Keywords for quick reference
+keywords:
+  - Endings
+  - beginnings
+  - change
+  - transformation

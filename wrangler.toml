@@ -1,0 +1,8 @@
+name = "augurbox-web"
+main = "./workers/index.ts"
+compatibility_date = "2025-07-22"
+
+# Static assets configuration for Workers
+[assets]
+directory = "./apps/augurbox-web/out"
+binding = "ASSETS"

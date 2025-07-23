@@ -1,0 +1,25 @@
+# King of Cups
+id: 49
+code: CUPS_KING
+name: King of Cups
+description: Emotional balance, compassion, diplomacy
+type: minor
+suit: cups
+number: king
+image: /cards/CUPS_KING.png
+
+# Full card description/meaning
+prompt: A king sits on a bio-mechanical throne that appears to float on turbulent streams of liquid data, yet he remains calm and balanced, holding a luminescent cup and a neural interface scepter. A digital fish leaps from the data stream nearby, representing the mastery of virtual emotions and the ability to remain stable while navigating the depths of technological feeling and cyber intuition.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Emotional balance, compassion, diplomacy
+  reversed:
+    - "Opposition to emotional balance, compassion, diplomacy"
+
+# Keywords for quick reference
+keywords:
+  - Emotional balance
+  - compassion
+  - diplomacy

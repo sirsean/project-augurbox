@@ -1,0 +1,25 @@
+# Five of Wands
+id: 26
+code: WANDS_05
+name: Five of Wands
+description: Conflict, disagreements, competition
+type: minor
+suit: wands
+number: 5
+image: /cards/WANDS_05.png
+
+# Full card description/meaning
+prompt: Five digital avatars engage in a high-energy virtual duel with data wands raised, though pixelated smiles suggest this is play-fighting rather than combative warfare. The scene represents healthy techno-competition, contrasting digital philosophies, and the dynamic energy sparked by challenging intellectual encounters and online debates.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Conflict, disagreements, competition
+  reversed:
+    - "Opposition to conflict, disagreements, competition"
+
+# Keywords for quick reference
+keywords:
+  - Conflict
+  - disagreements
+  - competition

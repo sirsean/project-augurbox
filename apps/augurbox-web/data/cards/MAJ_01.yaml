@@ -1,0 +1,24 @@
+# The Magician
+id: 1
+code: MAJ_01
+name: The Magician
+description: Manifestation, resourcefulness, power
+type: major
+number: 1
+image: /cards/MAJ_01.png
+
+# Full card description/meaning
+prompt: An enigmatic magician stands before an altar made of recycled circuit boards, one hand reaching towards the techno-sky and the other gesturing to the neon-lit streets below, channeling the energy of the underground. The four tarot suits are reimagined as futuristic tools—metallic wands, glowing cups, digital swords, and neon pentacles, embodying digital mastery over the elements. Above, an infinity hologram glows with boundless potential and the power to materialize cybernetic dreams.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Manifestation, resourcefulness, power
+  reversed:
+    - "Opposition to manifestation, resourcefulness, power"
+
+# Keywords for quick reference
+keywords:
+  - Manifestation
+  - resourcefulness
+  - power

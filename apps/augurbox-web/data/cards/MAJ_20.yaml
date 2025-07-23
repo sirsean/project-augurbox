@@ -1,0 +1,25 @@
+# Judgement
+id: 20
+code: MAJ_20
+name: Judgement
+description: Judgement, rebirth, inner calling, forgiveness
+type: major
+number: 20
+image: /cards/MAJ_20.png
+
+# Full card description/meaning
+prompt: An angel blows a trumpet from the heavens while figures rise from coffins below with arms outstretched toward the divine call. The trumpet bears a flag with a red cross on white, symbolizing purity redeemed. The scene represents spiritual awakening, resurrection, and the call to higher purpose.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Judgement, rebirth, inner calling, forgiveness
+  reversed:
+    - "Opposition to judgement, rebirth, inner calling, forgiveness"
+
+# Keywords for quick reference
+keywords:
+  - Judgement
+  - rebirth
+  - inner calling
+  - forgiveness

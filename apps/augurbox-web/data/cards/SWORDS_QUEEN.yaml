@@ -1,0 +1,25 @@
+# Queen of Swords
+id: 62
+code: SWORDS_QUEEN
+name: Queen of Swords
+description: Independence, unbiased judgement, clear boundaries
+type: minor
+suit: swords
+number: queen
+image: /cards/SWORDS_QUEEN.png
+
+# Full card description/meaning
+prompt: A queen sits on a bio-mechanical throne holding an upright plasma sword, her other hand extended as if gesturing for digital clarity. Data clouds fill the cyber sky while her expression shows wisdom gained through virtual experience and system interfaces. She represents technological independence, clear algorithmic thinking, and the ability to make unbiased digital judgments.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Independence, unbiased judgement, clear boundaries
+  reversed:
+    - "Opposition to independence, unbiased judgement, clear boundaries"
+
+# Keywords for quick reference
+keywords:
+  - Independence
+  - unbiased judgement
+  - clear boundaries

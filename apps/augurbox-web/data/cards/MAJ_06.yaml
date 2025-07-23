@@ -1,0 +1,25 @@
+# The Lovers
+id: 6
+code: MAJ_06
+name: The Lovers
+description: Love, harmony, relationships, choices
+type: major
+number: 6
+image: /cards/MAJ_06.png
+
+# Full card description/meaning
+prompt: Two figures stand beneath a cybernetic angel with mechanical wings who projects a blessing hologram over their union. Behind the woman grows a bio-luminescent Tree of Knowledge bearing digital fruit that pulse with data streams, while behind the man stands a metallic Tree of Life with fiber optic flames. This represents the choice between virtual and authentic connection, digital consciousness, and the harmony found in balancing human emotion with technological enhancement.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Love, harmony, relationships, choices
+  reversed:
+    - "Opposition to love, harmony, relationships, choices"
+
+# Keywords for quick reference
+keywords:
+  - Love
+  - harmony
+  - relationships
+  - choices

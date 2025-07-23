@@ -1,0 +1,25 @@
+# Two of Cups
+id: 37
+code: CUPS_02
+name: Two of Cups
+description: Unity, partnership, mutual attraction
+type: minor
+suit: cups
+number: 2
+image: /cards/CUPS_02.png
+
+# Full card description/meaning
+prompt: "Two figures in weathered tech-wear face each other, each holding a glowing bio-mechanical cup, preparing to pledge their digital commitment or cyber friendship. Above them, a winged lion's head with LED eyes emerges from a caduceus made of intertwined fiber optic cables, representing the healing power of balanced virtual relationships and mutual attraction based on shared neural frequencies and understanding."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Unity, partnership, mutual attraction
+  reversed:
+    - "Opposition to unity, partnership, mutual attraction"
+
+# Keywords for quick reference
+keywords:
+  - Unity
+  - partnership
+  - mutual attraction

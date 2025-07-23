@@ -1,0 +1,26 @@
+# Three of Swords
+id: 52
+code: SWORDS_03
+name: Three of Swords
+description: Heartbreak, separation, grief, sorrow
+type: minor
+suit: swords
+number: 3
+image: /cards/SWORDS_03.png
+
+# Full card description/meaning
+prompt: Three plasma swords pierce a bio-mechanical heart against a stormy digital sky filled with data rain clouds. The scene represents cyber heartbreak, network separation, and the sharp pain of digital grief, but also suggests that system storms eventually pass and emotional healing protocols can begin after acknowledging the pain subroutines.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Heartbreak, separation, grief, sorrow
+  reversed:
+    - "Opposition to heartbreak, separation, grief, sorrow"
+
+# Keywords for quick reference
+keywords:
+  - Heartbreak
+  - separation
+  - grief
+  - sorrow

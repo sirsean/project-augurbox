@@ -1,0 +1,26 @@
+# The Sun
+id: 19
+code: MAJ_19
+name: The Sun
+description: Positivity, fun, warmth, success, vitality
+type: major
+number: 19
+image: /cards/MAJ_19.png
+
+# Full card description/meaning
+prompt: A radiant sun shines down on a joyful child riding a white horse in a walled garden. Sunflowers grow behind the wall, turning their faces toward the light, while the child holds a red banner of passion and life force. The scene radiates pure joy, vitality, and innocent celebration of life.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Positivity, fun, warmth, success, vitality
+  reversed:
+    - "Opposition to positivity, fun, warmth, success, vitality"
+
+# Keywords for quick reference
+keywords:
+  - Positivity
+  - fun
+  - warmth
+  - success
+  - vitality

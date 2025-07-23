@@ -1,0 +1,26 @@
+# Four of Pentacles
+id: 67
+code: PENTACLES_04
+name: Four of Pentacles
+description: Conservation, frugality, security, holding on
+type: minor
+suit: pentacles
+number: 4
+image: /cards/PENTACLES_04.png
+
+# Full card description/meaning
+prompt: A figure in weathered tech robes sits holding tightly to a glowing pentacle while balancing one on their head and standing on two others, all pulsing with electric energy. A cyber city appears in the background, representing security through conservation of digital resources, but also the potential limitations of holding too tightly to virtual material possessions and encrypted data hoards.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Conservation, frugality, security, holding on
+  reversed:
+    - "Opposition to conservation, frugality, security, holding on"
+
+# Keywords for quick reference
+keywords:
+  - Conservation
+  - frugality
+  - security
+  - holding on

@@ -1,0 +1,24 @@
+# The Fool
+id: 0
+code: MAJ_00
+name: The Fool
+description: New beginnings, innocence, spontaneity
+type: major
+number: 0
+image: /cards/MAJ_00.png
+
+# Full card description/meaning
+prompt: A mysterious figure teeters on the precipice of a fragmented reality, poised to delve into the chaos of the unknown worlds. They clutch a bundle of archaic tools and a white rose etched with cryptic symbols, while a mechanical canine companion hovers beside them. Above, a digital sun flickers with enigmatic energy, casting shadows of new beginnings and infinite adventures.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - New beginnings, innocence, spontaneity
+  reversed:
+    - "Opposition to new beginnings, innocence, spontaneity"
+
+# Keywords for quick reference
+keywords:
+  - New beginnings
+  - innocence
+  - spontaneity

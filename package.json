@@ -4,10 +4,31 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cd apps/augurbox-web && npm run dev",
+    "build": "cd apps/augurbox-web && npm run build",
+    "start:workers": "cd apps/augurbox-web && npm run workers:dev",
+    "generate:prompts": "tsx scripts/build-prompts.ts",
+    "generate:images": "tsx scripts/build-images.ts",
+    "deploy": "npm run build && npx wrangler deploy --config=./wrangler.toml",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250722.0",
+    "@types/node": "^24.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "dotenv": "^17.2.0",
+    "esbuild": "^0.25.8",
+    "eslint": "^9.31.0",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.25.1"
+  }
 }

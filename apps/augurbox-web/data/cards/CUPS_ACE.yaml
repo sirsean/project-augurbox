@@ -1,0 +1,26 @@
+# Ace of Cups
+id: 36
+code: CUPS_ACE
+name: Ace of Cups
+description: Love, new relationships, compassion, creativity
+type: minor
+suit: cups
+number: 1
+image: /cards/CUPS_ACE.png
+
+# Full card description/meaning
+prompt: A cybernetic hand emerges from a smoggy data cloud offering a bio-luminescent cup overflowing with liquid light, from which five streams of neural data flow into the electronic wasteland below. A mechanical dove with fiber optic wings carrying a digital communion chip descends toward the cup, representing synthetic love and artificial spiritual nourishment. The scene symbolizes the beginning of emotional connection through technological interface.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Love, new relationships, compassion, creativity
+  reversed:
+    - "Opposition to love, new relationships, compassion, creativity"
+
+# Keywords for quick reference
+keywords:
+  - Love
+  - new relationships
+  - compassion
+  - creativity

@@ -1,0 +1,26 @@
+# Ten of Cups
+id: 45
+code: CUPS_10
+name: Ten of Cups
+description: Happiness, home, family, satisfaction
+type: minor
+suit: cups
+number: 10
+image: /cards/CUPS_10.png
+
+# Full card description/meaning
+prompt: A couple in matching tech wear stands with arms raised toward a holographic rainbow in the digital sky displaying ten luminescent cups, while cyber-children play nearby with glowing toys. A comfortable data haven sits in the background, representing ultimate digital happiness, virtual family harmony, and the achievement of emotional fulfillment through love and connected community in the network.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Happiness, home, family, satisfaction
+  reversed:
+    - "Opposition to happiness, home, family, satisfaction"
+
+# Keywords for quick reference
+keywords:
+  - Happiness
+  - home
+  - family
+  - satisfaction

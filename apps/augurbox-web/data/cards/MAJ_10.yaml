@@ -1,0 +1,25 @@
+# Wheel of Fortune
+id: 10
+code: MAJ_10
+name: Wheel of Fortune
+description: Good luck, karma, life cycles, destiny
+type: major
+number: 10
+image: /cards/MAJ_10.png
+
+# Full card description/meaning
+prompt: A massive mechanical wheel rotates in a polluted sky, its surface etched with algorithmic symbols and corrupted data streams. A cybernetic sphinx with glowing optical sensors perches atop wielding an energy blade, while a bio-mechanical serpent descends on one side and a digital manifestation of Anubis rises on the other. The wheel represents the eternal cycle of technological fortune, digital karma, and the constant dance between system upgrades and obsolescence in the connected world.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Good luck, karma, life cycles, destiny
+  reversed:
+    - "Opposition to good luck, karma, life cycles, destiny"
+
+# Keywords for quick reference
+keywords:
+  - Good luck
+  - karma
+  - life cycles
+  - destiny

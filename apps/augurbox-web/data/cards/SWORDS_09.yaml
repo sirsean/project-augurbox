@@ -1,0 +1,27 @@
+# Nine of Swords
+id: 58
+code: SWORDS_09
+name: Nine of Swords
+description: Anxiety, worry, fear, depression, nightmares
+type: minor
+suit: swords
+number: 9
+image: /cards/SWORDS_09.png
+
+# Full card description/meaning
+prompt: A figure sits up in a bio-mechanical bed with head in hands, appearing distressed, while nine energy swords hover on the wall above, casting eerie plasma light. The scene represents digital anxiety, cyber worry, virtual nightmares, and the mental anguish that can come from overthinking algorithms or dwelling on negative system possibilities rather than facing digital reality.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Anxiety, worry, fear, depression, nightmares
+  reversed:
+    - "Opposition to anxiety, worry, fear, depression, nightmares"
+
+# Keywords for quick reference
+keywords:
+  - Anxiety
+  - worry
+  - fear
+  - depression
+  - nightmares

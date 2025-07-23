@@ -1,0 +1,26 @@
+# Six of Swords
+id: 55
+code: SWORDS_06
+name: Six of Swords
+description: Transition, change, rite of passage, moving on
+type: minor
+suit: swords
+number: 6
+image: /cards/SWORDS_06.png
+
+# Full card description/meaning
+prompt: A figure sits in a hover-craft with a cyber-child, being ferried across calm streams of liquid data toward distant digital shores. Six energy swords stand upright in the craft, their plasma blades reflecting in the data streams, representing the thoughts, beliefs, or memories being carried from one phase of technological life to another during times of system transition.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Transition, change, rite of passage, moving on
+  reversed:
+    - "Opposition to transition, change, rite of passage, moving on"
+
+# Keywords for quick reference
+keywords:
+  - Transition
+  - change
+  - rite of passage
+  - moving on

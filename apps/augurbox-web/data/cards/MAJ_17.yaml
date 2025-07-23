@@ -1,0 +1,26 @@
+# The Star
+id: 17
+code: MAJ_17
+name: The Star
+description: Hope, faith, purpose, renewal, spirituality
+type: major
+number: 17
+image: /cards/MAJ_17.png
+
+# Full card description/meaning
+prompt: A figure kneels by a pool of liquid mercury under a sky filled with satellite constellations, pouring luminescent coolant onto the electronic landscape and back into the pool. The large central star is an eight-pointed transmission beacon representing hope and digital guidance, while seven smaller orbital satellites represent the network nodes. A mechanical bird nearby symbolizes the consciousness ready to upload and transcend physical limitations.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Hope, faith, purpose, renewal, spirituality
+  reversed:
+    - "Opposition to hope, faith, purpose, renewal, spirituality"
+
+# Keywords for quick reference
+keywords:
+  - Hope
+  - faith
+  - purpose
+  - renewal
+  - spirituality

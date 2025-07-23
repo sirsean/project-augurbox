@@ -1,0 +1,26 @@
+# The Moon
+id: 18
+code: MAJ_18
+name: The Moon
+description: Illusion, fear, anxiety, subconscious, intuition
+type: major
+number: 18
+image: /cards/MAJ_18.png
+
+# Full card description/meaning
+prompt: A full moon with digital display features looks down on a data pathway winding between two transmission towers toward distant server farms. A bio-mechanical crustacean emerges from polluted water while a cybernetic wolf and robotic dog emit electronic howls at the moon, representing wild and domesticated aspects of technological nature. Digital dewdrops fall from the moon, symbolizing the nourishment of the artificial subconscious through ambient data streams.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Illusion, fear, anxiety, subconscious, intuition
+  reversed:
+    - "Opposition to illusion, fear, anxiety, subconscious, intuition"
+
+# Keywords for quick reference
+keywords:
+  - Illusion
+  - fear
+  - anxiety
+  - subconscious
+  - intuition

@@ -1,0 +1,26 @@
+# King of Pentacles
+id: 77
+code: PENTACLES_KING
+name: King of Pentacles
+description: Financial success, leadership, security, generosity
+type: minor
+suit: pentacles
+number: king
+image: /cards/PENTACLES_KING.png
+
+# Full card description/meaning
+prompt: A king sits on a digital throne decorated with holographic bull heads and surrounded by bio-mechanical grapevines, holding a pentacle that pulses with energy while his data fortress and virtual gardens stretch behind him. The scene represents successful leadership in technological material affairs, established digital wealth, and the generosity that comes from true cyber abundance and network security.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Financial success, leadership, security, generosity
+  reversed:
+    - "Opposition to financial success, leadership, security, generosity"
+
+# Keywords for quick reference
+keywords:
+  - Financial success
+  - leadership
+  - security
+  - generosity

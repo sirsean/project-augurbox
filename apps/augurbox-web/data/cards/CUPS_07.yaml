@@ -1,0 +1,26 @@
+# Seven of Cups
+id: 42
+code: CUPS_07
+name: Seven of Cups
+description: Opportunities, choices, wishful thinking, illusion
+type: minor
+suit: cups
+number: 7
+image: /cards/CUPS_07.png
+
+# Full card description/meaning
+prompt: A silhouetted figure stands before seven cups floating in smoggy data clouds, each containing different digital symbols representing various cyber choices or virtual temptations. The scene suggests the need to distinguish between realistic technological opportunities and mere digital fantasies or algorithmic wishful thinking in the connected world.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Opportunities, choices, wishful thinking, illusion
+  reversed:
+    - "Opposition to opportunities, choices, wishful thinking, illusion"
+
+# Keywords for quick reference
+keywords:
+  - Opportunities
+  - choices
+  - wishful thinking
+  - illusion

@@ -1,0 +1,25 @@
+# The Hanged Man
+id: 12
+code: MAJ_12
+name: The Hanged Man
+description: Suspension, restriction, letting go, sacrifice
+type: major
+number: 12
+image: /cards/MAJ_12.png
+
+# Full card description/meaning
+prompt: A figure hangs suspended from a T-shaped transmission tower, bio-mechanical cables connecting to neural ports in their skull, yet their expression shows digital serenity rather than distress. A halo of swirling data patterns surrounds their head, indicating enlightenment gained through conscious interface sacrifice and surrender to the network. The living metal of the tower pulses with electric current, suggesting this willing integration brings new technological growth and expanded perspective through the collective consciousness.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Suspension, restriction, letting go, sacrifice
+  reversed:
+    - "Opposition to suspension, restriction, letting go, sacrifice"
+
+# Keywords for quick reference
+keywords:
+  - Suspension
+  - restriction
+  - letting go
+  - sacrifice

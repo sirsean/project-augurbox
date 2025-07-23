@@ -1,0 +1,25 @@
+# Strength
+id: 8
+code: MAJ_08
+name: Strength
+description: Inner strength, bravery, compassion, focus
+type: major
+number: 8
+image: /cards/MAJ_08.png
+
+# Full card description/meaning
+prompt: A gentle figure in weathered white robes embedded with fiber optic threads calmly interfaces with a cybernetic lion, its metallic jaws and LED mane responding to their bio-electric touch. The gesture demonstrates that inner strength and digital compassion can overcome raw computational force. Above their head floats a holographic infinity symbol, representing unlimited neural power and the triumph of conscious spirit over base programming through empathy rather than force.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Inner strength, bravery, compassion, focus
+  reversed:
+    - "Opposition to inner strength, bravery, compassion, focus"
+
+# Keywords for quick reference
+keywords:
+  - Inner strength
+  - bravery
+  - compassion
+  - focus

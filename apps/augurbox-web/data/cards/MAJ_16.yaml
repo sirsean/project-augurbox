@@ -1,0 +1,25 @@
+# The Tower
+id: 16
+code: MAJ_16
+name: The Tower
+description: Sudden change, upheaval, chaos, revelation
+type: major
+number: 16
+image: /cards/MAJ_16.png
+
+# Full card description/meaning
+prompt: An electromagnetic pulse strikes a towering data center, destroying its antenna array and sending figures with neural implants tumbling toward the wasteland below. The tower represents false digital structures built on corrupted code foundations, while the EMP brings sudden system revelation and necessary destruction of virtual illusions, clearing the way for authentic analog reconstruction.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Sudden change, upheaval, chaos, revelation
+  reversed:
+    - "Opposition to sudden change, upheaval, chaos, revelation"
+
+# Keywords for quick reference
+keywords:
+  - Sudden change
+  - upheaval
+  - chaos
+  - revelation

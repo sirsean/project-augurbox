@@ -1,0 +1,26 @@
+# Nine of Cups
+id: 44
+code: CUPS_09
+name: Nine of Cups
+description: Satisfaction, happiness, fulfillment, success
+type: minor
+suit: cups
+number: 9
+image: /cards/CUPS_09.png
+
+# Full card description/meaning
+prompt: "A satisfied figure in cyber attire sits with arms crossed before a curved bio-mechanical bench displaying nine golden cups that pulse with soft light. Their expression shows digital contentment and technological achievement. This is often called the \"wish card,\" representing the fulfillment of virtual desires and the satisfaction that comes from achieving emotional and digital material goals in the connected realm."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Satisfaction, happiness, fulfillment, success
+  reversed:
+    - "Opposition to satisfaction, happiness, fulfillment, success"
+
+# Keywords for quick reference
+keywords:
+  - Satisfaction
+  - happiness
+  - fulfillment
+  - success

@@ -1,0 +1,25 @@
+# Two of Pentacles
+id: 65
+code: PENTACLES_02
+name: Two of Pentacles
+description: Multiple priorities, time management, adaptability
+type: minor
+suit: pentacles
+number: 2
+image: /cards/PENTACLES_02.png
+
+# Full card description/meaning
+prompt: A figure in tech gear juggles two glowing pentacles connected by a holographic infinity loop while data ships navigate through digital waves in the background. The scene represents the challenge of balancing multiple technological responsibilities, managing processing time and system resources, and adapting to changing network circumstances while maintaining digital equilibrium.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Multiple priorities, time management, adaptability
+  reversed:
+    - "Opposition to multiple priorities, time management, adaptability"
+
+# Keywords for quick reference
+keywords:
+  - Multiple priorities
+  - time management
+  - adaptability
