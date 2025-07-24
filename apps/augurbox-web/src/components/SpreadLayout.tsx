@@ -6,10 +6,17 @@ import { type Spread, type DrawnCard, type Position } from '@/types/reading';
 import { type Card } from '@/lib/cards';
 import CardRevealModal from './CardRevealModal';
 
+interface CardInterpretation {
+  positionId: string;
+  interpretation: string;
+  isLoading: boolean;
+}
+
 interface SpreadLayoutProps {
   spread: Spread;
   drawnCards: DrawnCard[];
   allCards: Card[];
+  interpretations: CardInterpretation[];
   onCardReveal: (positionId: string) => void;
   readingState: 'revealing' | 'complete';
 }
@@ -18,6 +25,7 @@ export default function SpreadLayout({
   spread, 
   drawnCards, 
   allCards, 
+  interpretations,
   onCardReveal, 
   readingState 
 }: SpreadLayoutProps) {
@@ -158,6 +166,7 @@ export default function SpreadLayout({
           card={selectedCard.card}
           drawnCard={selectedCard.drawnCard}
           position={selectedCard.position}
+          interpretation={interpretations.find(i => i.positionId === selectedCard.position.id)}
           onClose={() => setSelectedCard(null)}
         />
       )}

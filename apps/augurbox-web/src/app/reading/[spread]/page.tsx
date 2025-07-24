@@ -120,9 +120,10 @@ export default function SpreadReadingPage() {
           };
         });
       
+      // Map position IDs to position indices (1-based)
       const revealedPositions = drawnCards
         .filter(c => c.is_revealed && c.position_id !== positionId)
-        .map(c => parseInt(c.position_id));
+        .map(c => c.position_id);
       
       const response = await fetch('/api/reading-update', {
         method: 'POST',
@@ -139,7 +140,7 @@ export default function SpreadReadingPage() {
               description: card.description
             },
             orientation: revealedCard.is_reversed ? 'Reversed' : 'Upright',
-            position: parseInt(positionId)
+            position: positionId
           }
         })
       });
@@ -339,6 +340,7 @@ export default function SpreadReadingPage() {
                 spread={spread}
                 drawnCards={drawnCards}
                 allCards={allCards}
+                interpretations={interpretations}
                 onCardReveal={revealCard}
                 readingState={readingState}
               />

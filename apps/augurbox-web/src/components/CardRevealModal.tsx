@@ -5,10 +5,17 @@ import Image from 'next/image';
 import { type Card } from '@/lib/cards';
 import { type DrawnCard, type Position } from '@/types/reading';
 
+interface CardInterpretation {
+  positionId: string;
+  interpretation: string;
+  isLoading: boolean;
+}
+
 interface CardRevealModalProps {
   card: Card;
   drawnCard: DrawnCard;
   position: Position;
+  interpretation?: CardInterpretation;
   onClose: () => void;
 }
 
@@ -69,8 +76,8 @@ const getCardInterpretation = (card: Card, isReversed: boolean, position: Positi
   };
 };
 
-export default function CardRevealModal({ card, drawnCard, position, onClose }: CardRevealModalProps) {
-  const interpretation = getCardInterpretation(card, drawnCard.is_reversed, position);
+export default function CardRevealModal({ card, drawnCard, position, interpretation, onClose }: CardRevealModalProps) {
+  const localInterpretation = getCardInterpretation(card, drawnCard.is_reversed, position);
 
   // Close modal on escape key
   useEffect(() => {
@@ -86,12 +93,12 @@ export default function CardRevealModal({ card, drawnCard, position, onClose }: 
 
   return (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-      <div className="bg-surface border-2 border-accent max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-surface border-2 border-accent max-w-5xl w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="border-b border-border p-6">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-bold text-accent mb-2">{interpretation.fringeName}</h2>
+              <h2 className="text-2xl font-bold text-accent mb-2">{card.name}</h2>
               <div className="flex items-center space-x-4 text-sm font-mono text-text-dim">
                 <span>POSITION: {position.name.toUpperCase()}</span>
                 <span>•</span>
@@ -109,10 +116,10 @@ export default function CardRevealModal({ card, drawnCard, position, onClose }: 
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 p-6">
-          {/* Card Image */}
-          <div className="space-y-4">
-            <div className={`relative mx-auto w-64 h-96 border-2 border-accent shadow-lg shadow-accent/20 ${
+        <div className="p-8">
+          {/* Large Card Image - Centered and Prominent */}
+          <div className="text-center mb-8">
+            <div className={`relative mx-auto w-80 h-[480px] border-2 border-accent shadow-xl shadow-accent/30 ${
               drawnCard.is_reversed ? 'rotate-180' : ''
             }`}>
               <Image
@@ -120,44 +127,30 @@ export default function CardRevealModal({ card, drawnCard, position, onClose }: 
                 alt={card.name}
                 fill
                 className="object-cover"
+                priority
               />
-            </div>
-            
-            <div className="text-center space-y-2">
-              <div className="text-foreground font-bold text-lg">{card.name}</div>
-              <div className="text-text-dim font-mono text-sm">{card.description}</div>
-              {drawnCard.is_reversed && (
-                <div className="text-accent font-mono text-sm font-bold">⟲ REVERSED ORIENTATION</div>
-              )}
             </div>
           </div>
 
-          {/* Card Details */}
-          <div className="space-y-6">
+          {/* Card Information Grid */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {/* Position Context */}
             <div className="bg-surface-secondary/50 border border-border p-4">
-              <h3 className="text-accent font-mono text-sm uppercase tracking-wider mb-2">
+              <h3 className="text-accent font-mono text-sm uppercase tracking-wider mb-3">
                 Position Context
               </h3>
               <div className="text-foreground font-bold mb-2">{position.name}</div>
-              <div className="text-text-dim text-sm">{position.description}</div>
+              <div className="text-text-dim text-sm leading-relaxed">{position.description}</div>
             </div>
 
-            {/* System Reading */}
+            {/* Combined System Reading & Core Frequencies */}
             <div className="bg-surface-secondary/50 border border-border p-4">
-              <h3 className="text-accent font-mono text-sm uppercase tracking-wider mb-2">
-                System Reading
-              </h3>
-              <div className="text-foreground text-sm leading-relaxed">
-                {interpretation.systemMeaning}
-              </div>
-            </div>
-
-            {/* Keywords */}
-            <div className="bg-surface-secondary/50 border border-border p-4">
-              <h3 className="text-accent font-mono text-sm uppercase tracking-wider mb-2">
+              <h3 className="text-accent font-mono text-sm uppercase tracking-wider mb-3">
                 Core Frequencies
               </h3>
+              <div className="text-foreground text-sm leading-relaxed mb-3">
+                {drawnCard.is_reversed ? 'Inverse protocols detected.' : 'Systems nominal.'}
+              </div>
               <div className="flex flex-wrap gap-2">
                 {card.keywords.map((keyword, index) => (
                   <span
@@ -169,25 +162,30 @@ export default function CardRevealModal({ card, drawnCard, position, onClose }: 
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Drifter's Prompt */}
-            <div className="bg-accent/10 border border-accent p-4">
-              <h3 className="text-accent font-mono text-sm uppercase tracking-wider mb-2">
-                The Drifter's Prompt
+          {/* AI Interpretation - Full Width */}
+          <div className="mt-6 max-w-4xl mx-auto">
+            <div className="bg-accent/10 border border-accent p-6">
+              <h3 className="text-accent font-mono text-sm uppercase tracking-wider mb-3">
+                Augurbox Neural Analysis
               </h3>
-              <div className="text-foreground italic leading-relaxed">
-                "{interpretation.drifterPrompt}"
-              </div>
-            </div>
-
-            {/* Card Prompt (Full Description) */}
-            <div className="bg-surface-secondary/50 border border-border p-4">
-              <h3 className="text-accent font-mono text-sm uppercase tracking-wider mb-2">
-                Neural Imprint
-              </h3>
-              <div className="text-text-dim text-sm leading-relaxed">
-                {card.prompt}
-              </div>
+              {interpretation?.isLoading ? (
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+                  <span className="text-accent font-mono text-sm animate-pulse">
+                    NEURAL ANALYSIS IN PROGRESS...
+                  </span>
+                </div>
+              ) : interpretation?.interpretation ? (
+                <div className="text-foreground leading-relaxed">
+                  {interpretation.interpretation}
+                </div>
+              ) : (
+                <div className="text-text-dim italic leading-relaxed">
+                  Neural pathways are establishing connection... analysis will be available once card is revealed during reading.
+                </div>
+              )}
             </div>
           </div>
         </div>
