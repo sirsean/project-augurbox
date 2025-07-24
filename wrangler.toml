@@ -6,3 +6,7 @@ compatibility_date = "2025-07-22"
 [assets]
 directory = "./apps/augurbox-web/out"
 binding = "ASSETS"
+
+# AI binding for Cloudflare AI
+[ai]
+binding = "AI"

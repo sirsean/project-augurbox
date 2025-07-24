@@ -145,19 +145,10 @@ export default function SpreadLayout({
 
       {/* Instructions */}
       <div className="text-center mt-8">
-        {readingState === 'revealing' ? (
+        {readingState === 'revealing' && (
           <p className="text-text-dim font-mono text-sm">
             Click on face-down cards to reveal them and begin your reading
           </p>
-        ) : (
-          <div className="space-y-2">
-            <p className="text-foreground font-mono text-sm">
-              All cards revealed. Click any card to view detailed interpretation.
-            </p>
-            <button className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-2 px-6 text-xs uppercase tracking-wider transition-all duration-300">
-              ▶ GENERATE SYNTHESIS
-            </button>
-          </div>
         )}
       </div>
 

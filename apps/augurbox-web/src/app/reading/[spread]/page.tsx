@@ -10,6 +10,18 @@ import SpreadLayout from '@/components/SpreadLayout';
 
 type ReadingState = 'selecting' | 'shuffling' | 'drawing' | 'revealing' | 'complete';
 
+interface CardInterpretation {
+  positionId: string;
+  interpretation: string;
+  isLoading: boolean;
+}
+
+interface ReadingSynthesis {
+  synthesis: string;
+  isLoading: boolean;
+  hasGenerated: boolean;
+}
+
 export default function SpreadReadingPage() {
   const params = useParams();
   const router = useRouter();
@@ -21,6 +33,12 @@ export default function SpreadReadingPage() {
   const [drawnCards, setDrawnCards] = useState<DrawnCard[]>([]);
   const [shuffledCards, setShuffledCards] = useState<Card[]>([]);
   const [isShuffling, setIsShuffling] = useState(false);
+  const [interpretations, setInterpretations] = useState<CardInterpretation[]>([]);
+  const [synthesis, setSynthesis] = useState<ReadingSynthesis>({
+    synthesis: '',
+    isLoading: false,
+    hasGenerated: false
+  });
 
   // Find the selected spread
   useEffect(() => {
@@ -76,12 +94,88 @@ export default function SpreadReadingPage() {
     setReadingState('revealing');
   };
 
-  const revealCard = (positionId: string) => {
+  const getAIInterpretation = async (positionId: string) => {
+    if (!spread) return;
+    
+    const revealedCard = drawnCards.find(card => card.position_id === positionId);
+    const card = allCards.find(c => c.code === revealedCard?.card_code);
+    
+    if (!revealedCard || !card) return;
+    
+    // Set loading state
+    setInterpretations(prev => [
+      ...prev.filter(i => i.positionId !== positionId),
+      { positionId, interpretation: '', isLoading: true }
+    ]);
+    
+    try {
+      // Get current revealed cards for context
+      const revealedCards = drawnCards
+        .filter(c => c.is_revealed && c.position_id !== positionId)
+        .map(c => {
+          const cardData = allCards.find(ac => ac.code === c.card_code);
+          return {
+            name: cardData?.name || 'Unknown',
+            orientation: c.is_reversed ? 'Reversed' : 'Upright'
+          };
+        });
+      
+      const revealedPositions = drawnCards
+        .filter(c => c.is_revealed && c.position_id !== positionId)
+        .map(c => parseInt(c.position_id));
+      
+      const response = await fetch('/api/reading-update', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          readingType: spreadId,
+          cards: revealedCards,
+          positions: revealedPositions,
+          recentCard: {
+            card: {
+              name: card.name,
+              description: card.description
+            },
+            orientation: revealedCard.is_reversed ? 'Reversed' : 'Upright',
+            position: parseInt(positionId)
+          }
+        })
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        setInterpretations(prev => [
+          ...prev.filter(i => i.positionId !== positionId),
+          { positionId, interpretation: data.interpretation, isLoading: false }
+        ]);
+      } else {
+        console.error('AI interpretation failed:', data.error);
+        setInterpretations(prev => [
+          ...prev.filter(i => i.positionId !== positionId),
+          { positionId, interpretation: 'The neural pathways flicker... interpretation unavailable.', isLoading: false }
+        ]);
+      }
+    } catch (error) {
+      console.error('Failed to get AI interpretation:', error);
+      setInterpretations(prev => [
+        ...prev.filter(i => i.positionId !== positionId),
+        { positionId, interpretation: 'Connection to the augurbox interrupted... data stream corrupted.', isLoading: false }
+      ]);
+    }
+  };
+
+  const revealCard = async (positionId: string) => {
     setDrawnCards(prev => prev.map(card => 
       card.position_id === positionId 
         ? { ...card, is_revealed: true }
         : card
     ));
+    
+    // Get AI interpretation for this card
+    await getAIInterpretation(positionId);
     
     // Check if all cards are revealed
     const allRevealed = drawnCards.every(card => 
@@ -90,6 +184,52 @@ export default function SpreadReadingPage() {
     
     if (allRevealed) {
       setTimeout(() => setReadingState('complete'), 500);
+    }
+  };
+
+  const generateSynthesis = async () => {
+    if (!spread || synthesis.isLoading || synthesis.hasGenerated) return;
+    
+    setSynthesis(prev => ({ ...prev, isLoading: true }));
+    
+    try {
+      const response = await fetch('/api/reading-synthesis', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          readingType: spreadId,
+          spread,
+          drawnCards,
+          allCards,
+          interpretations: interpretations.filter(i => !i.isLoading)
+        })
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        setSynthesis({
+          synthesis: data.synthesis,
+          isLoading: false,
+          hasGenerated: true
+        });
+      } else {
+        console.error('AI synthesis failed:', data.error);
+        setSynthesis({
+          synthesis: 'The quantum matrix fluctuates... synthesis data corrupted. Neural pathways require recalibration.',
+          isLoading: false,
+          hasGenerated: true
+        });
+      }
+    } catch (error) {
+      console.error('Failed to generate synthesis:', error);
+      setSynthesis({
+        synthesis: 'Connection to augurbox main processor interrupted... synthesis transmission failed.',
+        isLoading: false,
+        hasGenerated: true
+      });
     }
   };
 
@@ -192,13 +332,156 @@ export default function SpreadReadingPage() {
 
         {/* Spread Layout */}
         {(readingState === 'revealing' || readingState === 'complete') && (
-          <SpreadLayout
-            spread={spread}
-            drawnCards={drawnCards}
-            allCards={allCards}
-            onCardReveal={revealCard}
-            readingState={readingState}
-          />
+          <div className="space-y-8">
+            {/* Main spread area */}
+            <div className="w-full">
+              <SpreadLayout
+                spread={spread}
+                drawnCards={drawnCards}
+                allCards={allCards}
+                onCardReveal={revealCard}
+                readingState={readingState}
+              />
+            </div>
+            
+            {/* Interpretations section */}
+            <div className="w-full">
+              {/* Instructions when no interpretations yet */}
+              {interpretations.length === 0 && readingState === 'revealing' && (
+                <div className="bg-surface-secondary/50 border border-border/30 p-6 text-center mb-8">
+                  <div className="text-accent font-mono text-sm mb-2">
+                    ⟨ AWAITING NEURAL LINK ⟩
+                  </div>
+                  <div className="text-text-dim font-mono text-xs">
+                    Reveal cards to receive augurbox interpretations
+                  </div>
+                </div>
+              )}
+              
+              {/* Show loading state */}
+              {interpretations.some(i => i.isLoading) && (
+                <div className="bg-surface-secondary border border-border p-6 mb-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+                    <span className="text-accent font-mono text-sm animate-pulse">
+                      NEURAL ANALYSIS IN PROGRESS...
+                    </span>
+                  </div>
+                </div>
+              )}
+              
+              {/* Generate Synthesis Button - only show when all cards are revealed */}
+              {readingState === 'complete' && interpretations.filter(i => !i.isLoading).length === spread.positions.length && !synthesis.hasGenerated && (
+                <div className="text-center mb-8">
+                  <button
+                    onClick={generateSynthesis}
+                    disabled={synthesis.isLoading}
+                    className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-4 px-8 text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {synthesis.isLoading ? (
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-foreground rounded-full animate-pulse"></div>
+                        <span>GENERATING SYNTHESIS...</span>
+                      </div>
+                    ) : (
+                      '⚡ GENERATE SYNTHESIS'
+                    )}
+                  </button>
+                  <p className="text-text-dim font-mono text-xs mt-4">
+                    Combine all interpretations into a comprehensive analysis
+                  </p>
+                </div>
+              )}
+              
+              {/* Synthesis Display */}
+              {synthesis.hasGenerated && (
+                <div className="mb-8">
+                  <h3 className="text-accent font-mono text-xl uppercase tracking-wider mb-6 text-center border-b border-accent/50 pb-4">
+                    ⟨ FINAL SYNTHESIS ⟩
+                  </h3>
+                  
+                  <div className="bg-accent/10 border-2 border-accent/30 p-8 shadow-lg shadow-accent/10">
+                    <div className="text-foreground text-lg leading-relaxed whitespace-pre-wrap">
+                      {synthesis.synthesis}
+                    </div>
+                  </div>
+                </div>
+              )}
+              
+              {/* Synthesis Loading State */}
+              {synthesis.isLoading && (
+                <div className="mb-8">
+                  <h3 className="text-accent font-mono text-xl uppercase tracking-wider mb-6 text-center border-b border-accent/50 pb-4">
+                    ⟨ FINAL SYNTHESIS ⟩
+                  </h3>
+                  
+                  <div className="bg-surface-secondary border border-border p-8">
+                    <div className="flex items-center justify-center space-x-4">
+                      <div className="w-4 h-4 bg-accent rounded-full animate-pulse"></div>
+                      <span className="text-accent font-mono text-lg animate-pulse">
+                        QUANTUM MATRIX SYNTHESIS IN PROGRESS...
+                      </span>
+                    </div>
+                    <div className="text-center mt-4">
+                      <div className="text-text-dim font-mono text-sm">
+                        Analyzing probability convergence patterns...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Interpretations grid - newest first */}
+              {interpretations.filter(i => !i.isLoading).length > 0 && (
+                <div>
+                  <h3 className="text-accent font-mono text-lg uppercase tracking-wider mb-6 text-center border-b border-border/50 pb-4">
+                    ⟨ AUGURBOX TRANSMISSIONS ⟩
+                  </h3>
+                  
+                  <div className="flex flex-col gap-4">
+                    {interpretations
+                      .filter(i => !i.isLoading)
+                      .reverse() // Newest first
+                      .map((interpretation, reverseIndex) => {
+                        const position = spread.positions.find(p => p.id === interpretation.positionId);
+                        const drawnCard = drawnCards.find(dc => dc.position_id === interpretation.positionId);
+                        const card = allCards.find(c => c.code === drawnCard?.card_code);
+                        const originalIndex = interpretations.filter(i => !i.isLoading).length - reverseIndex;
+                        
+                        return (
+                          <div key={`${interpretation.positionId}-${originalIndex}`} 
+                               className="bg-surface-secondary border border-border p-6 transition-all duration-300 hover:border-accent/30">
+                            {/* Header */}
+                            <div className="flex items-center justify-between mb-4">
+                              <div className="flex items-center space-x-3">
+                                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                                <div className="text-accent font-mono text-sm font-bold">
+                                  {position?.name || `Position ${interpretation.positionId}`}
+                                </div>
+                              </div>
+                              <div className="text-text-dim font-mono text-xs">
+                                [{String(originalIndex).padStart(2, '0')}]
+                              </div>
+                            </div>
+                            
+                            {/* Card info */}
+                            <div className="text-text-dim font-mono text-sm mb-4 border-l-2 border-accent/30 pl-3">
+                              {card?.name} {drawnCard?.is_reversed ? '(Reversed)' : '(Upright)'}
+                            </div>
+                            
+                            {/* Interpretation */}
+                            <div className="text-foreground text-base leading-relaxed">
+                              {interpretation.interpretation}
+                            </div>
+                          </div>
+                        );
+                      })
+                    }
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
         )}
 
         {/* Navigation */}
