@@ -14,12 +14,16 @@ interface CardInterpretation {
   positionId: string;
   interpretation: string;
   isLoading: boolean;
+  error: string | null;
+  retryable: boolean;
 }
 
 interface ReadingSynthesis {
   synthesis: string;
   isLoading: boolean;
   hasGenerated: boolean;
+  error: string | null;
+  retryable: boolean;
 }
 
 export default function SpreadReadingPage() {
@@ -37,7 +41,9 @@ export default function SpreadReadingPage() {
   const [synthesis, setSynthesis] = useState<ReadingSynthesis>({
     synthesis: '',
     isLoading: false,
-    hasGenerated: false
+    hasGenerated: false,
+    error: null,
+    retryable: false
   });
 
   // Find the selected spread
@@ -105,7 +111,7 @@ export default function SpreadReadingPage() {
     // Set loading state
     setInterpretations(prev => [
       ...prev.filter(i => i.positionId !== positionId),
-      { positionId, interpretation: '', isLoading: true }
+      { positionId, interpretation: '', isLoading: true, error: null, retryable: false }
     ]);
     
     try {
@@ -150,20 +156,32 @@ export default function SpreadReadingPage() {
       if (data.success) {
         setInterpretations(prev => [
           ...prev.filter(i => i.positionId !== positionId),
-          { positionId, interpretation: data.interpretation, isLoading: false }
+          { positionId, interpretation: data.interpretation, isLoading: false, error: null, retryable: false }
         ]);
       } else {
         console.error('AI interpretation failed:', data.error);
         setInterpretations(prev => [
           ...prev.filter(i => i.positionId !== positionId),
-          { positionId, interpretation: 'The neural pathways flicker... interpretation unavailable.', isLoading: false }
+          { 
+            positionId, 
+            interpretation: '', 
+            isLoading: false, 
+            error: data.error || 'AI interpretation failed',
+            retryable: data.retryable || false
+          }
         ]);
       }
     } catch (error) {
       console.error('Failed to get AI interpretation:', error);
       setInterpretations(prev => [
         ...prev.filter(i => i.positionId !== positionId),
-        { positionId, interpretation: 'Connection to the augurbox interrupted... data stream corrupted.', isLoading: false }
+        { 
+          positionId, 
+          interpretation: '', 
+          isLoading: false, 
+          error: 'Connection to the augurbox interrupted... data stream corrupted.',
+          retryable: false
+        }
       ]);
     }
   };
@@ -189,9 +207,14 @@ export default function SpreadReadingPage() {
   };
 
   const generateSynthesis = async () => {
-    if (!spread || synthesis.isLoading || synthesis.hasGenerated) return;
+    if (!spread || synthesis.isLoading) return;
     
-    setSynthesis(prev => ({ ...prev, isLoading: true }));
+    setSynthesis(prev => ({ 
+      ...prev, 
+      isLoading: true, 
+      error: null, 
+      retryable: false 
+    }));
     
     try {
       const response = await fetch('/api/reading-synthesis', {
@@ -214,22 +237,28 @@ export default function SpreadReadingPage() {
         setSynthesis({
           synthesis: data.synthesis,
           isLoading: false,
-          hasGenerated: true
+          hasGenerated: true,
+          error: null,
+          retryable: false
         });
       } else {
         console.error('AI synthesis failed:', data.error);
         setSynthesis({
-          synthesis: 'The quantum matrix fluctuates... synthesis data corrupted. Neural pathways require recalibration.',
+          synthesis: '',
           isLoading: false,
-          hasGenerated: true
+          hasGenerated: false,
+          error: data.error || 'Unknown error occurred',
+          retryable: data.retryable || false
         });
       }
     } catch (error) {
       console.error('Failed to generate synthesis:', error);
       setSynthesis({
-        synthesis: 'Connection to augurbox main processor interrupted... synthesis transmission failed.',
+        synthesis: '',
         isLoading: false,
-        hasGenerated: true
+        hasGenerated: false,
+        error: 'Connection to augurbox main processor interrupted... synthesis transmission failed.',
+        retryable: false
       });
     }
   };
@@ -342,6 +371,7 @@ export default function SpreadReadingPage() {
                 allCards={allCards}
                 interpretations={interpretations}
                 onCardReveal={revealCard}
+                onRetryInterpretation={getAIInterpretation}
                 readingState={readingState}
               />
             </div>
@@ -432,6 +462,47 @@ export default function SpreadReadingPage() {
                   </div>
                 </div>
               )}
+              
+              {/* Synthesis Error State */}
+              {synthesis.error && !synthesis.hasGenerated && (
+                <div className="mb-8">
+                  <h3 className="text-accent font-mono text-xl uppercase tracking-wider mb-6 text-center border-b border-accent/50 pb-4">
+                    ⟨ SYNTHESIS ERROR ⟩
+                  </h3>
+                  
+                  <div className="bg-red-900/20 border-2 border-red-500/30 p-8">
+                    <div className="text-center">
+                      <div className="text-red-400 font-mono text-sm mb-4">
+                        ⚠ NEURAL MATRIX DISRUPTION
+                      </div>
+                      <div className="text-foreground mb-6">
+                        {synthesis.error}
+                      </div>
+                      
+                      {synthesis.retryable && (
+                        <div className="space-y-4">
+                          <div className="text-text-dim font-mono text-xs">
+                            This appears to be a temporary issue. You can try generating the synthesis again.
+                          </div>
+                          <button
+                            onClick={generateSynthesis}
+                            disabled={synthesis.isLoading}
+                            className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-3 px-6 text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            🔄 RETRY SYNTHESIS
+                          </button>
+                        </div>
+                      )}
+                      
+                      {!synthesis.retryable && (
+                        <div className="text-text-dim font-mono text-xs">
+                          This error cannot be automatically retried. Please try refreshing the page or contact support.
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* Interpretations grid - newest first */}
               {interpretations.filter(i => !i.isLoading).length > 0 && (
@@ -452,14 +523,25 @@ export default function SpreadReadingPage() {
                         
                         return (
                           <div key={`${interpretation.positionId}-${originalIndex}`} 
-                               className="bg-surface-secondary border border-border p-6 transition-all duration-300 hover:border-accent/30">
+                               className={`border p-6 transition-all duration-300 ${
+                                 interpretation.error ? 'bg-red-900/10 border-red-500/30' : 'bg-surface-secondary border-border hover:border-accent/30'
+                               }`}>
                             {/* Header */}
                             <div className="flex items-center justify-between mb-4">
                               <div className="flex items-center space-x-3">
-                                <div className="w-2 h-2 bg-accent rounded-full"></div>
-                                <div className="text-accent font-mono text-sm font-bold">
+                                <div className={`w-2 h-2 rounded-full ${
+                                  interpretation.error ? 'bg-red-400' : 'bg-accent'
+                                }`}></div>
+                                <div className={`font-mono text-sm font-bold ${
+                                  interpretation.error ? 'text-red-400' : 'text-accent'
+                                }`}>
                                   {position?.name || `Position ${interpretation.positionId}`}
                                 </div>
+                                {interpretation.error && (
+                                  <div className="text-red-400 font-mono text-xs">
+                                    ⚠ ERROR
+                                  </div>
+                                )}
                               </div>
                               <div className="text-text-dim font-mono text-xs">
                                 [{String(originalIndex).padStart(2, '0')}]
@@ -471,10 +553,39 @@ export default function SpreadReadingPage() {
                               {card?.name} {drawnCard?.is_reversed ? '(Reversed)' : '(Upright)'}
                             </div>
                             
-                            {/* Interpretation */}
-                            <div className="text-foreground text-base leading-relaxed">
-                              {interpretation.interpretation}
-                            </div>
+                            {/* Error State */}
+                            {interpretation.error ? (
+                              <div className="space-y-4">
+                                <div className="text-red-300 text-sm">
+                                  {interpretation.error}
+                                </div>
+                                
+                                {interpretation.retryable && (
+                                  <div className="space-y-2">
+                                    <div className="text-text-dim font-mono text-xs">
+                                      This appears to be a temporary issue. You can retry the interpretation.
+                                    </div>
+                                    <button
+                                      onClick={() => getAIInterpretation(interpretation.positionId)}
+                                      className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-2 px-4 text-xs uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20"
+                                    >
+                                      🔄 RETRY INTERPRETATION
+                                    </button>
+                                  </div>
+                                )}
+                                
+                                {!interpretation.retryable && (
+                                  <div className="text-text-dim font-mono text-xs">
+                                    This error cannot be automatically retried. The card may need to be revealed again.
+                                  </div>
+                                )}
+                              </div>
+                            ) : (
+                              /* Successful Interpretation */
+                              <div className="text-foreground text-base leading-relaxed">
+                                {interpretation.interpretation}
+                              </div>
+                            )}
                           </div>
                         );
                       })

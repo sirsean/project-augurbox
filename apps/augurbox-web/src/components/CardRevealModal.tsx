@@ -9,6 +9,8 @@ interface CardInterpretation {
   positionId: string;
   interpretation: string;
   isLoading: boolean;
+  error: string | null;
+  retryable: boolean;
 }
 
 interface CardRevealModalProps {
@@ -17,6 +19,7 @@ interface CardRevealModalProps {
   position: Position;
   interpretation?: CardInterpretation;
   onClose: () => void;
+  onRetryInterpretation?: () => void;
 }
 
 // Generate Fringe-style names and drifter prompts based on card
@@ -76,7 +79,7 @@ const getCardInterpretation = (card: Card, isReversed: boolean, position: Positi
   };
 };
 
-export default function CardRevealModal({ card, drawnCard, position, interpretation, onClose }: CardRevealModalProps) {
+export default function CardRevealModal({ card, drawnCard, position, interpretation, onClose, onRetryInterpretation }: CardRevealModalProps) {
   const localInterpretation = getCardInterpretation(card, drawnCard.is_reversed, position);
 
   // Close modal on escape key
@@ -176,6 +179,36 @@ export default function CardRevealModal({ card, drawnCard, position, interpretat
                   <span className="text-accent font-mono text-sm animate-pulse">
                     NEURAL ANALYSIS IN PROGRESS...
                   </span>
+                </div>
+              ) : interpretation?.error ? (
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-2 mb-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span className="text-red-400 font-mono text-sm font-bold">
+                      ⚠ NEURAL MATRIX DISRUPTION
+                    </span>
+                  </div>
+                  <div className="text-red-300 text-sm leading-relaxed mb-4">
+                    {interpretation.error}
+                  </div>
+                  
+                  {interpretation.retryable && onRetryInterpretation ? (
+                    <div className="space-y-3">
+                      <div className="text-text-dim font-mono text-xs">
+                        This appears to be a temporary issue. You can retry the neural analysis.
+                      </div>
+                      <button
+                        onClick={onRetryInterpretation}
+                        className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-2 px-4 text-xs uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20"
+                      >
+                        🔄 RETRY NEURAL ANALYSIS
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="text-text-dim font-mono text-xs">
+                      This error cannot be automatically retried. The card may need to be revealed again during the reading.
+                    </div>
+                  )}
                 </div>
               ) : interpretation?.interpretation ? (
                 <div className="text-foreground leading-relaxed">

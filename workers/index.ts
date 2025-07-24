@@ -35,6 +35,17 @@ export default {
   },
 } satisfies ExportedHandler<Env>;
 
+// Shared function to determine if an error is temporary and retryable
+function isTemporaryAIError(error: unknown): boolean {
+  return error instanceof Error && (
+    error.message.includes('model temporarily unavailable') ||
+    error.message.includes('InferenceUpstreamError') ||
+    error.message.includes('9000') ||
+    error.message.includes('3040') ||
+    error.message.includes('Capacity temporarily exceeded')
+  );
+}
+
 // Handle tarot reading AI interpretation requests
 async function handleReadingUpdate(request: Request, env: Env): Promise<Response> {
   // Add CORS headers for local development and production
@@ -117,11 +128,16 @@ Respond as the Augurbox with an in-character interpretation of how this newly re
 
   } catch (error) {
     console.error('Error in reading-update function:', error);
+    
+    // Check if it's a temporary AI model error using shared function
+    const isTemporaryError = isTemporaryAIError(error);
+    
     return new Response(JSON.stringify({ 
-      error: 'Internal server error',
-      success: false 
+      error: isTemporaryError ? 'AI model temporarily unavailable' : 'Internal server error',
+      success: false,
+      retryable: isTemporaryError
     }), {
-      status: 500,
+      status: isTemporaryError ? 503 : 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
@@ -210,11 +226,22 @@ Analyze the complete quantum probability matrix revealed by this reading. Synthe
 
   } catch (error) {
     console.error('Error in reading-synthesis function:', error);
+    
+    // Check if it's a temporary AI model error
+    const isTemporaryError = error instanceof Error && (
+      error.message.includes('model temporarily unavailable') ||
+      error.message.includes('InferenceUpstreamError') ||
+      error.message.includes('9000') ||
+      error.message.includes('3040') ||
+      error.message.includes('Capacity temporarily exceeded')
+    );
+    
     return new Response(JSON.stringify({ 
-      error: 'Internal server error',
-      success: false 
+      error: isTemporaryError ? 'AI model temporarily unavailable' : 'Internal server error',
+      success: false,
+      retryable: isTemporaryError
     }), {
-      status: 500,
+      status: isTemporaryError ? 503 : 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
