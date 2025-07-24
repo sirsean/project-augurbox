@@ -223,53 +223,53 @@ Analyze the complete quantum probability matrix revealed by this reading. Synthe
 // Reading type configurations
 function getReadingTypeDetails(readingType: string) {
   const readings = {
-    'supply-run': {
+    'supply_run': {
       name: 'The Supply Run',
       description: 'A 3-card tactical spread analyzing past intel, current situation, and future outcomes.',
       positions: [
-        { id: 1, name: 'Past Intel', meaning: 'What led to this situation' },
-        { id: 2, name: 'Current Situation', meaning: 'Present circumstances and challenges' },
-        { id: 3, name: 'Future Outcome', meaning: 'Likely results and consequences' }
+        { id: 'past', name: 'Past Intel', meaning: 'What led to this situation' },
+        { id: 'present', name: 'Current Situation', meaning: 'Present circumstances and challenges' },
+        { id: 'future', name: 'Future Outcome', meaning: 'Likely results and consequences' }
       ]
     },
-    'system-scan': {
+    'system_scan': {
       name: 'System Scan',
       description: 'A 5-card diagnostic spread examining multiple system components.',
       positions: [
-        { id: 1, name: 'Core Issue', meaning: 'The heart of the matter' },
-        { id: 2, name: 'External Forces', meaning: 'Outside influences and pressures' },
-        { id: 3, name: 'Internal State', meaning: 'Your inner resources and mindset' },
-        { id: 4, name: 'Hidden Variables', meaning: 'Unseen factors at play' },
-        { id: 5, name: 'System Output', meaning: 'The final result or resolution' }
+        { id: 'core', name: 'Core Issue', meaning: 'The heart of the matter' },
+        { id: 'external', name: 'External Forces', meaning: 'Outside influences and pressures' },
+        { id: 'internal', name: 'Internal State', meaning: 'Your inner resources and mindset' },
+        { id: 'hidden', name: 'Hidden Variables', meaning: 'Unseen factors at play' },
+        { id: 'output', name: 'System Output', meaning: 'The final result or resolution' }
       ]
     },
-    'deep-space-anomaly': {
+    'deep_space_anomaly': {
       name: 'The Deep Space Anomaly',
       description: 'A 10-card Celtic Cross spread for comprehensive analysis of complex situations.',
       positions: [
-        { id: 1, name: 'Current Situation', meaning: 'Your present circumstances' },
-        { id: 2, name: 'Challenge/Cross', meaning: 'What opposes or challenges you' },
-        { id: 3, name: 'Distant Past', meaning: 'Foundational influences' },
-        { id: 4, name: 'Recent Past', meaning: 'Recent events leading here' },
-        { id: 5, name: 'Possible Outcome', meaning: 'What may come to pass' },
-        { id: 6, name: 'Near Future', meaning: 'Immediate next steps' },
-        { id: 7, name: 'Your Approach', meaning: 'How you approach this situation' },
-        { id: 8, name: 'External Influences', meaning: 'Others\' impact on you' },
-        { id: 9, name: 'Hopes/Fears', meaning: 'Your inner hopes and fears' },
-        { id: 10, name: 'Final Outcome', meaning: 'The ultimate resolution' }
+        { id: 'current', name: 'Current Situation', meaning: 'Your present circumstances' },
+        { id: 'challenge', name: 'Challenge/Cross', meaning: 'What opposes or challenges you' },
+        { id: 'distant_past', name: 'Distant Past', meaning: 'Foundational influences' },
+        { id: 'recent_past', name: 'Recent Past', meaning: 'Recent events leading here' },
+        { id: 'possible_outcome', name: 'Possible Outcome', meaning: 'What may come to pass' },
+        { id: 'near_future', name: 'Near Future', meaning: 'Immediate next steps' },
+        { id: 'approach', name: 'Your Approach', meaning: 'How you approach this situation' },
+        { id: 'external_influences', name: 'External Influences', meaning: 'Others\' impact on you' },
+        { id: 'hopes_fears', name: 'Hopes/Fears', meaning: 'Your inner hopes and fears' },
+        { id: 'final_outcome', name: 'Final Outcome', meaning: 'The ultimate resolution' }
       ]
     }
   };
 
-  return readings[readingType as keyof typeof readings] || readings['supply-run'];
+  return readings[readingType as keyof typeof readings] || readings['supply_run'];
 }
 
-function getPositionMeaning(position: number, readingDetails: any) {
+function getPositionMeaning(position: string, readingDetails: any) {
   const pos = readingDetails.positions.find((p: any) => p.id === position);
   return pos ? `${pos.name}: ${pos.meaning}` : `Position ${position}`;
 }
 
-function formatReadingState(cards: any[], positions: number[], readingDetails: any) {
+function formatReadingState(cards: any[], positions: string[], readingDetails: any) {
   if (cards.length === 0) {
     return 'No cards revealed yet.';
   }
@@ -284,8 +284,13 @@ function formatReadingState(cards: any[], positions: number[], readingDetails: a
 function formatCompleteReading(spread: any, drawnCards: any[], allCards: any[], interpretations: any[], readingDetails: any) {
   let output = '';
   
-  // Sort drawn cards by position for consistent output
-  const sortedCards = [...drawnCards].sort((a, b) => parseInt(a.position_id) - parseInt(b.position_id));
+  // Sort drawn cards by position order in the spread definition
+  const positionOrder = readingDetails.positions.map((p: any) => p.id);
+  const sortedCards = [...drawnCards].sort((a, b) => {
+    const indexA = positionOrder.indexOf(a.position_id);
+    const indexB = positionOrder.indexOf(b.position_id);
+    return indexA - indexB;
+  });
   
   sortedCards.forEach((drawnCard) => {
     const card = allCards.find(c => c.code === drawnCard.card_code);
