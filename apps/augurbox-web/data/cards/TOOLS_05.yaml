@@ -1,0 +1,25 @@
+# Five of Tools
+id: 26
+code: TOOLS_05
+name: Five of Tools
+description: Conflict, competition, labor disputes
+type: minor
+suit: tools
+number: 5
+image: /cards/TOOLS_05.png
+
+# Full card description/meaning
+prompt: Five Engineers Guild members engage in a heated but non-violent dispute over salvage rights, each brandishing different tools—wrenches, plasma cutters, diagnostic scanners—while arguing over a massive piece of valuable machinery half-buried in the wasteland debris. Despite the intensity of their disagreement, this represents healthy competition for resources, contrasting engineering philosophies, and the dynamic energy that drives innovation through professional rivalry and territorial disputes.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Conflict, competition, labor disputes
+  reversed:
+    - "Opposition to conflict, competition, labor disputes"
+
+# Keywords for quick reference
+keywords:
+  - Conflict
+  - competition
+  - labor disputes

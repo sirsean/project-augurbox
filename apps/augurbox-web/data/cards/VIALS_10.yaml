@@ -1,0 +1,25 @@
+# Ten of Vials
+id: 45
+code: VIALS_10
+name: Ten of Vials
+description: Ultimate resource security, abundant community sharing, family prosperity
+type: minor
+suit: vials
+number: 10
+image: /cards/VIALS_10.png
+
+# Full card description/meaning
+prompt: A family of bio-resource cultivators stands with raised hands beneath a living rainbow of symbiotic organisms that display ten glowing vials in a natural arc overhead, while children play safely among bioluminescent plants that grow in abundance around their thriving settlement. A established bio-dome community gleams in the background, representing ultimate resource security, the emotional fulfillment of sharing abundant biological wealth within a loving community, and the prosperity that comes from multi-generational investment in sustainable cultivation and harmonious relationships with alien ecosystems.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Ultimate resource security, abundant community sharing, family prosperity
+  reversed:
+    - "Opposition to ultimate resource security, abundant community sharing, family prosperity"
+
+# Keywords for quick reference
+keywords:
+  - Ultimate resource security
+  - abundant community sharing
+  - family prosperity

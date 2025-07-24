@@ -1,0 +1,25 @@
+# Ace of Vials
+id: 36
+code: VIALS_ACE
+name: Ace of Vials
+description: New emotional connections, pure resources, the beginning of valuable relationships
+type: minor
+suit: vials
+number: 1
+image: /cards/VIALS_ACE.png
+
+# Full card description/meaning
+prompt: A weathered hand emerges from swirling bio-luminescent mist, offering a pristine glass vial filled with shimmering, opalescent fluid that pulses with inner light. Five streams of the precious liquid flow from the vial into collection channels carved in the rocky ground, representing the generous sharing of rare biological resources. A bio-mechanical dove with iridescent feathers and glowing eyes descends toward the vial, symbolizing the pure potential for new alliances, the beginning of valuable trade relationships, and the emotional nourishment that comes from sharing scarce resources in the harsh Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - New emotional connections, pure resources, the beginning of valuable relationships
+  reversed:
+    - "Opposition to new emotional connections, pure resources, the beginning of valuable relationships"
+
+# Keywords for quick reference
+keywords:
+  - New emotional connections
+  - pure resources
+  - the beginning of valuable relationships

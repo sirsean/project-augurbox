@@ -1,0 +1,25 @@
+# Page of Comms
+id: 60
+code: COMMS_PAGE
+name: Page of Comms
+description: Curiosity about information, learning to decode signals, vigilant communication
+type: minor
+suit: comms
+number: page
+image: /cards/COMMS_PAGE.png
+
+# Full card description/meaning
+prompt: A young apprentice in weathered communication gear stands on uneven terrain scattered with broken signal equipment, holding a small but powerful signal detector aloft while scanning the chaotic electromagnetic environment with alert curiosity. Mechanical signal-relay birds fill the static-filled sky above, representing the active, inquisitive mind learning to navigate the complex world of Fringe communications, ready to decode new information sources and deliver critical messages despite the dangerous and unstable communication landscape.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Curiosity about information, learning to decode signals, vigilant communication
+  reversed:
+    - "Opposition to curiosity about information, learning to decode signals, vigilant communication"
+
+# Keywords for quick reference
+keywords:
+  - Curiosity about information
+  - learning to decode signals
+  - vigilant communication

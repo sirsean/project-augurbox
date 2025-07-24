@@ -1,0 +1,25 @@
+# Five of Comms
+id: 54
+code: COMMS_05
+name: Five of Comms
+description: Information warfare victory at great cost, propaganda triumph, hollow communication victory
+type: minor
+suit: comms
+number: 5
+image: /cards/COMMS_05.png
+
+# Full card description/meaning
+prompt: A figure in battle-worn communication gear stands holding three active signal jammers while looking at two others walking away dejectedly through the wasteland, their abandoned communication equipment sparking and dying in the toxic soil. The sky crackles with digital static and conflicting data streams, representing the pyrrhic victory of information warfare where winning through deception, propaganda manipulation, and signal jamming comes at too high a cost to relationships and community trust, leaving the victor isolated in their hollow triumph.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Information warfare victory at great cost, propaganda triumph, hollow communication victory
+  reversed:
+    - "Opposition to information warfare victory at great cost, propaganda triumph, hollow communication victory"
+
+# Keywords for quick reference
+keywords:
+  - Information warfare victory at great cost
+  - propaganda triumph
+  - hollow communication victory

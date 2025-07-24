@@ -1,0 +1,25 @@
+# Nine of Vials
+id: 44
+code: VIALS_09
+name: Nine of Vials
+description: Satisfaction with accumulated resources, emotional fulfillment, successful cultivation
+type: minor
+suit: vials
+number: 9
+image: /cards/VIALS_09.png
+
+# Full card description/meaning
+prompt: "A satisfied resource trader sits with arms crossed before a curved bio-mechanical display rack showcasing nine precious vials filled with different rare essences that pulse with soft, varied light—each representing a successful harvest or beneficial trade. Their expression shows deep contentment and emotional fulfillment achieved through patient cultivation and wise resource management. This represents the \"wish fulfilled\" card of resource abundance, the satisfaction that comes from building sustainable bio-wealth through careful relationships with nature and trading partners."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Satisfaction with accumulated resources, emotional fulfillment, successful cultivation
+  reversed:
+    - "Opposition to satisfaction with accumulated resources, emotional fulfillment, successful cultivation"
+
+# Keywords for quick reference
+keywords:
+  - Satisfaction with accumulated resources
+  - emotional fulfillment
+  - successful cultivation

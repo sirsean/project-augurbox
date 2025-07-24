@@ -1,0 +1,25 @@
+# Six of Tools
+id: 27
+code: TOOLS_06
+name: Six of Tools
+description: Success, public recognition, progress through skilled work
+type: minor
+suit: tools
+number: 6
+image: /cards/TOOLS_06.png
+
+# Full card description/meaning
+prompt: A triumphant engineer rides a reinforced construction mech through a crowd of celebrating Drifters and Guild members, wearing a crown made from welded salvage and holding a gleaming power drill topped with a wreath of twisted metal. Five other workers raise their tools—wrenches, plasma cutters, diagnostic scanners—in recognition of the successful completion of a major infrastructure project. The scene represents victory through skilled labor, public recognition of engineering excellence, and the respect earned through masterful craftsmanship in the harsh Fringe environment.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Success, public recognition, progress through skilled work
+  reversed:
+    - "Opposition to success, public recognition, progress through skilled work"
+
+# Keywords for quick reference
+keywords:
+  - Success
+  - public recognition
+  - progress through skilled work

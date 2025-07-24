@@ -1,0 +1,25 @@
+# Page of Tools
+id: 32
+code: TOOLS_PAGE
+name: Page of Tools
+description: Eagerness to learn, technical curiosity, apprenticeship
+type: minor
+suit: tools
+number: page
+image: /cards/TOOLS_PAGE.png
+
+# Full card description/meaning
+prompt: A young apprentice engineer in patched work clothes holds a gleaming multi-tool up for careful examination, standing in a vast salvage yard with transmission towers and construction sites dotting the horizon. Their eager stance suggests technical curiosity and readiness for hands-on learning. Tool holsters and diagnostic equipment mark them as someone beginning their engineering journey, representing the enthusiasm of youth discovering the transformative power of skilled craftsmanship in the Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Eagerness to learn, technical curiosity, apprenticeship
+  reversed:
+    - "Opposition to eagerness to learn, technical curiosity, apprenticeship"
+
+# Keywords for quick reference
+keywords:
+  - Eagerness to learn
+  - technical curiosity
+  - apprenticeship

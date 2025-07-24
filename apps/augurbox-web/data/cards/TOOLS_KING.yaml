@@ -1,0 +1,25 @@
+# King of Tools
+id: 35
+code: TOOLS_KING
+name: King of Tools
+description: Master craftsman, visionary leadership, engineering wisdom
+type: minor
+suit: tools
+number: king
+image: /cards/TOOLS_KING.png
+
+# Full card description/meaning
+prompt: "A king sits on a throne built from the finest salvaged machinery, holding a master's tool—a fusion welder that pulses with controlled energy—while construction blueprints and technical schematics decorate both his reinforced robes and the throne's metalwork. A holographic display shows ongoing construction projects in an endless loop, representing the cyclical nature of building and rebuilding in the Fringe. The scene embodies master-level engineering leadership, technical vision, and the ability to inspire others through innovative construction and infrastructure projects."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Master craftsman, visionary leadership, engineering wisdom
+  reversed:
+    - "Opposition to master craftsman, visionary leadership, engineering wisdom"
+
+# Keywords for quick reference
+keywords:
+  - Master craftsman
+  - visionary leadership
+  - engineering wisdom

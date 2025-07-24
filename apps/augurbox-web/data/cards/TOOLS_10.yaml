@@ -1,0 +1,24 @@
+# Ten of Tools
+id: 31
+code: TOOLS_10
+name: Ten of Tools
+description: Overwhelming responsibility, the burden of success
+type: minor
+suit: tools
+number: 10
+image: /cards/TOOLS_10.png
+
+# Full card description/meaning
+prompt: A bent figure struggles under the massive weight of ten heavy construction tools—arc welders, fusion hammers, plasma saws, hydraulic lifts—while trudging toward a distant settlement construction site. The technological burden of equipment and responsibility seems almost crushing, yet the gleaming new habitat domes on the horizon represent the reward for such dedication. The scene captures the overwhelming responsibilities that come with engineering success and the determination required to complete massive infrastructure projects.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Overwhelming responsibility, the burden of success
+  reversed:
+    - "Opposition to overwhelming responsibility, the burden of success"
+
+# Keywords for quick reference
+keywords:
+  - Overwhelming responsibility
+  - the burden of success

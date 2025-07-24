@@ -1,0 +1,25 @@
+# Eight of Vials
+id: 43
+code: VIALS_08
+name: Eight of Vials
+description: Abandoning depleted resources, seeking new territories, emotional withdrawal
+type: minor
+suit: vials
+number: 8
+image: /cards/VIALS_08.png
+
+# Full card description/meaning
+prompt: A lone Venonaut in full environmental protection walks away from eight drained vials arranged in the toxic soil of an exhausted extraction site, heading toward distant bio-luminescent formations under an alien sky. The scene represents the difficult decision to abandon depleted resource territories that no longer yield valuable materials, the emotional toll of leaving behind significant investments in cultivation and extraction, and the need to seek higher ground where untapped biological wealth might still flourish.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Abandoning depleted resources, seeking new territories, emotional withdrawal
+  reversed:
+    - "Opposition to abandoning depleted resources, seeking new territories, emotional withdrawal"
+
+# Keywords for quick reference
+keywords:
+  - Abandoning depleted resources
+  - seeking new territories
+  - emotional withdrawal

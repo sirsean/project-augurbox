@@ -1,0 +1,25 @@
+# Ace of Gear
+id: 64
+code: GEAR_ACE
+name: Ace of Gear
+description: New equipment opportunity, material manifestation, the foundation of physical security
+type: minor
+suit: gear
+number: 1
+image: /cards/GEAR_ACE.png
+
+# Full card description/meaning
+prompt: "A weathered hand emerges from swirling dust and debris, holding a pristine piece of advanced equipment that hums with mechanical precision—a multi-purpose survival device that gleams with promise. Below lies a rough path carved through rocky terrain leading to distant mining operations and trade outposts, representing the practical steps needed to manifest material success and physical security in the harsh Fringe. The device symbolizes the potential for new territorial claims, the foundation of wealth through quality equipment, and the promise that \"you are only as good as your gear.\""
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - New equipment opportunity, material manifestation, the foundation of physical security
+  reversed:
+    - "Opposition to new equipment opportunity, material manifestation, the foundation of physical security"
+
+# Keywords for quick reference
+keywords:
+  - New equipment opportunity
+  - material manifestation
+  - the foundation of physical security

@@ -1,0 +1,25 @@
+# Five of Gear
+id: 68
+code: GEAR_05
+name: Five of Gear
+description: Equipment failure, material hardship, loss of security
+type: minor
+suit: gear
+number: 5
+image: /cards/GEAR_05.png
+
+# Full card description/meaning
+prompt: Two figures in torn environmental suits trudge through a toxic storm, their broken gear sparking and failing, while in the distance a well-lit trading post displays five pieces of quality survival equipment in its reinforced windows. Despite their apparent material hardship and equipment failure, help and essential gear are available nearby through the Union of Merchants if they can reach it. The scene represents the devastating impact of gear failure in the Fringe, but also suggests that community support and trade networks can provide a path back to security.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Equipment failure, material hardship, loss of security
+  reversed:
+    - "Opposition to equipment failure, material hardship, loss of security"
+
+# Keywords for quick reference
+keywords:
+  - Equipment failure
+  - material hardship
+  - loss of security

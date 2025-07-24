@@ -1,0 +1,25 @@
+# Two of Vials
+id: 37
+code: VIALS_02
+name: Two of Vials
+description: Partnership in trade, mutual benefit, alliance formation
+type: minor
+suit: vials
+number: 2
+image: /cards/VIALS_02.png
+
+# Full card description/meaning
+prompt: Two Venonauts in weathered environmental suits face each other across a makeshift trading post, each holding a glowing bio-containment vial filled with precious alien flora extracts, preparing to complete a mutually beneficial exchange. Above them, a winged serpent carved from living coral hovers over intertwined vines that pulse with bio-electric energy, representing the symbiotic power of balanced trade relationships and mutual prosperity built on the careful exchange of rare biological and chemical resources.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Partnership in trade, mutual benefit, alliance formation
+  reversed:
+    - "Opposition to partnership in trade, mutual benefit, alliance formation"
+
+# Keywords for quick reference
+keywords:
+  - Partnership in trade
+  - mutual benefit
+  - alliance formation

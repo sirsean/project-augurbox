@@ -1,0 +1,25 @@
+# Ten of Gear
+id: 73
+code: GEAR_10
+name: Ten of Gear
+description: Generational wealth, established security, legacy equipment
+type: minor
+suit: gear
+number: 10
+image: /cards/GEAR_10.png
+
+# Full card description/meaning
+prompt: An elder from an established trading family stands in a fortified compound courtyard, watching as multiple generations of family members work with inherited equipment and maintain legacy systems. Ten pieces of masterwork gear are arranged overhead in a protective formation—weapons, shields, processors, vehicles—representing lasting material wealth, the security that comes from established resource foundations, and the pride of passing down quality equipment that has served the family through multiple generations of Fringe survival.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Generational wealth, established security, legacy equipment
+  reversed:
+    - "Opposition to generational wealth, established security, legacy equipment"
+
+# Keywords for quick reference
+keywords:
+  - Generational wealth
+  - established security
+  - legacy equipment

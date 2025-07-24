@@ -1,0 +1,25 @@
+# Seven of Vials
+id: 42
+code: VIALS_07
+name: Seven of Vials
+description: Multiple trade opportunities, illusion vs reality in resources, tempting offers
+type: minor
+suit: vials
+number: 7
+image: /cards/VIALS_07.png
+
+# Full card description/meaning
+prompt: A silhouetted figure stands before seven vials floating in bioluminescent mist, each containing different alien substances—some glowing with promise, others dark and ominous—representing various trade opportunities and resource choices. The scene suggests the critical need to distinguish between legitimate biological treasures and dangerous temptations, the difficulty of evaluating unknown alien flora, and the wishful thinking that can lead traders to overestimate the value of mysterious substances without proper analysis by The Borsh Conservatory.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Multiple trade opportunities, illusion vs reality in resources, tempting offers
+  reversed:
+    - "Opposition to multiple trade opportunities, illusion vs reality in resources, tempting offers"
+
+# Keywords for quick reference
+keywords:
+  - Multiple trade opportunities
+  - illusion vs reality in resources
+  - tempting offers

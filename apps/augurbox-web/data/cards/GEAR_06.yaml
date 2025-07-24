@@ -1,0 +1,25 @@
+# Six of Gear
+id: 69
+code: GEAR_06
+name: Six of Gear
+description: Generous resource sharing, fair trade, equipment charity
+type: minor
+suit: gear
+number: 6
+image: /cards/GEAR_06.png
+
+# Full card description/meaning
+prompt: A Union of Merchants trader holds a precision balance scale in one hand while distributing essential survival equipment to desperate Drifters with the other—oxygen masks, portable power cells, water purification tablets. Six pieces of quality gear are displayed overhead on elevated platforms, representing the flow of material resources through generous trade practices, fair equipment exchange, and the merchant philosophy that prosperity shared creates stronger communities in the harsh Fringe environment.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Generous resource sharing, fair trade, equipment charity
+  reversed:
+    - "Opposition to generous resource sharing, fair trade, equipment charity"
+
+# Keywords for quick reference
+keywords:
+  - Generous resource sharing
+  - fair trade
+  - equipment charity

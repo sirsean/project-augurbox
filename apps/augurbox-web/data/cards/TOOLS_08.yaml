@@ -1,0 +1,25 @@
+# Eight of Tools
+id: 29
+code: TOOLS_08
+name: Eight of Tools
+description: Swift action, rapid deployment, efficient execution
+type: minor
+suit: tools
+number: 8
+image: /cards/TOOLS_08.png
+
+# Full card description/meaning
+prompt: Eight industrial tools—plasma torches, fusion cutters, hydraulic jacks, diagnostic probes—streak through the dust-filled air like projectiles toward a massive salvage operation, suggesting rapid deployment of engineering resources and swift coordinated action. Below lies a sprawling scrapyard with gleaming metal deposits, representing the efficient execution of large-scale projects and the rapid progress that comes from coordinated effort and proper tool deployment.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Swift action, rapid deployment, efficient execution
+  reversed:
+    - "Opposition to swift action, rapid deployment, efficient execution"
+
+# Keywords for quick reference
+keywords:
+  - Swift action
+  - rapid deployment
+  - efficient execution

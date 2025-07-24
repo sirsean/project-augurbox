@@ -1,0 +1,25 @@
+# King of Gear
+id: 77
+code: GEAR_KING
+name: King of Gear
+description: Material mastery, territorial leadership, equipment generosity
+type: minor
+suit: gear
+number: king
+image: /cards/GEAR_KING.png
+
+# Full card description/meaning
+prompt: A king sits on a throne built from the most advanced salvaged technology, decorated with mechanical bull imagery and surrounded by thriving equipment stockpiles, holding a master-crafted device that represents ultimate material authority. His established fortress and well-equipped settlement stretch behind him in the distance, representing successful leadership in material affairs, territorial dominance through superior equipment, and the generosity that comes from true abundance—the willingness to share resources that makes him a leader others will follow into the dangerous unknown of the Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Material mastery, territorial leadership, equipment generosity
+  reversed:
+    - "Opposition to material mastery, territorial leadership, equipment generosity"
+
+# Keywords for quick reference
+keywords:
+  - Material mastery
+  - territorial leadership
+  - equipment generosity

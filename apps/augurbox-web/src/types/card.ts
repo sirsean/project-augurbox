@@ -15,14 +15,14 @@ export interface Card {
   keywords: string[];
 }
 
-export type CardSuit = 'wands' | 'cups' | 'swords' | 'pentacles';
+export type CardSuit = 'tools' | 'vials' | 'comms' | 'gear';
 
 export interface CardsByType {
   major: Card[];
   minor: {
-    wands: Card[];
-    cups: Card[];
-    swords: Card[];
-    pentacles: Card[];
+    tools: Card[];
+    vials: Card[];
+    comms: Card[];
+    gear: Card[];
   };
 }

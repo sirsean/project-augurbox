@@ -1,0 +1,25 @@
+# Ace of Comms
+id: 50
+code: COMMS_ACE
+name: Ace of Comms
+description: New breakthrough in information, clarity of communication, pure truth cutting through deception
+type: minor
+suit: comms
+number: 1
+image: /cards/COMMS_ACE.png
+
+# Full card description/meaning
+prompt: A weathered hand emerges from swirling electromagnetic interference, grasping a crystalline communication device that pulses with pure, unfiltered data streams. The device is crowned with a holographic wreath of interlinked signal patterns, representing victory through perfect information clarity and the cutting power of undeniable truth. In the distance, transmission towers stand like sentinels against the chaotic sky, symbolizing the challenges that can be overcome when communication is clear, direct, and free from the distortion of propaganda and misinformation that plagues the Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - New breakthrough in information, clarity of communication, pure truth cutting through deception
+  reversed:
+    - "Opposition to new breakthrough in information, clarity of communication, pure truth cutting through deception"
+
+# Keywords for quick reference
+keywords:
+  - New breakthrough in information
+  - clarity of communication
+  - pure truth cutting through deception

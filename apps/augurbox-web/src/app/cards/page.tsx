@@ -93,10 +93,10 @@ export default function CardsPage() {
           <h1 className="text-2xl font-bold text-foreground mb-4 font-mono tracking-widest uppercase">MINOR ARCANA // 56 CONSTRUCTS</h1>
         </div>
 
-        <SuitSection suit="wands" cards={cardsByType.minor.wands} />
-        <SuitSection suit="cups" cards={cardsByType.minor.cups} />
-        <SuitSection suit="swords" cards={cardsByType.minor.swords} />
-        <SuitSection suit="pentacles" cards={cardsByType.minor.pentacles} />
+        <SuitSection suit="tools" cards={cardsByType.minor.tools} />
+        <SuitSection suit="vials" cards={cardsByType.minor.vials} />
+        <SuitSection suit="comms" cards={cardsByType.minor.comms} />
+        <SuitSection suit="gear" cards={cardsByType.minor.gear} />
       </main>
     </div>
   );

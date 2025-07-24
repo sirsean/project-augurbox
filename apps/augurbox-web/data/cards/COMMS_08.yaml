@@ -1,0 +1,25 @@
+# Eight of Comms
+id: 57
+code: COMMS_08
+name: Eight of Comms
+description: Information overwhelm, trapped by conflicting signals, communication paralysis
+type: minor
+suit: comms
+number: 8
+image: /cards/COMMS_08.png
+
+# Full card description/meaning
+prompt: A blindfolded figure stands surrounded by eight towering communication arrays that pulse with conflicting information streams, appearing mentally trapped by the overwhelming flood of contradictory data, yet with a clear pathway visible behind them through the interference. The scene represents the paralysis that comes from information overload, the mental imprisonment created by too many competing voices and signals, and the self-imposed limitations that arise when one becomes overwhelmed by the constant noise of Fringe communication networks.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Information overwhelm, trapped by conflicting signals, communication paralysis
+  reversed:
+    - "Opposition to information overwhelm, trapped by conflicting signals, communication paralysis"
+
+# Keywords for quick reference
+keywords:
+  - Information overwhelm
+  - trapped by conflicting signals
+  - communication paralysis

@@ -1,0 +1,25 @@
+# Queen of Comms
+id: 62
+code: COMMS_QUEEN
+name: Queen of Comms
+description: Independent information analysis, unbiased communication, clear signal boundaries
+type: minor
+suit: comms
+number: queen
+image: /cards/COMMS_QUEEN.png
+
+# Full card description/meaning
+prompt: A queen sits on a throne built from crystalline communication equipment, holding an upright signal array that cuts through electromagnetic interference with surgical precision, her other hand extended in a gesture that commands silence from the chaotic data streams around her. Her expression shows the wisdom gained through years of analyzing conflicting information sources, representing communication independence, clear analytical thinking, and the rare ability to make unbiased judgments about truth and falsehood in the propaganda-filled environment of the Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Independent information analysis, unbiased communication, clear signal boundaries
+  reversed:
+    - "Opposition to independent information analysis, unbiased communication, clear signal boundaries"
+
+# Keywords for quick reference
+keywords:
+  - Independent information analysis
+  - unbiased communication
+  - clear signal boundaries

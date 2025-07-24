@@ -1,0 +1,25 @@
+# Page of Vials
+id: 46
+code: VIALS_PAGE
+name: Page of Vials
+description: Curiosity about new resources, intuitive bio-sensing, learning opportunities
+type: minor
+suit: vials
+number: page
+image: /cards/VIALS_PAGE.png
+
+# Full card description/meaning
+prompt: A young student of xenobiology stands by a pool of luminescent bio-fluid, holding a collection vial from which a strange, translucent organism seems to emerge and communicate, representing the unexpected nature of first contact with alien life forms and the intuitive messages that come through careful observation of biological samples. The bio-luminescent creature symbolizes the contents of the living ecosystem beginning to reveal its secrets to those patient enough to listen and learn from the natural world.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Curiosity about new resources, intuitive bio-sensing, learning opportunities
+  reversed:
+    - "Opposition to curiosity about new resources, intuitive bio-sensing, learning opportunities"
+
+# Keywords for quick reference
+keywords:
+  - Curiosity about new resources
+  - intuitive bio-sensing
+  - learning opportunities

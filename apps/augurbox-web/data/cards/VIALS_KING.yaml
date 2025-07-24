@@ -1,0 +1,25 @@
+# King of Vials
+id: 49
+code: VIALS_KING
+name: King of Vials
+description: Mastery of resource diplomacy, emotional balance in trade, wise cultivation leadership
+type: minor
+suit: vials
+number: king
+image: /cards/VIALS_KING.png
+
+# Full card description/meaning
+prompt: A king sits on a bio-mechanical throne that appears to float on turbulent streams of various bio-fluids, yet he remains calm and balanced, holding a master vial and a scepter carved from living coral. An exotic bio-mechanical creature leaps from the stream nearby, representing his mastery of resource emotions and the ability to remain diplomatically stable while navigating the complex depths of inter-species trade relationships, biological cultivation, and the emotional negotiations required for sustainable resource management in the dangerous Fringe environment.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Mastery of resource diplomacy, emotional balance in trade, wise cultivation leadership
+  reversed:
+    - "Opposition to mastery of resource diplomacy, emotional balance in trade, wise cultivation leadership"
+
+# Keywords for quick reference
+keywords:
+  - Mastery of resource diplomacy
+  - emotional balance in trade
+  - wise cultivation leadership

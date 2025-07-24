@@ -1,0 +1,25 @@
+# Seven of Comms
+id: 56
+code: COMMS_07
+name: Seven of Comms
+description: Information theft, stealth communication, getting away with stolen intelligence
+type: minor
+suit: comms
+number: 7
+image: /cards/COMMS_07.png
+
+# Full card description/meaning
+prompt: A figure in advanced signal-dampening gear sneaks away from a fortified communication complex, carrying five encrypted data cores while leaving two active signal emitters behind to mask their escape. The scene suggests covert intelligence gathering, the strategic theft of classified information, and the dangerous game of espionage communication, but also hints at the potential consequences of stealing sensitive data and the risk of being caught in the web of information warfare that defines survival in the Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Information theft, stealth communication, getting away with stolen intelligence
+  reversed:
+    - "Opposition to information theft, stealth communication, getting away with stolen intelligence"
+
+# Keywords for quick reference
+keywords:
+  - Information theft
+  - stealth communication
+  - getting away with stolen intelligence

@@ -1,0 +1,25 @@
+# Knight of Tools
+id: 33
+code: TOOLS_KNIGHT
+name: Knight of Tools
+description: Passionate action, impulsive building, adventurous engineering
+type: minor
+suit: tools
+number: knight
+image: /cards/TOOLS_KNIGHT.png
+
+# Full card description/meaning
+prompt: "A knight-engineer in reinforced work armor rides a heavy construction mech, wielding a massive plasma cutter like a lance. The mech's hydraulic systems hiss with steam as it prepares to charge into a new construction project with reckless enthusiasm. The knight's armor is decorated with guild insignia and tool motifs that gleam in the harsh light. The scene represents passionate engineering action, the impulsive drive to build and create, and the adventurous spirit that tackles impossible construction projects."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Passionate action, impulsive building, adventurous engineering
+  reversed:
+    - "Opposition to passionate action, impulsive building, adventurous engineering"
+
+# Keywords for quick reference
+keywords:
+  - Passionate action
+  - impulsive building
+  - adventurous engineering

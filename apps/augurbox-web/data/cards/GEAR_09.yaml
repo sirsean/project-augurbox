@@ -1,0 +1,25 @@
+# Nine of Gear
+id: 72
+code: GEAR_09
+name: Nine of Gear
+description: Material accomplishment, self-sufficiency, independent security
+type: minor
+suit: gear
+number: 9
+image: /cards/GEAR_09.png
+
+# Full card description/meaning
+prompt: An elegantly equipped Drifter stands in their well-maintained personal compound, surrounded by nine pieces of premium survival gear—environmental suits, defense systems, resource processors—all functioning perfectly and providing complete self-sufficiency. A mechanical companion animal patrols the perimeter with advanced sensors, representing the material luxury and independent security that come from disciplined resource management and wise investment in quality equipment over flashy but unreliable alternatives.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Material accomplishment, self-sufficiency, independent security
+  reversed:
+    - "Opposition to material accomplishment, self-sufficiency, independent security"
+
+# Keywords for quick reference
+keywords:
+  - Material accomplishment
+  - self-sufficiency
+  - independent security

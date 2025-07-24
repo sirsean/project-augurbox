@@ -1,0 +1,25 @@
+# Eight of Gear
+id: 71
+code: GEAR_08
+name: Eight of Gear
+description: Diligent craftsmanship, skill development, quality over quantity
+type: minor
+suit: gear
+number: 8
+image: /cards/GEAR_08.png
+
+# Full card description/meaning
+prompt: A master craftsperson sits at a reinforced workbench in their workshop, carefully assembling precision survival equipment with meticulous attention to detail. Six completed pieces of quality gear are displayed on the workshop walls while one complex device remains in progress on the workbench. The scene represents dedication to skilled craftsmanship, the development of expertise in equipment manufacturing, and the patient work required to achieve mastery in creating reliable gear that can mean the difference between life and death in the Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Diligent craftsmanship, skill development, quality over quantity
+  reversed:
+    - "Opposition to diligent craftsmanship, skill development, quality over quantity"
+
+# Keywords for quick reference
+keywords:
+  - Diligent craftsmanship
+  - skill development
+  - quality over quantity

@@ -1,0 +1,25 @@
+# Knight of Vials
+id: 47
+code: VIALS_KNIGHT
+name: Knight of Vials
+description: Romantic approach to cultivation, gentle resource gathering, pursuit of beauty
+type: minor
+suit: vials
+number: knight
+image: /cards/VIALS_KNIGHT.png
+
+# Full card description/meaning
+prompt: A knight-cultivator in bio-adaptive armor rides a symbiotic mount at a leisurely pace through fields of alien flora, holding a prismatic vial as if offering its contents to pollinate the surrounding ecosystem. The mount moves calmly through the bio-luminescent landscape, its organic systems interfacing peacefully with the living environment, representing the gentle, romantic approach to resource cultivation and the pursuit of biological harmony rather than aggressive extraction and exploitation of natural systems.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Romantic approach to cultivation, gentle resource gathering, pursuit of beauty
+  reversed:
+    - "Opposition to romantic approach to cultivation, gentle resource gathering, pursuit of beauty"
+
+# Keywords for quick reference
+keywords:
+  - Romantic approach to cultivation
+  - gentle resource gathering
+  - pursuit of beauty

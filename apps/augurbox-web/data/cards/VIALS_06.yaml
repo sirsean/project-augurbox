@@ -1,0 +1,25 @@
+# Six of Vials
+id: 41
+code: VIALS_06
+name: Six of Vials
+description: Nostalgia for simpler times, sharing innocent resources, gentle memories
+type: minor
+suit: vials
+number: 6
+image: /cards/VIALS_06.png
+
+# Full card description/meaning
+prompt: A young apprentice alchemist in patched environmental gear offers a small vial filled with glowing flower essence to a younger child in what appears to be a protected bio-dome garden, surrounded by the careful cultivation of six different specimen containers holding preserved petals and seeds from a time before the wasteland. The scene represents nostalgic longing for the innocent abundance that existed before the harsh realities of resource scarcity, the simple joy of sharing gentle biological materials, and the preservation of pure, uncorrupted genetic samples from a more fertile past.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Nostalgia for simpler times, sharing innocent resources, gentle memories
+  reversed:
+    - "Opposition to nostalgia for simpler times, sharing innocent resources, gentle memories"
+
+# Keywords for quick reference
+keywords:
+  - Nostalgia for simpler times
+  - sharing innocent resources
+  - gentle memories

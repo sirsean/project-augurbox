@@ -1,0 +1,25 @@
+# Ace of Tools
+id: 22
+code: TOOLS_ACE
+name: Ace of Tools
+description: New creative energy, raw potential for action, the spark of creation
+type: minor
+suit: tools
+number: 1
+image: /cards/TOOLS_ACE.png
+
+# Full card description/meaning
+prompt: A weathered hand emerges from swirling dust and debris, gripping a gleaming multi-tool that sparks with electric energy. Scattered around are the remnants of previous builds—twisted metal, broken circuits, salvaged components waiting to be transformed. In the distance, the skeletal framework of a new construction rises against the harsh Fringe sky, representing the raw potential of creation, the first spark of ambitious engineering, and the drive to impose order on the wasteland through sheer will and craftsmanship.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - New creative energy, raw potential for action, the spark of creation
+  reversed:
+    - "Opposition to new creative energy, raw potential for action, the spark of creation"
+
+# Keywords for quick reference
+keywords:
+  - New creative energy
+  - raw potential for action
+  - the spark of creation

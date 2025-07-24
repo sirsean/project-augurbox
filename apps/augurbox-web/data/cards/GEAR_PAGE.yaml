@@ -1,0 +1,25 @@
+# Page of Gear
+id: 74
+code: GEAR_PAGE
+name: Page of Gear
+description: Study of equipment, learning practical skills, mechanical curiosity
+type: minor
+suit: gear
+number: page
+image: /cards/GEAR_PAGE.png
+
+# Full card description/meaning
+prompt: A young apprentice trader stands in a salvage field, holding a complex piece of mining equipment up for detailed examination, with supply caravans visible on the distant horizon. Their focused attention to the mechanical device represents new opportunities for practical learning, the careful study of equipment functionality, and the methodical examination of material prospects that will determine their future success in the harsh realities of Fringe survival and trade.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Study of equipment, learning practical skills, mechanical curiosity
+  reversed:
+    - "Opposition to study of equipment, learning practical skills, mechanical curiosity"
+
+# Keywords for quick reference
+keywords:
+  - Study of equipment
+  - learning practical skills
+  - mechanical curiosity

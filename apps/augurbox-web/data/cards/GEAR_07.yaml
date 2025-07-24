@@ -1,0 +1,25 @@
+# Seven of Gear
+id: 70
+code: GEAR_07
+name: Seven of Gear
+description: Assessment of investment, patience with long-term projects, evaluating returns
+type: minor
+suit: gear
+number: 7
+image: /cards/GEAR_07.png
+
+# Full card description/meaning
+prompt: A contemplative member of the Subsurface Miners Guild leans on a reinforced mining staff while surveying seven pieces of precision extraction equipment arranged throughout a partially excavated mineral deposit. The scene represents the critical pause to assess material progress and returns after sustained resource investment, the patience required for long-term mining operations, and the decision whether to continue current extraction efforts or redirect resources to more promising geological formations.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Assessment of investment, patience with long-term projects, evaluating returns
+  reversed:
+    - "Opposition to assessment of investment, patience with long-term projects, evaluating returns"
+
+# Keywords for quick reference
+keywords:
+  - Assessment of investment
+  - patience with long-term projects
+  - evaluating returns

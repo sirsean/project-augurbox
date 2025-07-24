@@ -1,0 +1,25 @@
+# Four of Vials
+id: 39
+code: VIALS_04
+name: Four of Vials
+description: Contemplation of offers, weighing trade opportunities, emotional detachment
+type: minor
+suit: vials
+number: 4
+image: /cards/VIALS_04.png
+
+# Full card description/meaning
+prompt: A solitary trader sits beneath a gnarled bio-mechanical tree whose roots interface with underground chemical deposits, three filled vials arranged on the ground before them while a fourth vial containing an unknown, swirling substance is offered by an outstretched mechanical appendage. The trader appears lost in contemplation, perhaps considering whether this new resource is worth the risk, representing the careful evaluation needed when dealing with unknown biological materials and the emotional distance required for successful negotiation in dangerous trades.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Contemplation of offers, weighing trade opportunities, emotional detachment
+  reversed:
+    - "Opposition to contemplation of offers, weighing trade opportunities, emotional detachment"
+
+# Keywords for quick reference
+keywords:
+  - Contemplation of offers
+  - weighing trade opportunities
+  - emotional detachment

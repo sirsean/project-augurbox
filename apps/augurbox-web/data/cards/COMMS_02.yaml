@@ -1,0 +1,25 @@
+# Two of Comms
+id: 51
+code: COMMS_02
+name: Two of Comms
+description: Information stalemate, difficult decisions about what to believe, conflicting sources
+type: minor
+suit: comms
+number: 2
+image: /cards/COMMS_02.png
+
+# Full card description/meaning
+prompt: A blindfolded figure sits in a makeshift communication bunker, holding two crossed antenna arrays that crackle with opposing data streams, while behind them competing transmission towers broadcast conflicting information into the chaotic atmosphere. The blindfold represents the need to rely on inner wisdom when external sources are compromised or contradictory, while the crossed communication devices suggest an information stalemate requiring careful analysis to determine which signals carry truth and which carry deception in the fog of Fringe information warfare.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Information stalemate, difficult decisions about what to believe, conflicting sources
+  reversed:
+    - "Opposition to information stalemate, difficult decisions about what to believe, conflicting sources"
+
+# Keywords for quick reference
+keywords:
+  - Information stalemate
+  - difficult decisions about what to believe
+  - conflicting sources

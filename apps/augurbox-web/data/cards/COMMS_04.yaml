@@ -1,0 +1,25 @@
+# Four of Comms
+id: 53
+code: COMMS_04
+name: Four of Comms
+description: Communication silence, rest from information overload, peaceful isolation from signals
+type: minor
+suit: comms
+number: 4
+image: /cards/COMMS_04.png
+
+# Full card description/meaning
+prompt: A figure lies in repose on a shielded platform within a Faraday cage sanctuary, hands positioned over a dormant communication console, while three active signal arrays hover on the walls above and one lies silent beneath, their lights dimmed to gentle pulses. The scene represents the crucial need for communication rest, mental silence from the constant bombardment of information, and peaceful contemplation away from the endless noise of competing signals, propaganda, and data streams that assault inhabitants of the Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Communication silence, rest from information overload, peaceful isolation from signals
+  reversed:
+    - "Opposition to communication silence, rest from information overload, peaceful isolation from signals"
+
+# Keywords for quick reference
+keywords:
+  - Communication silence
+  - rest from information overload
+  - peaceful isolation from signals

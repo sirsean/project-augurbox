@@ -1,0 +1,25 @@
+# Nine of Tools
+id: 30
+code: TOOLS_09
+name: Nine of Tools
+description: Resilience, final stand, strength through adversity
+type: minor
+suit: tools
+number: 9
+image: /cards/TOOLS_09.png
+
+# Full card description/meaning
+prompt: A battle-scarred engineer leans on a makeshift neural-linked staff, looking warily over their shoulder at eight defensive tools—plasma barriers, auto-turrets, energy shields—arranged like a protective perimeter behind them. Despite obvious wounds from territorial conflicts and equipment malfunctions, they remain alert and ready for the next challenge. The scene represents perseverance through engineering trials, maintaining vigilance over valuable claims, and the strength gained through surviving the harsh realities of Fringe construction work.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Resilience, final stand, strength through adversity
+  reversed:
+    - "Opposition to resilience, final stand, strength through adversity"
+
+# Keywords for quick reference
+keywords:
+  - Resilience
+  - final stand
+  - strength through adversity

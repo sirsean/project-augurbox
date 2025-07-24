@@ -1,0 +1,25 @@
+# Queen of Vials
+id: 48
+code: VIALS_QUEEN
+name: Queen of Vials
+description: Intuitive understanding of ecosystems, nurturing resource management, emotional wisdom
+type: minor
+suit: vials
+number: queen
+image: /cards/VIALS_QUEEN.png
+
+# Full card description/meaning
+prompt: A queen sits on a bio-mechanical throne at the edge of a pool filled with living bio-fluid, holding an ornate master vial that displays swirling patterns of interconnected life forms while gazing into it with deep understanding. Symbiotic organisms and crystalline formations decorate her throne, representing her profound connection to the biological unconscious and the emotional depths of natural systems. She embodies compassionate resource stewardship, intuitive wisdom about ecological balance, and the emotional maturity needed to nurture both alien and human communities.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Intuitive understanding of ecosystems, nurturing resource management, emotional wisdom
+  reversed:
+    - "Opposition to intuitive understanding of ecosystems, nurturing resource management, emotional wisdom"
+
+# Keywords for quick reference
+keywords:
+  - Intuitive understanding of ecosystems
+  - nurturing resource management
+  - emotional wisdom

@@ -1,0 +1,25 @@
+# Three of Tools
+id: 24
+code: TOOLS_03
+name: Three of Tools
+description: Expansion, foresight, trade opportunities
+type: minor
+suit: tools
+number: 3
+image: /cards/TOOLS_03.png
+
+# Full card description/meaning
+prompt: A weathered Drifter stands on a rocky outcrop overlooking a vast trade route that cuts through the wasteland, watching a caravan of scavenged vehicles heading toward the horizon loaded with salvaged machinery. Three tools—a plasma torch, welding rig, and diagnostic scanner—stand embedded in the rocky ground beside them, marking the boundaries of their established territory. The scene symbolizes expansion of operations, long-term foresight in territorial claims, and the entrepreneurial opportunities that come from understanding trade routes and resource flows.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Expansion, foresight, trade opportunities
+  reversed:
+    - "Opposition to expansion, foresight, trade opportunities"
+
+# Keywords for quick reference
+keywords:
+  - Expansion
+  - foresight
+  - trade opportunities

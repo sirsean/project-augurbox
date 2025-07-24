@@ -1,0 +1,25 @@
+# Nine of Comms
+id: 58
+code: COMMS_09
+name: Nine of Comms
+description: Information anxiety, fear of the truth, communication nightmares
+type: minor
+suit: comms
+number: 9
+image: /cards/COMMS_09.png
+
+# Full card description/meaning
+prompt: A figure sits up in a bio-mechanical communication chamber with head in hands, appearing distressed and unable to sleep, while nine menacing signal arrays hover on the walls above, casting eerie patterns of shifting data and electromagnetic interference. The scene represents the anxiety that comes from knowing too much dangerous information, the fear of communication being intercepted or misused, and the mental anguish that afflicts those who carry the burden of terrible truths in the information wars of the Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Information anxiety, fear of the truth, communication nightmares
+  reversed:
+    - "Opposition to information anxiety, fear of the truth, communication nightmares"
+
+# Keywords for quick reference
+keywords:
+  - Information anxiety
+  - fear of the truth
+  - communication nightmares

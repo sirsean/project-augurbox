@@ -1,0 +1,26 @@
+# Four of Tools
+id: 25
+code: TOOLS_04
+name: Four of Tools
+description: Celebration, stability, home, achievement
+type: minor
+suit: tools
+number: 4
+image: /cards/TOOLS_04.png
+
+# Full card description/meaning
+prompt: Four massive construction tools—plasma cutters, arc welders, hydraulic lifts, and fusion hammers—form the framework of a newly completed settlement structure, their work lights casting celebratory patterns across the gathered Engineers Guild members who raise their hands in triumph. The completed habitat dome gleams in the background, representing the joy of successful construction, celebration of engineering achievements, and the stability that comes from building something lasting in the harsh Fringe environment.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Celebration, stability, home, achievement
+  reversed:
+    - "Opposition to celebration, stability, home, achievement"
+
+# Keywords for quick reference
+keywords:
+  - Celebration
+  - stability
+  - home
+  - achievement

@@ -1,0 +1,25 @@
+# Three of Comms
+id: 52
+code: COMMS_03
+name: Three of Comms
+description: Betrayal through information, painful truth, communication that causes separation
+type: minor
+suit: comms
+number: 3
+image: /cards/COMMS_03.png
+
+# Full card description/meaning
+prompt: Three sharp transmission spires pierce through a bio-mechanical communication hub against a stormy sky filled with chaotic data static, representing the painful moment when truth cuts through relationships and illusions. The scene captures the sharp anguish of betrayal through leaked information, the separation that occurs when hidden communications are revealed, and the grief that comes from learning that trusted allies have been spreading misinformation or withholding critical intelligence in the dangerous game of Fringe survival.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Betrayal through information, painful truth, communication that causes separation
+  reversed:
+    - "Opposition to betrayal through information, painful truth, communication that causes separation"
+
+# Keywords for quick reference
+keywords:
+  - Betrayal through information
+  - painful truth
+  - communication that causes separation

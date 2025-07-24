@@ -1,0 +1,25 @@
+# Queen of Gear
+id: 76
+code: GEAR_QUEEN
+name: Queen of Gear
+description: Practical wisdom, nurturing security, material comfort
+type: minor
+suit: gear
+number: queen
+image: /cards/GEAR_QUEEN.png
+
+# Full card description/meaning
+prompt: "A queen sits on a throne constructed from the finest salvaged materials in a well-appointed shelter, holding a masterwork survival device while surrounded by an abundance of quality equipment and comfortable living conditions. A mechanical companion creature with protective instincts rests at her feet, representing practical wisdom in resource management, the ability to create material comfort even in harsh conditions, and the nurturing approach that builds lasting security through careful attention to everyone's equipment needs."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Practical wisdom, nurturing security, material comfort
+  reversed:
+    - "Opposition to practical wisdom, nurturing security, material comfort"
+
+# Keywords for quick reference
+keywords:
+  - Practical wisdom
+  - nurturing security
+  - material comfort

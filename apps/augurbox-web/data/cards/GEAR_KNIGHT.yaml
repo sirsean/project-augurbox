@@ -1,0 +1,25 @@
+# Knight of Gear
+id: 75
+code: GEAR_KNIGHT
+name: Knight of Gear
+description: Methodical progress, reliable equipment use, conservative approach
+type: minor
+suit: gear
+number: knight
+image: /cards/GEAR_KNIGHT.png
+
+# Full card description/meaning
+prompt: A heavily armored knight sits steadily on a reinforced mechanical mount, holding a masterwork survival device while surveying a recently established mining operation. Unlike other knights, this figure represents steady, methodical material progress rather than swift action—the careful, conservative approach that ensures lasting success through patience, reliable equipment maintenance, and persistent effort in developing sustainable resource operations in the dangerous Fringe environment.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Methodical progress, reliable equipment use, conservative approach
+  reversed:
+    - "Opposition to methodical progress, reliable equipment use, conservative approach"
+
+# Keywords for quick reference
+keywords:
+  - Methodical progress
+  - reliable equipment use
+  - conservative approach

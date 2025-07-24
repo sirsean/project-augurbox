@@ -163,404 +163,404 @@ export const cards: Card[] = [
     prompt: 'A dancing figure is surrounded by an oval wreath, representing completion and cosmic consciousness. In each corner appears a symbol of the four elements - angel (air), eagle (water), lion (fire), and bull (earth). The figure holds two wands, symbolizing balance between opposing forces and mastery over all elements.'
   },
 
-  // Wands (Fire) - 14 cards (22-35)
+  // Tools (Fire/Action) - 14 cards (22-35)
   {
     id: 22,
-    code: 'WANDS_ACE',
-    name: 'Ace of Wands',
-    description: 'New creative energy, inspiration, potential',
-    prompt: 'A mechanical hand protrudes from a smoggy, holographic cloud, clutching a fiery wand with flickering LED leaves sprouting from its shaft. In the distance lies a digital fortress and towering data servers, representing the potential for groundbreaking tech ventures and cyber enterprises. The wand symbolizes the raw power of innovation and the spark of creative genius in the digital frontier.'
+    code: 'TOOLS_ACE',
+    name: 'Ace of Tools',
+    description: 'New creative energy, raw potential for action, the spark of creation',
+    prompt: 'A weathered hand emerges from swirling dust and debris, gripping a gleaming multi-tool that sparks with electric energy. Scattered around are the remnants of previous builds—twisted metal, broken circuits, salvaged components waiting to be transformed. In the distance, the skeletal framework of a new construction rises against the harsh Fringe sky, representing the raw potential of creation, the first spark of ambitious engineering, and the drive to impose order on the wasteland through sheer will and craftsmanship.'
   },
   {
     id: 23,
-    code: 'WANDS_02',
-    name: 'Two of Wands',
-    description: 'Future planning, making decisions, personal power',
-    prompt: 'A figure stands atop a fortified digital outpost, holding a virtual globe in one hand and a glowing data wand in the other, surveying a sprawling cyber landscape. A second holographic wand hovers beside them, representing strategic foresight and digital vision. The scene encapsulates planning for future technological paths, making decisions at the crossroads of innovation, and wielding the power to code one\'s digital destiny.'
+    code: 'TOOLS_02',
+    name: 'Two of Tools',
+    description: 'Future planning, strategic decision-making, personal power through preparation',
+    prompt: 'An Engineer Guild member stands atop a reinforced observation tower, holding a salvaged globe showing territorial claims in one hand and a gleaming wrench in the other, surveying the harsh Fringe landscape spread before them. A second tool—a plasma cutter—rests against the tower wall, representing the dual nature of creation and destruction in frontier engineering. The scene captures the essence of strategic planning, making crucial decisions about resource allocation, and wielding personal power through careful preparation and territorial vision.'
   },
   {
     id: 24,
-    code: 'WANDS_03',
-    name: 'Three of Wands',
-    description: 'Expansion, foresight, overseas opportunities',
-    prompt: 'A figure stands on a digital precipice overlooking a vast ocean of data streams, watching virtual ships sail toward the horizon. Three luminescent wands stand embedded in the cyber soil beside them, marking boundaries of exploration. The scene symbolizes the expansion of digital horizons, tech trade and enterprise, and the foresight needed to navigate upcoming technological opportunities.'
+    code: 'TOOLS_03',
+    name: 'Three of Tools',
+    description: 'Expansion, foresight, trade opportunities',
+    prompt: 'A weathered Drifter stands on a rocky outcrop overlooking a vast trade route that cuts through the wasteland, watching a caravan of scavenged vehicles heading toward the horizon loaded with salvaged machinery. Three tools—a plasma torch, welding rig, and diagnostic scanner—stand embedded in the rocky ground beside them, marking the boundaries of their established territory. The scene symbolizes expansion of operations, long-term foresight in territorial claims, and the entrepreneurial opportunities that come from understanding trade routes and resource flows.'
   },
   {
     id: 25,
-    code: 'WANDS_04',
-    name: 'Four of Wands',
-    description: 'Celebration, harmony, home, achievement',
-    prompt: 'Four radiant, LED-adorned cyber wands form a luminous canopy adorned with virtual garlands and digital fruit, where avatars in the distance raise their digitized arms in celebration. A digital fortress rises in the background, representing the joy of virtual homecoming, celebration of digital achievements, and the harmony in online community affairs.'
+    code: 'TOOLS_04',
+    name: 'Four of Tools',
+    description: 'Celebration, stability, home, achievement',
+    prompt: 'Four massive construction tools—plasma cutters, arc welders, hydraulic lifts, and fusion hammers—form the framework of a newly completed settlement structure, their work lights casting celebratory patterns across the gathered Engineers Guild members who raise their hands in triumph. The completed habitat dome gleams in the background, representing the joy of successful construction, celebration of engineering achievements, and the stability that comes from building something lasting in the harsh Fringe environment.'
   },
   {
     id: 26,
-    code: 'WANDS_05',
-    name: 'Five of Wands',
-    description: 'Conflict, disagreements, competition',
-    prompt: 'Five digital avatars engage in a high-energy virtual duel with data wands raised, though pixelated smiles suggest this is play-fighting rather than combative warfare. The scene represents healthy techno-competition, contrasting digital philosophies, and the dynamic energy sparked by challenging intellectual encounters and online debates.'
+    code: 'TOOLS_05',
+    name: 'Five of Tools',
+    description: 'Conflict, competition, labor disputes',
+    prompt: 'Five Engineers Guild members engage in a heated but non-violent dispute over salvage rights, each brandishing different tools—wrenches, plasma cutters, diagnostic scanners—while arguing over a massive piece of valuable machinery half-buried in the wasteland debris. Despite the intensity of their disagreement, this represents healthy competition for resources, contrasting engineering philosophies, and the dynamic energy that drives innovation through professional rivalry and territorial disputes.'
   },
   {
     id: 27,
-    code: 'WANDS_06',
-    name: 'Six of Wands',
-    description: 'Success, public recognition, progress',
-    prompt: 'A triumphant figure rides a sleek cybernetic steed through digital crowds, wearing a crown of light-emitting circuits and wielding a data wand topped with a holographic wreath. Five other figures raise glowing wands in recognition, their cheers echoing through virtual reality speakers. The scene represents victory in the digital realm, successful tech innovation, and public recognition of digital achievements.'
+    code: 'TOOLS_06',
+    name: 'Six of Tools',
+    description: 'Success, public recognition, progress through skilled work',
+    prompt: 'A triumphant engineer rides a reinforced construction mech through a crowd of celebrating Drifters and Guild members, wearing a crown made from welded salvage and holding a gleaming power drill topped with a wreath of twisted metal. Five other workers raise their tools—wrenches, plasma cutters, diagnostic scanners—in recognition of the successful completion of a major infrastructure project. The scene represents victory through skilled labor, public recognition of engineering excellence, and the respect earned through masterful craftsmanship in the harsh Fringe environment.'
   },
   {
     id: 28,
-    code: 'WANDS_07',
-    name: 'Seven of Wands',
-    description: 'Challenge, competition, perseverance',
-    prompt: 'A figure stands atop a transmission tower wielding a plasma wand defensively while six other energy weapons thrust up from the electronic wasteland below, representing cyber challenges and digital competitors. The elevated position and defensive neural interface stance suggest the advantage of maintaining one\'s digital principles and standing firm against system corruption despite overwhelming technological opposition.'
+    code: 'TOOLS_07',
+    name: 'Seven of Tools',
+    description: 'Defensive position, perseverance, holding ground',
+    prompt: 'A lone Mercenary stands atop a fortified scrap tower, wielding a high-powered plasma rifle defensively while six other weapons—assault rifles, grenade launchers, energy blasters—thrust up from the wasteland raiders below. The elevated position and defensive stance suggest the advantage of preparation and superior firepower when protecting valuable salvage claims against overwhelming opposition and territorial raiders in the lawless Fringe.'
   },
   {
     id: 29,
-    code: 'WANDS_08',
-    name: 'Eight of Wands',
-    description: 'Speed, action, air travel, movement',
-    prompt: 'Eight luminescent data wands streak through the digital atmosphere like plasma arrows against a clear virtual sky, suggesting rapid data transmission and swift technological action. Below them lies a serene cyber landscape with streams of liquid light, representing the swift resolution of network delays and the rapid progress of digital projects and quantum communications.'
+    code: 'TOOLS_08',
+    name: 'Eight of Tools',
+    description: 'Swift action, rapid deployment, efficient execution',
+    prompt: 'Eight industrial tools—plasma torches, fusion cutters, hydraulic jacks, diagnostic probes—streak through the dust-filled air like projectiles toward a massive salvage operation, suggesting rapid deployment of engineering resources and swift coordinated action. Below lies a sprawling scrapyard with gleaming metal deposits, representing the efficient execution of large-scale projects and the rapid progress that comes from coordinated effort and proper tool deployment.'
   },
   {
     id: 30,
-    code: 'WANDS_09',
-    name: 'Nine of Wands',
-    description: 'Resilience, courage, persistence, test of faith',
-    prompt: 'A battle-scarred figure leans on a makeshift neural staff, looking warily behind at eight glowing wands standing upright like a digital perimeter fence. Despite obvious cyber-combat wounds and flickering implants, they remain alert and ready for the next system breach. The scene represents perseverance through technological trials, maintaining digital vigilance, and the strength gained through surviving cyber warfare.'
+    code: 'TOOLS_09',
+    name: 'Nine of Tools',
+    description: 'Resilience, final stand, strength through adversity',
+    prompt: 'A battle-scarred engineer leans on a makeshift neural-linked staff, looking warily over their shoulder at eight defensive tools—plasma barriers, auto-turrets, energy shields—arranged like a protective perimeter behind them. Despite obvious wounds from territorial conflicts and equipment malfunctions, they remain alert and ready for the next challenge. The scene represents perseverance through engineering trials, maintaining vigilance over valuable claims, and the strength gained through surviving the harsh realities of Fringe construction work.'
   },
   {
     id: 31,
-    code: 'WANDS_10',
-    name: 'Ten of Wands',
-    description: 'Burden, extra responsibility, hard work',
-    prompt: 'A bent figure struggles under the weight of ten heavy data wands crackling with electric energy while walking toward a distant digital outpost or cyber settlement. The technological burden seems almost too much to bear, yet the virtual destination glows on the horizon. The scene represents the heavy digital responsibilities that come with tech success and the determination to see complex coding projects through to completion.'
+    code: 'TOOLS_10',
+    name: 'Ten of Tools',
+    description: 'Overwhelming responsibility, the burden of success',
+    prompt: 'A bent figure struggles under the massive weight of ten heavy construction tools—arc welders, fusion hammers, plasma saws, hydraulic lifts—while trudging toward a distant settlement construction site. The technological burden of equipment and responsibility seems almost crushing, yet the gleaming new habitat domes on the horizon represent the reward for such dedication. The scene captures the overwhelming responsibilities that come with engineering success and the determination required to complete massive infrastructure projects.'
   },
   {
     id: 32,
-    code: 'WANDS_PAGE',
-    name: 'Page of Wands',
-    description: 'Enthusiasm, exploration, discovery',
-    prompt: 'A young figure in weathered cyber-punk attire holds a glowing data wand as if examining its circuitry, standing in a barren electronic wasteland with transmission towers in the distance. Their stance suggests digital curiosity and readiness for cyber adventure. The salamander circuits adorning their jacket pulse with electric current, representing the transformative power of innovation and the enthusiasm of youth exploring the digital frontier.'
+    code: 'TOOLS_PAGE',
+    name: 'Page of Tools',
+    description: 'Eagerness to learn, technical curiosity, apprenticeship',
+    prompt: 'A young apprentice engineer in patched work clothes holds a gleaming multi-tool up for careful examination, standing in a vast salvage yard with transmission towers and construction sites dotting the horizon. Their eager stance suggests technical curiosity and readiness for hands-on learning. Tool holsters and diagnostic equipment mark them as someone beginning their engineering journey, representing the enthusiasm of youth discovering the transformative power of skilled craftsmanship in the Fringe.'
   },
   {
     id: 33,
-    code: 'WANDS_KNIGHT',
-    name: 'Knight of Wands',
-    description: 'Energy, passion, adventurous, impulsive',
-    prompt: 'A cyber-knight in bio-mechanical armor rides a rearing synthetic steed, holding a plasma wand like an energy lance. The mount\'s LED eyes glow with electric fire as it prepares to charge forward through the digital battlefield. The knight\'s armor is etched with salamander circuits that pulse with energy. The scene represents passionate digital action, cyber adventure, and the impulsive energy that drives bold technological ventures.'
+    code: 'TOOLS_KNIGHT',
+    name: 'Knight of Tools',
+    description: 'Passionate action, impulsive building, adventurous engineering',
+    prompt: 'A knight-engineer in reinforced work armor rides a heavy construction mech, wielding a massive plasma cutter like a lance. The mech\'s hydraulic systems hiss with steam as it prepares to charge into a new construction project with reckless enthusiasm. The knight\'s armor is decorated with guild insignia and tool motifs that gleam in the harsh light. The scene represents passionate engineering action, the impulsive drive to build and create, and the adventurous spirit that tackles impossible construction projects.'
   },
   {
     id: 34,
-    code: 'WANDS_QUEEN',
-    name: 'Queen of Wands',
-    description: 'Confidence, courage, determination',
-    prompt: 'A queen sits on a throne decorated with holographic lions and digital sunflowers that track the light, holding a plasma wand in one hand and a bio-luminescent sunflower in the other. A sleek black cyber-cat with glowing eyes sits at her feet, representing her connection to intuitive digital powers and network magic. The scene radiates confidence, electric warmth, and the determination to achieve goals through personal charisma in the cyber realm.'
+    code: 'TOOLS_QUEEN',
+    name: 'Queen of Tools',
+    description: 'Confident leadership, mastery of craft, determined execution',
+    prompt: 'A guild queen sits on a throne constructed from precision-welded metal and advanced diagnostic equipment, holding a gleaming sonic screwdriver in one hand and a bio-luminescent work light in the other. A mechanical companion—part cat, part diagnostic drone—rests at her feet with glowing sensor arrays. The scene radiates engineering confidence, technical mastery, and the determination to achieve ambitious construction goals through skilled leadership and intuitive understanding of complex systems.'
   },
   {
     id: 35,
-    code: 'WANDS_KING',
-    name: 'King of Wands',
-    description: 'Leadership, vision, honor, determination',
-    prompt: 'A king sits on a digital throne holding a flowering data wand that pulses with electric blooms, with salamander circuits decorating both his bio-mechanical robes and the throne architecture. One salamander hologram appears to be biting its own tail in an infinite loop, representing the eternal nature of creative digital energy and recursive code. The scene represents mature technological leadership, cyber vision, and the ability to inspire others through innovative example in the connected world.'
+    code: 'TOOLS_KING',
+    name: 'King of Tools',
+    description: 'Master craftsman, visionary leadership, engineering wisdom',
+    prompt: 'A king sits on a throne built from the finest salvaged machinery, holding a master\'s tool—a fusion welder that pulses with controlled energy—while construction blueprints and technical schematics decorate both his reinforced robes and the throne\'s metalwork. A holographic display shows ongoing construction projects in an endless loop, representing the cyclical nature of building and rebuilding in the Fringe. The scene embodies master-level engineering leadership, technical vision, and the ability to inspire others through innovative construction and infrastructure projects.'
   },
 
-  // Cups (Water) - 14 cards (36-49)
+  // Vials (Water/Resources) - 14 cards (36-49)
   {
     id: 36,
-    code: 'CUPS_ACE',
-    name: 'Ace of Cups',
-    description: 'Love, new relationships, compassion, creativity',
-    prompt: 'A cybernetic hand emerges from a smoggy data cloud offering a bio-luminescent cup overflowing with liquid light, from which five streams of neural data flow into the electronic wasteland below. A mechanical dove with fiber optic wings carrying a digital communion chip descends toward the cup, representing synthetic love and artificial spiritual nourishment. The scene symbolizes the beginning of emotional connection through technological interface.'
+    code: 'VIALS_ACE',
+    name: 'Ace of Vials',
+    description: 'New emotional connections, pure resources, the beginning of valuable relationships',
+    prompt: 'A weathered hand emerges from swirling bio-luminescent mist, offering a pristine glass vial filled with shimmering, opalescent fluid that pulses with inner light. Five streams of the precious liquid flow from the vial into collection channels carved in the rocky ground, representing the generous sharing of rare biological resources. A bio-mechanical dove with iridescent feathers and glowing eyes descends toward the vial, symbolizing the pure potential for new alliances, the beginning of valuable trade relationships, and the emotional nourishment that comes from sharing scarce resources in the harsh Fringe.'
   },
   {
     id: 37,
-    code: 'CUPS_02',
-    name: 'Two of Cups',
-    description: 'Unity, partnership, mutual attraction',
-    prompt: 'Two figures in weathered tech-wear face each other, each holding a glowing bio-mechanical cup, preparing to pledge their digital commitment or cyber friendship. Above them, a winged lion\'s head with LED eyes emerges from a caduceus made of intertwined fiber optic cables, representing the healing power of balanced virtual relationships and mutual attraction based on shared neural frequencies and understanding.'
+    code: 'VIALS_02',
+    name: 'Two of Vials',
+    description: 'Partnership in trade, mutual benefit, alliance formation',
+    prompt: 'Two Venonauts in weathered environmental suits face each other across a makeshift trading post, each holding a glowing bio-containment vial filled with precious alien flora extracts, preparing to complete a mutually beneficial exchange. Above them, a winged serpent carved from living coral hovers over intertwined vines that pulse with bio-electric energy, representing the symbiotic power of balanced trade relationships and mutual prosperity built on the careful exchange of rare biological and chemical resources.'
   },
   {
     id: 38,
-    code: 'CUPS_03',
-    name: 'Three of Cups',
-    description: 'Celebration, friendship, creativity, community',
-    prompt: 'Three figures in cyber-punk attire raise their luminescent cups in a digital toast, celebrating friendship, technological creativity, or good algorithmic fortune. They stand in a virtual garden of pixelated flora or fertile data landscape, representing the joy that comes from sharing tech success with friends and the creative energy generated by online community and collaborative coding.'
+    code: 'VIALS_03',
+    name: 'Three of Vials',
+    description: 'Celebration of successful harvest, community sharing, creative collaboration',
+    prompt: 'Three members of The Borsh Conservatory of Gastrocraft raise their bio-luminescent vials in celebration, toasting a successful harvest of rare alien spores beneath a canopy of cultivated bio-mechanical flora. They stand in a lush greenhouse laboratory where exotic plants pulse with strange light, representing the joy that comes from successful collaborative cultivation, the creative energy generated by shared knowledge of xenobiology, and the community bonds forged through dangerous resource gathering expeditions.'
   },
   {
     id: 39,
-    code: 'CUPS_04',
-    name: 'Four of Cups',
-    description: 'Contemplation, apathy, reevaluation',
-    prompt: 'A figure sits under a bio-mechanical tree with neural interface ports, three glowing cups on the electronic ground before them, while a cybernetic hand from a data cloud offers a fourth cup pulsing with digital energy. The figure appears lost in digital contemplation or cyber meditation, perhaps considering new technological opportunities or reevaluating current system configurations. The scene suggests a pause for digital reflection.'
+    code: 'VIALS_04',
+    name: 'Four of Vials',
+    description: 'Contemplation of offers, weighing trade opportunities, emotional detachment',
+    prompt: 'A solitary trader sits beneath a gnarled bio-mechanical tree whose roots interface with underground chemical deposits, three filled vials arranged on the ground before them while a fourth vial containing an unknown, swirling substance is offered by an outstretched mechanical appendage. The trader appears lost in contemplation, perhaps considering whether this new resource is worth the risk, representing the careful evaluation needed when dealing with unknown biological materials and the emotional distance required for successful negotiation in dangerous trades.'
   },
   {
     id: 40,
-    code: 'CUPS_05',
-    name: 'Five of Cups',
-    description: 'Regret, failure, disappointment, pessimism',
-    prompt: 'A cloaked figure in tattered tech robes contemplates three spilled cups leaking liquid light while two remain standing behind them, still glowing. In the distance, a digital bridge made of hardlight leads to a cyber fortress or data haven, suggesting that despite system losses and technological disappointments, there is still a pathway forward through the network and hope for digital restoration.'
+    code: 'VIALS_05',
+    name: 'Five of Vials',
+    description: 'Loss of valuable resources, contamination, broken alliances',
+    prompt: 'A cloaked figure in a contamination suit contemplates three shattered vials leaking precious bio-fluid into the toxic soil, their valuable contents lost to accident or sabotage, while two intact vials still glow behind them with salvageable resources. In the distance, a bridge of living coral spans a chasm leading to a thriving bio-dome settlement, suggesting that despite the loss of precious materials and broken trade relationships, there remains hope for rebuilding alliances and recovering from resource disasters through persistence and careful cultivation.'
   },
   {
     id: 41,
-    code: 'CUPS_06',
-    name: 'Six of Cups',
-    description: 'Revisiting the past, childhood memories, innocence',
-    prompt: 'A cyber-child in patched bio-mechanical clothing offers a cup filled with a holographic flower to another smaller child in what appears to be a digital courtyard or virtual garden setting. Six cups filled with pixelated flowers surround them, representing digital nostalgia, innocent pleasures in the virtual realm, and the simple joys of childhood memories preserved in the data stream.'
+    code: 'VIALS_06',
+    name: 'Six of Vials',
+    description: 'Nostalgia for simpler times, sharing innocent resources, gentle memories',
+    prompt: 'A young apprentice alchemist in patched environmental gear offers a small vial filled with glowing flower essence to a younger child in what appears to be a protected bio-dome garden, surrounded by the careful cultivation of six different specimen containers holding preserved petals and seeds from a time before the wasteland. The scene represents nostalgic longing for the innocent abundance that existed before the harsh realities of resource scarcity, the simple joy of sharing gentle biological materials, and the preservation of pure, uncorrupted genetic samples from a more fertile past.'
   },
   {
     id: 42,
-    code: 'CUPS_07',
-    name: 'Seven of Cups',
-    description: 'Opportunities, choices, wishful thinking, illusion',
-    prompt: 'A silhouetted figure stands before seven cups floating in smoggy data clouds, each containing different digital symbols representing various cyber choices or virtual temptations. The scene suggests the need to distinguish between realistic technological opportunities and mere digital fantasies or algorithmic wishful thinking in the connected world.'
+    code: 'VIALS_07',
+    name: 'Seven of Vials',
+    description: 'Multiple trade opportunities, illusion vs reality in resources, tempting offers',
+    prompt: 'A silhouetted figure stands before seven vials floating in bioluminescent mist, each containing different alien substances—some glowing with promise, others dark and ominous—representing various trade opportunities and resource choices. The scene suggests the critical need to distinguish between legitimate biological treasures and dangerous temptations, the difficulty of evaluating unknown alien flora, and the wishful thinking that can lead traders to overestimate the value of mysterious substances without proper analysis by The Borsh Conservatory.'
   },
   {
     id: 43,
-    code: 'CUPS_08',
-    name: 'Eight of Cups',
-    description: 'Disappointment, abandonment, withdrawal, escapism',
-    prompt: 'A figure in weathered tech gear walks away from eight glowing cups arranged in a digital stack, heading toward transmission towers under a crescent moon with LED display panels. The scene represents the difficult decision to leave behind virtual situations that no longer serve digital spiritual or emotional growth, seeking higher network ground despite abandoning previous cyber investments.'
+    code: 'VIALS_08',
+    name: 'Eight of Vials',
+    description: 'Abandoning depleted resources, seeking new territories, emotional withdrawal',
+    prompt: 'A lone Venonaut in full environmental protection walks away from eight drained vials arranged in the toxic soil of an exhausted extraction site, heading toward distant bio-luminescent formations under an alien sky. The scene represents the difficult decision to abandon depleted resource territories that no longer yield valuable materials, the emotional toll of leaving behind significant investments in cultivation and extraction, and the need to seek higher ground where untapped biological wealth might still flourish.'
   },
   {
     id: 44,
-    code: 'CUPS_09',
-    name: 'Nine of Cups',
-    description: 'Satisfaction, happiness, fulfillment, success',
-    prompt: 'A satisfied figure in cyber attire sits with arms crossed before a curved bio-mechanical bench displaying nine golden cups that pulse with soft light. Their expression shows digital contentment and technological achievement. This is often called the "wish card," representing the fulfillment of virtual desires and the satisfaction that comes from achieving emotional and digital material goals in the connected realm.'
+    code: 'VIALS_09',
+    name: 'Nine of Vials',
+    description: 'Satisfaction with accumulated resources, emotional fulfillment, successful cultivation',
+    prompt: 'A satisfied resource trader sits with arms crossed before a curved bio-mechanical display rack showcasing nine precious vials filled with different rare essences that pulse with soft, varied light—each representing a successful harvest or beneficial trade. Their expression shows deep contentment and emotional fulfillment achieved through patient cultivation and wise resource management. This represents the "wish fulfilled" card of resource abundance, the satisfaction that comes from building sustainable bio-wealth through careful relationships with nature and trading partners.'
   },
   {
    id: 45,
-    code: 'CUPS_10',
-    name: 'Ten of Cups',
-    description: 'Happiness, home, family, satisfaction',
-    prompt: 'A couple in matching tech wear stands with arms raised toward a holographic rainbow in the digital sky displaying ten luminescent cups, while cyber-children play nearby with glowing toys. A comfortable data haven sits in the background, representing ultimate digital happiness, virtual family harmony, and the achievement of emotional fulfillment through love and connected community in the network.'
+    code: 'VIALS_10',
+    name: 'Ten of Vials',
+    description: 'Ultimate resource security, abundant community sharing, family prosperity',
+    prompt: 'A family of bio-resource cultivators stands with raised hands beneath a living rainbow of symbiotic organisms that display ten glowing vials in a natural arc overhead, while children play safely among bioluminescent plants that grow in abundance around their thriving settlement. A established bio-dome community gleams in the background, representing ultimate resource security, the emotional fulfillment of sharing abundant biological wealth within a loving community, and the prosperity that comes from multi-generational investment in sustainable cultivation and harmonious relationships with alien ecosystems.'
   },
   {
     id: 46,
-    code: 'CUPS_PAGE',
-    name: 'Page of Cups',
-    description: 'Creative opportunities, intuitive messages, curiosity',
-    prompt: 'A young figure in weathered bio-mechanical clothing stands by a sea of liquid mercury holding a luminescent cup from which a digital fish made of data streams appears to emerge, representing the unexpected nature of intuitive technological messages and creative cyber inspiration. The holographic fish symbolizes the contents of the artificial subconscious mind surfacing into digital conscious awareness.'
+    code: 'VIALS_PAGE',
+    name: 'Page of Vials',
+    description: 'Curiosity about new resources, intuitive bio-sensing, learning opportunities',
+    prompt: 'A young student of xenobiology stands by a pool of luminescent bio-fluid, holding a collection vial from which a strange, translucent organism seems to emerge and communicate, representing the unexpected nature of first contact with alien life forms and the intuitive messages that come through careful observation of biological samples. The bio-luminescent creature symbolizes the contents of the living ecosystem beginning to reveal its secrets to those patient enough to listen and learn from the natural world.'
   },
   {
     id: 47,
-    code: 'CUPS_KNIGHT',
-    name: 'Knight of Cups',
-    description: 'Creativity, romance, charm, imagination',
-    prompt: 'A cyber-knight in bio-mechanical armor rides a synthetic horse at a leisurely pace, holding a glowing cup as if offering it to someone through the digital realm. The horse walks calmly rather than charging, its LED eyes soft and peaceful, representing the gentle, romantic approach to virtual life and the pursuit of emotional and artistic ideals rather than material conquest in the connected world.'
+    code: 'VIALS_KNIGHT',
+    name: 'Knight of Vials',
+    description: 'Romantic approach to cultivation, gentle resource gathering, pursuit of beauty',
+    prompt: 'A knight-cultivator in bio-adaptive armor rides a symbiotic mount at a leisurely pace through fields of alien flora, holding a prismatic vial as if offering its contents to pollinate the surrounding ecosystem. The mount moves calmly through the bio-luminescent landscape, its organic systems interfacing peacefully with the living environment, representing the gentle, romantic approach to resource cultivation and the pursuit of biological harmony rather than aggressive extraction and exploitation of natural systems.'
   },
   {
     id: 48,
-    code: 'CUPS_QUEEN',
-    name: 'Queen of Cups',
-    description: 'Compassion, care, emotional stability, intuition',
-    prompt: 'A queen sits on a bio-mechanical throne at the edge of a pool of liquid data, holding an ornate cup that displays swirling holographic patterns and gazing into it contemplatively. Digital fish and synthetic shells decorate the throne, representing her connection to the artificial subconscious and emotional data depths. She embodies digital compassion, intuitive cyber wisdom, and emotional technological maturity.'
+    code: 'VIALS_QUEEN',
+    name: 'Queen of Vials',
+    description: 'Intuitive understanding of ecosystems, nurturing resource management, emotional wisdom',
+    prompt: 'A queen sits on a bio-mechanical throne at the edge of a pool filled with living bio-fluid, holding an ornate master vial that displays swirling patterns of interconnected life forms while gazing into it with deep understanding. Symbiotic organisms and crystalline formations decorate her throne, representing her profound connection to the biological unconscious and the emotional depths of natural systems. She embodies compassionate resource stewardship, intuitive wisdom about ecological balance, and the emotional maturity needed to nurture both alien and human communities.'
   },
   {
     id: 49,
-    code: 'CUPS_KING',
-    name: 'King of Cups',
-    description: 'Emotional balance, compassion, diplomacy',
-    prompt: 'A king sits on a bio-mechanical throne that appears to float on turbulent streams of liquid data, yet he remains calm and balanced, holding a luminescent cup and a neural interface scepter. A digital fish leaps from the data stream nearby, representing the mastery of virtual emotions and the ability to remain stable while navigating the depths of technological feeling and cyber intuition.'
+    code: 'VIALS_KING',
+    name: 'King of Vials',
+    description: 'Mastery of resource diplomacy, emotional balance in trade, wise cultivation leadership',
+    prompt: 'A king sits on a bio-mechanical throne that appears to float on turbulent streams of various bio-fluids, yet he remains calm and balanced, holding a master vial and a scepter carved from living coral. An exotic bio-mechanical creature leaps from the stream nearby, representing his mastery of resource emotions and the ability to remain diplomatically stable while navigating the complex depths of inter-species trade relationships, biological cultivation, and the emotional negotiations required for sustainable resource management in the dangerous Fringe environment.'
   },
 
-  // Swords (Air) - 14 cards (50-63)
+  // Comms (Air/Information) - 14 cards (50-63)
   {
     id: 50,
-    code: 'SWORDS_ACE',
-    name: 'Ace of Swords',
-    description: 'New ideas, mental clarity, breakthrough',
-    prompt: 'A cybernetic hand emerges from a smoggy data cloud grasping a plasma sword crowned with a holographic wreath, representing victory through digital mental clarity and algorithmic truth. Transmission towers appear in the distance, symbolizing the challenges that can be overcome through clear cyber thinking and the cutting power of digital truth and computational logic.'
+    code: 'COMMS_ACE',
+    name: 'Ace of Comms',
+    description: 'New breakthrough in information, clarity of communication, pure truth cutting through deception',
+    prompt: 'A weathered hand emerges from swirling electromagnetic interference, grasping a crystalline communication device that pulses with pure, unfiltered data streams. The device is crowned with a holographic wreath of interlinked signal patterns, representing victory through perfect information clarity and the cutting power of undeniable truth. In the distance, transmission towers stand like sentinels against the chaotic sky, symbolizing the challenges that can be overcome when communication is clear, direct, and free from the distortion of propaganda and misinformation that plagues the Fringe.'
   },
   {
     id: 51,
-    code: 'SWORDS_02',
-    name: 'Two of Swords',
-    description: 'Difficult decisions, weighing options, stalemate',
-    prompt: 'A blindfolded figure in tech gear sits holding two crossed energy swords, with liquid data streams and rocky server clusters behind them. The digital blindfold represents the need to rely on inner algorithmic wisdom when external sensors are unclear, while the crossed plasma swords suggest a cyber stalemate requiring careful consideration of technological options.'
+    code: 'COMMS_02',
+    name: 'Two of Comms',
+    description: 'Information stalemate, difficult decisions about what to believe, conflicting sources',
+    prompt: 'A blindfolded figure sits in a makeshift communication bunker, holding two crossed antenna arrays that crackle with opposing data streams, while behind them competing transmission towers broadcast conflicting information into the chaotic atmosphere. The blindfold represents the need to rely on inner wisdom when external sources are compromised or contradictory, while the crossed communication devices suggest an information stalemate requiring careful analysis to determine which signals carry truth and which carry deception in the fog of Fringe information warfare.'
   },
   {
     id: 52,
-    code: 'SWORDS_03',
-    name: 'Three of Swords',
-    description: 'Heartbreak, separation, grief, sorrow',
-    prompt: 'Three plasma swords pierce a bio-mechanical heart against a stormy digital sky filled with data rain clouds. The scene represents cyber heartbreak, network separation, and the sharp pain of digital grief, but also suggests that system storms eventually pass and emotional healing protocols can begin after acknowledging the pain subroutines.'
+    code: 'COMMS_03',
+    name: 'Three of Comms',
+    description: 'Betrayal through information, painful truth, communication that causes separation',
+    prompt: 'Three sharp transmission spires pierce through a bio-mechanical communication hub against a stormy sky filled with chaotic data static, representing the painful moment when truth cuts through relationships and illusions. The scene captures the sharp anguish of betrayal through leaked information, the separation that occurs when hidden communications are revealed, and the grief that comes from learning that trusted allies have been spreading misinformation or withholding critical intelligence in the dangerous game of Fringe survival.'
   },
   {
     id: 53,
-    code: 'SWORDS_04',
-    name: 'Four of Swords',
-    description: 'Rest, relaxation, meditation, replenishment',
-    prompt: 'A figure lies in repose on a bio-mechanical platform or cyber bed with hands in neural interface position, while three energy swords hover on the wall above and one lies beneath, glowing softly. The scene represents the need for system rest, digital meditation, and peaceful contemplation to restore mental and spiritual processing power.'
+    code: 'COMMS_04',
+    name: 'Four of Comms',
+    description: 'Communication silence, rest from information overload, peaceful isolation from signals',
+    prompt: 'A figure lies in repose on a shielded platform within a Faraday cage sanctuary, hands positioned over a dormant communication console, while three active signal arrays hover on the walls above and one lies silent beneath, their lights dimmed to gentle pulses. The scene represents the crucial need for communication rest, mental silence from the constant bombardment of information, and peaceful contemplation away from the endless noise of competing signals, propaganda, and data streams that assault inhabitants of the Fringe.'
   },
   {
     id: 54,
-    code: 'SWORDS_05',
-    name: 'Five of Swords',
-    description: 'Defeat, surrender, walking away, self-interest',
-    prompt: 'A figure in battle-worn tech armor holds three plasma swords while looking at two others walking away dejectedly through the electronic wasteland, their energy weapons abandoned on the ground, flickering and dying. The sky is cloudy with digital static and turbulent data streams, representing cyber conflict where victory comes at too high a computational cost and the hollow nature of winning through algorithmic self-interest alone.'
+    code: 'COMMS_05',
+    name: 'Five of Comms',
+    description: 'Information warfare victory at great cost, propaganda triumph, hollow communication victory',
+    prompt: 'A figure in battle-worn communication gear stands holding three active signal jammers while looking at two others walking away dejectedly through the wasteland, their abandoned communication equipment sparking and dying in the toxic soil. The sky crackles with digital static and conflicting data streams, representing the pyrrhic victory of information warfare where winning through deception, propaganda manipulation, and signal jamming comes at too high a cost to relationships and community trust, leaving the victor isolated in their hollow triumph.'
   },
   {
     id: 55,
-    code: 'SWORDS_06',
-    name: 'Six of Swords',
-    description: 'Transition, change, rite of passage, moving on',
-    prompt: 'A figure sits in a hover-craft with a cyber-child, being ferried across calm streams of liquid data toward distant digital shores. Six energy swords stand upright in the craft, their plasma blades reflecting in the data streams, representing the thoughts, beliefs, or memories being carried from one phase of technological life to another during times of system transition.'
+    code: 'COMMS_06',
+    name: 'Six of Comms',
+    description: 'Safe passage of information, transitioning to better communication, moving toward truth',
+    prompt: 'A figure sits in a shielded communication vessel with a young apprentice signal operator, being ferried across calm streams of filtered data toward distant relay stations that pulse with clean, verified information. Six communication arrays stand upright in the craft, their signal beams creating safe pathways through the chaotic electromagnetic interference, representing the careful transport of important knowledge, beliefs, and memories from one information environment to another during times of communication transition and the passage toward more reliable sources of truth.'
   },
   {
     id: 56,
-    code: 'SWORDS_07',
-    name: 'Seven of Swords',
-    description: 'Deception, getting away with something, stealth',
-    prompt: 'A figure in stealth tech gear sneaks away from a cyber encampment carrying five energy swords, while two remain stuck in the electronic ground behind them, their plasma blades dimming. The scene suggests digital stealth, cyber strategy, or attempting to get away with stolen data, but also the potential consequences of taking what doesn\'t belong in the network or not facing virtual situations directly.'
+    code: 'COMMS_07',
+    name: 'Seven of Comms',
+    description: 'Information theft, stealth communication, getting away with stolen intelligence',
+    prompt: 'A figure in advanced signal-dampening gear sneaks away from a fortified communication complex, carrying five encrypted data cores while leaving two active signal emitters behind to mask their escape. The scene suggests covert intelligence gathering, the strategic theft of classified information, and the dangerous game of espionage communication, but also hints at the potential consequences of stealing sensitive data and the risk of being caught in the web of information warfare that defines survival in the Fringe.'
   },
   {
     id: 57,
-    code: 'SWORDS_08',
-    name: 'Eight of Swords',
-    description: 'Imprisonment, entrapment, self-imposed restriction',
-    prompt: 'A blindfolded figure in neural interface gear stands surrounded by eight energy swords stuck in the electronic ground, appearing trapped but with a clear pathway behind them through the digital static. The scene represents self-imposed technological limitations, mental cyber imprisonment, and the need to recognize that many restrictions exist only in the programmed mind.'
+    code: 'COMMS_08',
+    name: 'Eight of Comms',
+    description: 'Information overwhelm, trapped by conflicting signals, communication paralysis',
+    prompt: 'A blindfolded figure stands surrounded by eight towering communication arrays that pulse with conflicting information streams, appearing mentally trapped by the overwhelming flood of contradictory data, yet with a clear pathway visible behind them through the interference. The scene represents the paralysis that comes from information overload, the mental imprisonment created by too many competing voices and signals, and the self-imposed limitations that arise when one becomes overwhelmed by the constant noise of Fringe communication networks.'
   },
   {
     id: 58,
-    code: 'SWORDS_09',
-    name: 'Nine of Swords',
-    description: 'Anxiety, worry, fear, depression, nightmares',
-    prompt: 'A figure sits up in a bio-mechanical bed with head in hands, appearing distressed, while nine energy swords hover on the wall above, casting eerie plasma light. The scene represents digital anxiety, cyber worry, virtual nightmares, and the mental anguish that can come from overthinking algorithms or dwelling on negative system possibilities rather than facing digital reality.'
+    code: 'COMMS_09',
+    name: 'Nine of Comms',
+    description: 'Information anxiety, fear of the truth, communication nightmares',
+    prompt: 'A figure sits up in a bio-mechanical communication chamber with head in hands, appearing distressed and unable to sleep, while nine menacing signal arrays hover on the walls above, casting eerie patterns of shifting data and electromagnetic interference. The scene represents the anxiety that comes from knowing too much dangerous information, the fear of communication being intercepted or misused, and the mental anguish that afflicts those who carry the burden of terrible truths in the information wars of the Fringe.'
   },
   {
     id: 59,
-    code: 'SWORDS_10',
-    name: 'Ten of Swords',
-    description: 'Painful endings, deep wounds, betrayal, crisis',
-    prompt: 'A figure lies face down with ten energy swords in their back, under a dark digital sky with the first hints of dawn light from distant transmission towers on the horizon. The scene represents painful system endings, cyber betrayal, and hitting digital rock bottom, but the electronic dawn suggests that even the darkest network night eventually gives way to new technological beginnings.'
+    code: 'COMMS_10',
+    name: 'Ten of Comms',
+    description: 'Information overload crisis, complete communication breakdown, the end of signal clarity',
+    prompt: 'A figure lies face down, overwhelmed by ten massive communication towers that pierce through them like spears of overwhelming information, under a dark sky crackling with chaotic static and interference, yet the first hints of a clear signal dawn from distant, clean transmission sources on the horizon. The scene represents the complete breakdown of communication systems, the crisis point of information overload, and hitting rock bottom in the war between truth and misinformation, yet suggests that even the darkest communication night eventually gives way to new clarity and better signal sources.'
   },
   {
     id: 60,
-    code: 'SWORDS_PAGE',
-    name: 'Page of Swords',
-    description: 'Curiosity, new ideas, vigilance, messages',
-    prompt: 'A young figure in weathered tech gear stands on uneven electronic ground holding an energy sword aloft while looking alertly around. Data clouds and mechanical birds fill the digital sky, representing the active, curious cyber mind ready to defend digital ideas or deliver encrypted messages. The uneven electronic terrain suggests the need for mental algorithmic agility and technological balance.'
+    code: 'COMMS_PAGE',
+    name: 'Page of Comms',
+    description: 'Curiosity about information, learning to decode signals, vigilant communication',
+    prompt: 'A young apprentice in weathered communication gear stands on uneven terrain scattered with broken signal equipment, holding a small but powerful signal detector aloft while scanning the chaotic electromagnetic environment with alert curiosity. Mechanical signal-relay birds fill the static-filled sky above, representing the active, inquisitive mind learning to navigate the complex world of Fringe communications, ready to decode new information sources and deliver critical messages despite the dangerous and unstable communication landscape.'
   },
   {
     id: 61,
-    code: 'SWORDS_KNIGHT',
-    name: 'Knight of Swords',
-    description: 'Ambition, drive, determination, fast thinking',
-    prompt: 'A cyber-knight charges forward on a bio-mechanical steed with plasma sword raised, the mount\'s synthetic mane and the knight\'s digital plume streaming in the wind of rapid data transmission. The scene represents swift cyber action, digital determination, and the drive to achieve technological goals through force of neural will and quantum-quick thinking.'
+    code: 'COMMS_KNIGHT',
+    name: 'Knight of Comms',
+    description: 'Rapid information deployment, aggressive communication, swift signal transmission',
+    prompt: 'A cyber-knight charges forward on a signal-boosted mount, holding a high-powered transmission array like a lance, both rider and steed streaming with cascading data flows and electromagnetic energy as they race to deliver critical information across the hostile Fringe environment. The scene represents swift communication action, the aggressive pursuit of information objectives, and the drive to achieve strategic goals through the rapid deployment of communication technology and the determination to get vital intelligence through enemy interference.'
   },
   {
     id: 62,
-    code: 'SWORDS_QUEEN',
-    name: 'Queen of Swords',
-    description: 'Independence, unbiased judgement, clear boundaries',
-    prompt: 'A queen sits on a bio-mechanical throne holding an upright plasma sword, her other hand extended as if gesturing for digital clarity. Data clouds fill the cyber sky while her expression shows wisdom gained through virtual experience and system interfaces. She represents technological independence, clear algorithmic thinking, and the ability to make unbiased digital judgments.'
+    code: 'COMMS_QUEEN',
+    name: 'Queen of Comms',
+    description: 'Independent information analysis, unbiased communication, clear signal boundaries',
+    prompt: 'A queen sits on a throne built from crystalline communication equipment, holding an upright signal array that cuts through electromagnetic interference with surgical precision, her other hand extended in a gesture that commands silence from the chaotic data streams around her. Her expression shows the wisdom gained through years of analyzing conflicting information sources, representing communication independence, clear analytical thinking, and the rare ability to make unbiased judgments about truth and falsehood in the propaganda-filled environment of the Fringe.'
   },
   {
     id: 63,
-    code: 'SWORDS_KING',
-    name: 'King of Swords',
-    description: 'Mental clarity, intellectual power, authority',
-    prompt: 'A king sits on a digital throne holding an upright energy sword, representing cyber justice and mental clarity. His throne is decorated with holographic butterflies and digital sylphs, symbols of data streams and computational thought. The scene represents intellectual technological authority, clear algorithmic thinking, and the power that comes from mental discipline and cyber wisdom.'
+    code: 'COMMS_KING',
+    name: 'King of Comms',
+    description: 'Master of information strategy, communication authority, signal clarity through wisdom',
+    prompt: 'A king sits on a throne constructed from the finest communication technology, holding an upright master signal array that broadcasts pure, unfiltered truth, while his throne is decorated with holographic data streams and signal pattern motifs that represent the flow of verified information. The scene embodies intellectual communication authority, the mental discipline required to distinguish truth from propaganda, and the wisdom that comes from mastering the complex art of information warfare and strategic communication in the dangerous realm of the Fringe.'
   },
 
-  // Pentacles (Earth) - 14 cards (64-77)
+  // Gear (Earth/Material) - 14 cards (64-77)
   {
     id: 64,
-    code: 'PENTACLES_ACE',
-    name: 'Ace of Pentacles',
-    description: 'New financial opportunity, manifestation',
-    prompt: 'A cybernetic hand emerges from a smoggy data cloud holding a golden pentacle that pulses with circuit patterns, representing new digital material opportunities and the potential for cyber prosperity. Below lies a path of fiber optic cables leading to transmission towers, symbolizing the practical steps needed to manifest technological success and digital abundance in the connected world.'
+    code: 'GEAR_ACE',
+    name: 'Ace of Gear',
+    description: 'New equipment opportunity, material manifestation, the foundation of physical security',
+    prompt: 'A weathered hand emerges from swirling dust and debris, holding a pristine piece of advanced equipment that hums with mechanical precision—a multi-purpose survival device that gleams with promise. Below lies a rough path carved through rocky terrain leading to distant mining operations and trade outposts, representing the practical steps needed to manifest material success and physical security in the harsh Fringe. The device symbolizes the potential for new territorial claims, the foundation of wealth through quality equipment, and the promise that "you are only as good as your gear."'
   },
   {
     id: 65,
-    code: 'PENTACLES_02',
-    name: 'Two of Pentacles',
-    description: 'Multiple priorities, time management, adaptability',
-    prompt: 'A figure in tech gear juggles two glowing pentacles connected by a holographic infinity loop while data ships navigate through digital waves in the background. The scene represents the challenge of balancing multiple technological responsibilities, managing processing time and system resources, and adapting to changing network circumstances while maintaining digital equilibrium.'
+    code: 'GEAR_02',
+    name: 'Two of Gear',
+    description: 'Balancing resources, equipment maintenance, adaptability in harsh conditions',
+    prompt: 'A Union of Merchants trader in weathered gear carefully balances two pieces of essential survival equipment—a water purifier and a portable power cell—while behind them supply caravans navigate through the treacherous mountain passes of the wasteland. The scene represents the constant challenge of managing multiple essential resources, maintaining critical equipment in harsh conditions, and adapting to the ever-changing demands of Fringe survival where one broken piece of gear can mean the difference between life and death.'
   },
   {
     id: 66,
-    code: 'PENTACLES_03',
-    name: 'Three of Pentacles',
-    description: 'Teamwork, collaboration, building, learning',
-    prompt: 'A cyber-craftsperson works on a digital cathedral made of hardlight while two figures - one holding holographic blueprints and another observing through augmented reality - discuss the project. Three pentacles are projected into the virtual stone above, representing skilled tech teamwork, collaborative coding, and the building of something lasting through combined digital expertise and networked effort.'
+    code: 'GEAR_03',
+    name: 'Three of Gear',
+    description: 'Collaborative construction, shared expertise, building lasting infrastructure',
+    prompt: 'A skilled technician from the Subsurface Miners Guild works on reinforcing a critical mining platform while two other specialists—one holding detailed geological surveys and another operating diagnostic equipment—collaborate on the project. Three pieces of precision mining gear are integrated into the platform structure above, representing skilled teamwork in harsh conditions, collaborative expertise in specialized equipment, and the building of lasting infrastructure that can withstand the brutal environment of the Fringe.'
   },
   {
     id: 67,
-    code: 'PENTACLES_04',
-    name: 'Four of Pentacles',
-    description: 'Conservation, frugality, security, holding on',
-    prompt: 'A figure in weathered tech robes sits holding tightly to a glowing pentacle while balancing one on their head and standing on two others, all pulsing with electric energy. A cyber city appears in the background, representing security through conservation of digital resources, but also the potential limitations of holding too tightly to virtual material possessions and encrypted data hoards.'
+    code: 'GEAR_04',
+    name: 'Four of Gear',
+    description: 'Hoarding equipment, security through possession, fear of loss',
+    prompt: 'A paranoid Drifter sits in their fortified shelter, clutching a valuable piece of survival gear while surrounded by three other essential items—oxygen recycler, defensive turret, food synthesizer—all carefully guarded and maintained. The wasteland settlement visible through the reinforced windows represents both security through careful conservation of resources and the psychological limitations that come from holding too tightly to material possessions when survival depends entirely on the reliability of one\'s equipment.'
   },
   {
     id: 68,
-    code: 'PENTACLES_05',
-    name: 'Five of Pentacles',
-    description: 'Financial loss, poverty, lack, isolation',
-    prompt: 'Two figures in tattered tech gear walk through digital snow past an illuminated data sanctuary window showing five glowing pentacles. Despite their apparent cyber poverty and system hardship, help and digital spiritual sustenance are available nearby through the network if they choose to access it. The scene represents technological material hardship but also the availability of online assistance and community support.'
+    code: 'GEAR_05',
+    name: 'Five of Gear',
+    description: 'Equipment failure, material hardship, loss of security',
+    prompt: 'Two figures in torn environmental suits trudge through a toxic storm, their broken gear sparking and failing, while in the distance a well-lit trading post displays five pieces of quality survival equipment in its reinforced windows. Despite their apparent material hardship and equipment failure, help and essential gear are available nearby through the Union of Merchants if they can reach it. The scene represents the devastating impact of gear failure in the Fringe, but also suggests that community support and trade networks can provide a path back to security.'
   },
   {
     id: 69,
-    code: 'PENTACLES_06',
-    name: 'Six of Pentacles',
-    description: 'Generosity, charity, sharing, fairness',
-    prompt: 'A cyber-merchant holds digital scales in one hand while transferring crypto coins to needy figures in weathered tech gear with the other. Six glowing pentacles appear above in holographic displays, representing the flow of digital material resources through generosity, online charity, and fair algorithmic exchange. The scene emphasizes the importance of both giving and receiving data wealth in technological balance.'
+    code: 'GEAR_06',
+    name: 'Six of Gear',
+    description: 'Generous resource sharing, fair trade, equipment charity',
+    prompt: 'A Union of Merchants trader holds a precision balance scale in one hand while distributing essential survival equipment to desperate Drifters with the other—oxygen masks, portable power cells, water purification tablets. Six pieces of quality gear are displayed overhead on elevated platforms, representing the flow of material resources through generous trade practices, fair equipment exchange, and the merchant philosophy that prosperity shared creates stronger communities in the harsh Fringe environment.'
   },
   {
     id: 70,
-    code: 'PENTACLES_07',
-    name: 'Seven of Pentacles',
-    description: 'Assessment, reward for hard work, patience',
-    prompt: 'A figure in tech gear leans on a neural interface staff while contemplating seven glowing pentacles growing on a bio-mechanical bush, representing the pause to assess digital progress and results after sustained coding effort. The scene suggests technological patience, reflection on virtual achievements, and the decision whether to continue current development efforts or make system changes.'
+    code: 'GEAR_07',
+    name: 'Seven of Gear',
+    description: 'Assessment of investment, patience with long-term projects, evaluating returns',
+    prompt: 'A contemplative member of the Subsurface Miners Guild leans on a reinforced mining staff while surveying seven pieces of precision extraction equipment arranged throughout a partially excavated mineral deposit. The scene represents the critical pause to assess material progress and returns after sustained resource investment, the patience required for long-term mining operations, and the decision whether to continue current extraction efforts or redirect resources to more promising geological formations.'
   },
   {
     id: 71,
-    code: 'PENTACLES_08',
-    name: 'Eight of Pentacles',
-    description: 'Diligence, skill development, quality, mastery',
-    prompt: 'A cyber-craftsperson sits at a bio-mechanical workbench carefully coding pentacles into existence, with six completed holographic works displayed and one in progress on glowing screens. A cyber city appears in the distance, representing the dedication to digital skill development, quality programming craftsmanship, and the patient work required to achieve technological mastery.'
+    code: 'GEAR_08',
+    name: 'Eight of Gear',
+    description: 'Diligent craftsmanship, skill development, quality over quantity',
+    prompt: 'A master craftsperson sits at a reinforced workbench in their workshop, carefully assembling precision survival equipment with meticulous attention to detail. Six completed pieces of quality gear are displayed on the workshop walls while one complex device remains in progress on the workbench. The scene represents dedication to skilled craftsmanship, the development of expertise in equipment manufacturing, and the patient work required to achieve mastery in creating reliable gear that can mean the difference between life and death in the Fringe.'
   },
   {
     id: 72,
-    code: 'PENTACLES_09',
-    name: 'Nine of Pentacles',
-    description: 'Accomplishment, luxury, self-sufficiency',
-    prompt: 'An elegantly dressed figure in high-tech attire stands in a lush virtual garden filled with bio-mechanical grapevines bearing nine golden pentacles that pulse with energy. A hooded cyber-falcon with LED eyes perches on their hand, representing the digital luxury and technological self-sufficiency that come from disciplined coding effort and wise investment of system resources and processing time.'
+    code: 'GEAR_09',
+    name: 'Nine of Gear',
+    description: 'Material accomplishment, self-sufficiency, independent security',
+    prompt: 'An elegantly equipped Drifter stands in their well-maintained personal compound, surrounded by nine pieces of premium survival gear—environmental suits, defense systems, resource processors—all functioning perfectly and providing complete self-sufficiency. A mechanical companion animal patrols the perimeter with advanced sensors, representing the material luxury and independent security that come from disciplined resource management and wise investment in quality equipment over flashy but unreliable alternatives.'
   },
   {
     id: 73,
-    code: 'PENTACLES_10',
-    name: 'Ten of Pentacles',
-    description: 'Wealth, financial security, family, inheritance',
-    prompt: 'An elderly figure in weathered tech robes watches as family members in matching cyber gear gather in a digital courtyard, with ten pentacles arranged overhead forming a holographic tree-like pattern. Robotic companions play nearby and an archway of hardlight leads to a data fortress, representing lasting digital wealth, technological family legacy, and the security that comes from established network foundations.'
+    code: 'GEAR_10',
+    name: 'Ten of Gear',
+    description: 'Generational wealth, established security, legacy equipment',
+    prompt: 'An elder from an established trading family stands in a fortified compound courtyard, watching as multiple generations of family members work with inherited equipment and maintain legacy systems. Ten pieces of masterwork gear are arranged overhead in a protective formation—weapons, shields, processors, vehicles—representing lasting material wealth, the security that comes from established resource foundations, and the pride of passing down quality equipment that has served the family through multiple generations of Fringe survival.'
   },
   {
     id: 74,
-    code: 'PENTACLES_PAGE',
-    name: 'Page of Pentacles',
-    description: 'Study, new opportunities, ambition, messages',
-    prompt: 'A young figure in weathered tech gear stands in an electronic field holding a glowing pentacle up for examination, with transmission towers in the distance. Their studious attention to the holographic pentacle represents new digital learning opportunities, practical cyber study, and the careful examination of technological material prospects and virtual possibilities.'
+    code: 'GEAR_PAGE',
+    name: 'Page of Gear',
+    description: 'Study of equipment, learning practical skills, mechanical curiosity',
+    prompt: 'A young apprentice trader stands in a salvage field, holding a complex piece of mining equipment up for detailed examination, with supply caravans visible on the distant horizon. Their focused attention to the mechanical device represents new opportunities for practical learning, the careful study of equipment functionality, and the methodical examination of material prospects that will determine their future success in the harsh realities of Fringe survival and trade.'
   },
   {
     id: 75,
-    code: 'PENTACLES_KNIGHT',
-    name: 'Knight of Pentacles',
-    description: 'Efficiency, routine, conservatism, methodical',
-    prompt: 'A cyber-knight sits motionless on a heavy bio-mechanical work horse, holding a glowing pentacle and surveying freshly processed data fields. Unlike other knights, this figure represents steady, methodical digital progress rather than swift action - the careful, conservative approach that ensures lasting technological success through patience and persistent coding.'
+    code: 'GEAR_KNIGHT',
+    name: 'Knight of Gear',
+    description: 'Methodical progress, reliable equipment use, conservative approach',
+    prompt: 'A heavily armored knight sits steadily on a reinforced mechanical mount, holding a masterwork survival device while surveying a recently established mining operation. Unlike other knights, this figure represents steady, methodical material progress rather than swift action—the careful, conservative approach that ensures lasting success through patience, reliable equipment maintenance, and persistent effort in developing sustainable resource operations in the dangerous Fringe environment.'
   },
   {
     id: 76,
-    code: 'PENTACLES_QUEEN',
-    name: 'Queen of Pentacles',
-    description: 'Practicality, creature comforts, financial security',
-    prompt: 'A queen sits on a bio-mechanical throne in a virtual garden setting, holding a luminescent pentacle while surrounded by digital abundance and cyber luxury. A robotic rabbit with glowing eyes appears at her feet, representing technological fertility and digital prosperity. She embodies practical cyber wisdom, nurturing virtual abundance, and the ability to create network security and digital comfort.'
+    code: 'GEAR_QUEEN',
+    name: 'Queen of Gear',
+    description: 'Practical wisdom, nurturing security, material comfort',
+    prompt: 'A queen sits on a throne constructed from the finest salvaged materials in a well-appointed shelter, holding a masterwork survival device while surrounded by an abundance of quality equipment and comfortable living conditions. A mechanical companion creature with protective instincts rests at her feet, representing practical wisdom in resource management, the ability to create material comfort even in harsh conditions, and the nurturing approach that builds lasting security through careful attention to everyone\'s equipment needs.'
   },
   {
     id: 77,
-    code: 'PENTACLES_KING',
-    name: 'King of Pentacles',
-    description: 'Financial success, leadership, security, generosity',
-    prompt: 'A king sits on a digital throne decorated with holographic bull heads and surrounded by bio-mechanical grapevines, holding a pentacle that pulses with energy while his data fortress and virtual gardens stretch behind him. The scene represents successful leadership in technological material affairs, established digital wealth, and the generosity that comes from true cyber abundance and network security.'
+    code: 'GEAR_KING',
+    name: 'King of Gear',
+    description: 'Material mastery, territorial leadership, equipment generosity',
+    prompt: 'A king sits on a throne built from the most advanced salvaged technology, decorated with mechanical bull imagery and surrounded by thriving equipment stockpiles, holding a master-crafted device that represents ultimate material authority. His established fortress and well-equipped settlement stretch behind him in the distance, representing successful leadership in material affairs, territorial dominance through superior equipment, and the generosity that comes from true abundance—the willingness to share resources that makes him a leader others will follow into the dangerous unknown of the Fringe.'
   }
 ];
 

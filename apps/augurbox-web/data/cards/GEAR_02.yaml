@@ -1,0 +1,25 @@
+# Two of Gear
+id: 65
+code: GEAR_02
+name: Two of Gear
+description: Balancing resources, equipment maintenance, adaptability in harsh conditions
+type: minor
+suit: gear
+number: 2
+image: /cards/GEAR_02.png
+
+# Full card description/meaning
+prompt: A Union of Merchants trader in weathered gear carefully balances two pieces of essential survival equipment—a water purifier and a portable power cell—while behind them supply caravans navigate through the treacherous mountain passes of the wasteland. The scene represents the constant challenge of managing multiple essential resources, maintaining critical equipment in harsh conditions, and adapting to the ever-changing demands of Fringe survival where one broken piece of gear can mean the difference between life and death.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Balancing resources, equipment maintenance, adaptability in harsh conditions
+  reversed:
+    - "Opposition to balancing resources, equipment maintenance, adaptability in harsh conditions"
+
+# Keywords for quick reference
+keywords:
+  - Balancing resources
+  - equipment maintenance
+  - adaptability in harsh conditions

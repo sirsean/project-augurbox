@@ -1,0 +1,25 @@
+# Queen of Tools
+id: 34
+code: TOOLS_QUEEN
+name: Queen of Tools
+description: Confident leadership, mastery of craft, determined execution
+type: minor
+suit: tools
+number: queen
+image: /cards/TOOLS_QUEEN.png
+
+# Full card description/meaning
+prompt: A guild queen sits on a throne constructed from precision-welded metal and advanced diagnostic equipment, holding a gleaming sonic screwdriver in one hand and a bio-luminescent work light in the other. A mechanical companion—part cat, part diagnostic drone—rests at her feet with glowing sensor arrays. The scene radiates engineering confidence, technical mastery, and the determination to achieve ambitious construction goals through skilled leadership and intuitive understanding of complex systems.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Confident leadership, mastery of craft, determined execution
+  reversed:
+    - "Opposition to confident leadership, mastery of craft, determined execution"
+
+# Keywords for quick reference
+keywords:
+  - Confident leadership
+  - mastery of craft
+  - determined execution

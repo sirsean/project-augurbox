@@ -1,0 +1,25 @@
+# Three of Gear
+id: 66
+code: GEAR_03
+name: Three of Gear
+description: Collaborative construction, shared expertise, building lasting infrastructure
+type: minor
+suit: gear
+number: 3
+image: /cards/GEAR_03.png
+
+# Full card description/meaning
+prompt: A skilled technician from the Subsurface Miners Guild works on reinforcing a critical mining platform while two other specialists—one holding detailed geological surveys and another operating diagnostic equipment—collaborate on the project. Three pieces of precision mining gear are integrated into the platform structure above, representing skilled teamwork in harsh conditions, collaborative expertise in specialized equipment, and the building of lasting infrastructure that can withstand the brutal environment of the Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Collaborative construction, shared expertise, building lasting infrastructure
+  reversed:
+    - "Opposition to collaborative construction, shared expertise, building lasting infrastructure"
+
+# Keywords for quick reference
+keywords:
+  - Collaborative construction
+  - shared expertise
+  - building lasting infrastructure

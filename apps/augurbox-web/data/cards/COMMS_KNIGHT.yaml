@@ -1,0 +1,25 @@
+# Knight of Comms
+id: 61
+code: COMMS_KNIGHT
+name: Knight of Comms
+description: Rapid information deployment, aggressive communication, swift signal transmission
+type: minor
+suit: comms
+number: knight
+image: /cards/COMMS_KNIGHT.png
+
+# Full card description/meaning
+prompt: A cyber-knight charges forward on a signal-boosted mount, holding a high-powered transmission array like a lance, both rider and steed streaming with cascading data flows and electromagnetic energy as they race to deliver critical information across the hostile Fringe environment. The scene represents swift communication action, the aggressive pursuit of information objectives, and the drive to achieve strategic goals through the rapid deployment of communication technology and the determination to get vital intelligence through enemy interference.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Rapid information deployment, aggressive communication, swift signal transmission
+  reversed:
+    - "Opposition to rapid information deployment, aggressive communication, swift signal transmission"
+
+# Keywords for quick reference
+keywords:
+  - Rapid information deployment
+  - aggressive communication
+  - swift signal transmission

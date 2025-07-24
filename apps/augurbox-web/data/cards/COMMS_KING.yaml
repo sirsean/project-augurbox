@@ -1,0 +1,25 @@
+# King of Comms
+id: 63
+code: COMMS_KING
+name: King of Comms
+description: Master of information strategy, communication authority, signal clarity through wisdom
+type: minor
+suit: comms
+number: king
+image: /cards/COMMS_KING.png
+
+# Full card description/meaning
+prompt: A king sits on a throne constructed from the finest communication technology, holding an upright master signal array that broadcasts pure, unfiltered truth, while his throne is decorated with holographic data streams and signal pattern motifs that represent the flow of verified information. The scene embodies intellectual communication authority, the mental discipline required to distinguish truth from propaganda, and the wisdom that comes from mastering the complex art of information warfare and strategic communication in the dangerous realm of the Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Master of information strategy, communication authority, signal clarity through wisdom
+  reversed:
+    - "Opposition to master of information strategy, communication authority, signal clarity through wisdom"
+
+# Keywords for quick reference
+keywords:
+  - Master of information strategy
+  - communication authority
+  - signal clarity through wisdom

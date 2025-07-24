@@ -1,0 +1,25 @@
+# Ten of Comms
+id: 59
+code: COMMS_10
+name: Ten of Comms
+description: Information overload crisis, complete communication breakdown, the end of signal clarity
+type: minor
+suit: comms
+number: 10
+image: /cards/COMMS_10.png
+
+# Full card description/meaning
+prompt: A figure lies face down, overwhelmed by ten massive communication towers that pierce through them like spears of overwhelming information, under a dark sky crackling with chaotic static and interference, yet the first hints of a clear signal dawn from distant, clean transmission sources on the horizon. The scene represents the complete breakdown of communication systems, the crisis point of information overload, and hitting rock bottom in the war between truth and misinformation, yet suggests that even the darkest communication night eventually gives way to new clarity and better signal sources.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Information overload crisis, complete communication breakdown, the end of signal clarity
+  reversed:
+    - "Opposition to information overload crisis, complete communication breakdown, the end of signal clarity"
+
+# Keywords for quick reference
+keywords:
+  - Information overload crisis
+  - complete communication breakdown
+  - the end of signal clarity

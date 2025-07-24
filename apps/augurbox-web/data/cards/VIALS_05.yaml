@@ -1,0 +1,25 @@
+# Five of Vials
+id: 40
+code: VIALS_05
+name: Five of Vials
+description: Loss of valuable resources, contamination, broken alliances
+type: minor
+suit: vials
+number: 5
+image: /cards/VIALS_05.png
+
+# Full card description/meaning
+prompt: A cloaked figure in a contamination suit contemplates three shattered vials leaking precious bio-fluid into the toxic soil, their valuable contents lost to accident or sabotage, while two intact vials still glow behind them with salvageable resources. In the distance, a bridge of living coral spans a chasm leading to a thriving bio-dome settlement, suggesting that despite the loss of precious materials and broken trade relationships, there remains hope for rebuilding alliances and recovering from resource disasters through persistence and careful cultivation.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Loss of valuable resources, contamination, broken alliances
+  reversed:
+    - "Opposition to loss of valuable resources, contamination, broken alliances"
+
+# Keywords for quick reference
+keywords:
+  - Loss of valuable resources
+  - contamination
+  - broken alliances

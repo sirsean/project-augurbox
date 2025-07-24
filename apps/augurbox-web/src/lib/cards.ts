@@ -12,10 +12,10 @@ function convertCardData(rawCard: RawCard): Card {
     name: rawCard.name,
     description: rawCard.description,
     type: rawCard.code.startsWith('MAJ_') ? 'major' : 'minor',
-    suit: rawCard.code.startsWith('CUPS_') ? 'cups' :
-          rawCard.code.startsWith('WANDS_') ? 'wands' :
-          rawCard.code.startsWith('SWORDS_') ? 'swords' :
-          rawCard.code.startsWith('PENTACLES_') ? 'pentacles' : undefined,
+    suit: rawCard.code.startsWith('VIALS_') ? 'vials' :
+          rawCard.code.startsWith('TOOLS_') ? 'tools' :
+          rawCard.code.startsWith('COMMS_') ? 'comms' :
+          rawCard.code.startsWith('GEAR_') ? 'gear' : undefined,
     number: rawCard.code.startsWith('MAJ_') ? 
             parseInt(rawCard.code.split('_')[1]) :
             rawCard.code.includes('ACE') ? 1 :
@@ -48,10 +48,10 @@ export function getCardsByType(): CardsByType {
   const organized: CardsByType = {
     major: [],
     minor: {
-      wands: [],
-      cups: [],
-      swords: [],
-      pentacles: [],
+      tools: [],
+      vials: [],
+      comms: [],
+      gear: [],
     }
   };
 
@@ -75,10 +75,10 @@ export function getCardsByType(): CardsByType {
     });
   };
 
-  organized.minor.wands = sortBySuitRank(organized.minor.wands);
-  organized.minor.cups = sortBySuitRank(organized.minor.cups);
-  organized.minor.swords = sortBySuitRank(organized.minor.swords);
-  organized.minor.pentacles = sortBySuitRank(organized.minor.pentacles);
+  organized.minor.tools = sortBySuitRank(organized.minor.tools);
+  organized.minor.vials = sortBySuitRank(organized.minor.vials);
+  organized.minor.comms = sortBySuitRank(organized.minor.comms);
+  organized.minor.gear = sortBySuitRank(organized.minor.gear);
 
   return organized;
 }
@@ -95,20 +95,20 @@ function getSuitRankOrder(rank: string): number {
 
 export function getSuitDisplayName(suit: CardSuit): string {
   const names: Record<CardSuit, string> = {
-    wands: 'Wands',
-    cups: 'Cups',
-    swords: 'Swords',
-    pentacles: 'Pentacles'
+    tools: 'Tools',
+    vials: 'Vials',
+    comms: 'Comms',
+    gear: 'Gear'
   };
   return names[suit];
 }
 
 export function getSuitDescription(suit: CardSuit): string {
   const descriptions: Record<CardSuit, string> = {
-    wands: 'Fire • Creativity, passion, energy, career',
-    cups: 'Water • Emotions, relationships, intuition, spirituality',
-    swords: 'Air • Thoughts, communication, conflict, intellect', 
-    pentacles: 'Earth • Material matters, money, health, practical concerns'
+    tools: 'Fire • Action, creation, engineering, ambition',
+    vials: 'Water • Resources, emotions, sustenance, life force',
+    comms: 'Air • Information, strategy, communication, truth',
+    gear: 'Earth • Equipment, material wealth, security, territory'
   };
   return descriptions[suit];
 }

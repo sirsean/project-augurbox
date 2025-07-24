@@ -1,0 +1,25 @@
+# Seven of Tools
+id: 28
+code: TOOLS_07
+name: Seven of Tools
+description: Defensive position, perseverance, holding ground
+type: minor
+suit: tools
+number: 7
+image: /cards/TOOLS_07.png
+
+# Full card description/meaning
+prompt: A lone Mercenary stands atop a fortified scrap tower, wielding a high-powered plasma rifle defensively while six other weapons—assault rifles, grenade launchers, energy blasters—thrust up from the wasteland raiders below. The elevated position and defensive stance suggest the advantage of preparation and superior firepower when protecting valuable salvage claims against overwhelming opposition and territorial raiders in the lawless Fringe.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Defensive position, perseverance, holding ground
+  reversed:
+    - "Opposition to defensive position, perseverance, holding ground"
+
+# Keywords for quick reference
+keywords:
+  - Defensive position
+  - perseverance
+  - holding ground

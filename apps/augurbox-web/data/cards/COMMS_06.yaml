@@ -1,0 +1,25 @@
+# Six of Comms
+id: 55
+code: COMMS_06
+name: Six of Comms
+description: Safe passage of information, transitioning to better communication, moving toward truth
+type: minor
+suit: comms
+number: 6
+image: /cards/COMMS_06.png
+
+# Full card description/meaning
+prompt: A figure sits in a shielded communication vessel with a young apprentice signal operator, being ferried across calm streams of filtered data toward distant relay stations that pulse with clean, verified information. Six communication arrays stand upright in the craft, their signal beams creating safe pathways through the chaotic electromagnetic interference, representing the careful transport of important knowledge, beliefs, and memories from one information environment to another during times of communication transition and the passage toward more reliable sources of truth.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Safe passage of information, transitioning to better communication, moving toward truth
+  reversed:
+    - "Opposition to safe passage of information, transitioning to better communication, moving toward truth"
+
+# Keywords for quick reference
+keywords:
+  - Safe passage of information
+  - transitioning to better communication
+  - moving toward truth

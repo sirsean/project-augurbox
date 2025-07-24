@@ -1,0 +1,25 @@
+# Four of Gear
+id: 67
+code: GEAR_04
+name: Four of Gear
+description: Hoarding equipment, security through possession, fear of loss
+type: minor
+suit: gear
+number: 4
+image: /cards/GEAR_04.png
+
+# Full card description/meaning
+prompt: "A paranoid Drifter sits in their fortified shelter, clutching a valuable piece of survival gear while surrounded by three other essential items—oxygen recycler, defensive turret, food synthesizer—all carefully guarded and maintained. The wasteland settlement visible through the reinforced windows represents both security through careful conservation of resources and the psychological limitations that come from holding too tightly to material possessions when survival depends entirely on the reliability of one's equipment."
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Hoarding equipment, security through possession, fear of loss
+  reversed:
+    - "Opposition to hoarding equipment, security through possession, fear of loss"
+
+# Keywords for quick reference
+keywords:
+  - Hoarding equipment
+  - security through possession
+  - fear of loss

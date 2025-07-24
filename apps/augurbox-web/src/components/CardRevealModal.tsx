@@ -28,27 +28,36 @@ const getCardInterpretation = (card: Card, isReversed: boolean, position: Positi
   
   // Generate drifter prompt based on card and position
   const drifterPrompts: Record<string, string> = {
+    // Major Arcana
     'The Fool': 'What unknown frontier are you facing, and are you truly prepared for what\'s on the other side?',
     'The Magician': 'What tools do you possess that you haven\'t fully utilized? How can you channel your potential into reality?',
     'The High Priestess': 'What hidden knowledge is trying to surface in your consciousness? Are you listening to your intuition?',
     'The Empress': 'In what areas of your life are you being called to nurture and create? What wants to be born through you?',
     'The Emperor': 'Where do you need to establish better structure and authority in your life? What requires your leadership?',
-    'Two of Cups': 'What relationship in your life needs deeper attention and mutual understanding?',
-    'Three of Cups': 'How can you better celebrate and connect with your community?',
-    'Four of Cups': 'What opportunities are you overlooking due to emotional detachment or boredom?',
-    'Five of Cups': 'What loss are you still grieving that prevents you from seeing new possibilities?',
-    'Ace of Wands': 'What creative spark or new beginning is trying to ignite in your life?',
-    'Two of Wands': 'What long-term vision are you developing? How will you expand your horizons?',
-    'Three of Wands': 'What plans have you set in motion that now require patience and foresight?',
-    'Four of Wands': 'What achievement or milestone deserves celebration in your life right now?',
-    'Ace of Swords': 'What mental clarity or breakthrough in thinking do you need to embrace?',
-    'Two of Swords': 'What decision are you avoiding that requires you to cut through illusion and see clearly?',
-    'Three of Swords': 'What heartbreak or betrayal do you need to process and heal from?',
-    'Four of Swords': 'Where in your life do you need to create space for rest and contemplation?',
-    'Ace of Pentacles': 'What material opportunity or practical new beginning is presenting itself?',
-    'Two of Pentacles': 'How can you better balance the competing demands and resources in your life?',
-    'Three of Pentacles': 'What collaborative effort or skill-building endeavor requires your attention?',
-    'Four of Pentacles': 'What are you holding onto too tightly that prevents growth and flow?'
+    
+    // Vials (Resources/Emotions)
+    'Two of Vials': 'What partnership or alliance could bring mutual benefit to your current situation?',
+    'Three of Vials': 'How can you better celebrate shared successes with your community?',
+    'Four of Vials': 'What opportunities are you contemplating that might require careful evaluation?',
+    'Five of Vials': 'What loss of resources or relationships are you still processing?',
+    
+    // Tools (Action/Engineering)
+    'Ace of Tools': 'What creative project or new construction is calling for your energy and skills?',
+    'Two of Tools': 'What long-term strategic vision are you developing for your territory or domain?',
+    'Three of Tools': 'What expansion or growth opportunities are you observing on the horizon?',
+    'Four of Tools': 'What achievement or successful completion deserves recognition and celebration?',
+    
+    // Comms (Information/Strategy)
+    'Ace of Comms': 'What breakthrough in understanding or communication clarity do you need to embrace?',
+    'Two of Comms': 'What conflicting information sources require you to rely on your inner wisdom?',
+    'Three of Comms': 'What painful truth or betrayal through information do you need to process?',
+    'Four of Comms': 'Where in your life do you need to create space for silence from information overload?',
+    
+    // Gear (Material/Security)
+    'Ace of Gear': 'What new equipment, tool, or material opportunity is presenting itself to you?',
+    'Two of Gear': 'How can you better balance and maintain the essential resources you depend on?',
+    'Three of Gear': 'What collaborative construction or infrastructure project requires your expertise?',
+    'Four of Gear': 'What are you holding onto too tightly that might be limiting your security or growth?'
   };
   
   const drifterPrompt = drifterPrompts[card.name] || `How does the energy of ${card.name} relate to your current situation in ${position.name.toLowerCase()}?`;

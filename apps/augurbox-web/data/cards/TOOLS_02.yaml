@@ -1,0 +1,25 @@
+# Two of Tools
+id: 23
+code: TOOLS_02
+name: Two of Tools
+description: Future planning, strategic decision-making, personal power through preparation
+type: minor
+suit: tools
+number: 2
+image: /cards/TOOLS_02.png
+
+# Full card description/meaning
+prompt: An Engineer Guild member stands atop a reinforced observation tower, holding a salvaged globe showing territorial claims in one hand and a gleaming wrench in the other, surveying the harsh Fringe landscape spread before them. A second tool—a plasma cutter—rests against the tower wall, representing the dual nature of creation and destruction in frontier engineering. The scene captures the essence of strategic planning, making crucial decisions about resource allocation, and wielding personal power through careful preparation and territorial vision.
+
+# Card meanings (traditional interpretations)
+meanings:
+  upright:
+    - Future planning, strategic decision-making, personal power through preparation
+  reversed:
+    - "Opposition to future planning, strategic decision-making, personal power through preparation"
+
+# Keywords for quick reference
+keywords:
+  - Future planning
+  - strategic decision-making
+  - personal power through preparation
