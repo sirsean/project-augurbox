@@ -1,24 +1,25 @@
-# The World
+# The Free Fringe
 id: 21
 code: MAJ_21
-name: The World
-description: Completion, accomplishment, travel
+name: The Free Fringe
+description: Completion, integration, unity, fulfillment
 type: major
 number: 21
 image: /cards/MAJ_21.png
 
 # Full card description/meaning
-prompt: A dancing figure is surrounded by an oval wreath, representing completion and cosmic consciousness. In each corner appears a symbol of the four elements - angel (air), eagle (water), lion (fire), and bull (earth). The figure holds two wands, symbolizing balance between opposing forces and mastery over all elements.
+prompt: "Representatives from every faction, guild, and independent community gather in a vast amphitheater built from salvaged materials and alien architecture, their differences set aside in service of a greater vision. The Free Fringe banner flies overhead—not the symbol of any single group, but a new design that incorporates elements from all the diverse peoples who have chosen to make the frontier their home. In the center of the gathering, a holographic display shows star maps of explored territories, trade routes connecting distant settlements, and communication networks that span the known galaxy. The assembly represents not conquest or control, but the organic evolution of scattered survivors into a new form of civilization based on cooperation, mutual respect, and shared purpose. Around the amphitheater's edge, the four elements of frontier life are represented: Tools for building, Vials for sustaining, Comms for connecting, and Gear for surviving. The scene embodies completion of the great work of colonization, the integration of diverse peoples into a unified but not uniform society, and the fulfillment of humanity's destiny among the stars."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Completion, accomplishment, travel
+    - Completion, integration, unity, fulfillment
   reversed:
-    - "Opposition to completion, accomplishment, travel"
+    - "Opposition to completion, integration, unity, fulfillment"
 
 # Keywords for quick reference
 keywords:
   - Completion
-  - accomplishment
-  - travel
+  - integration
+  - unity
+  - fulfillment

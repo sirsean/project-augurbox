@@ -1,26 +1,25 @@
-# The Sun
+# The Aurelian Bloom
 id: 19
 code: MAJ_19
-name: The Sun
-description: Positivity, fun, warmth, success, vitality
+name: The Aurelian Bloom
+description: Joy, success, vitality, life force
 type: major
 number: 19
 image: /cards/MAJ_19.png
 
 # Full card description/meaning
-prompt: A radiant sun shines down on a joyful child riding a white horse in a walled garden. Sunflowers grow behind the wall, turning their faces toward the light, while the child holds a red banner of passion and life force. The scene radiates pure joy, vitality, and innocent celebration of life.
+prompt: A magnificent alien plant unfurls its golden petals across a previously barren landscape, its bio-luminescent flowers releasing spores that shimmer like liquid sunlight in the atmosphere. Where the spores settle, the dead soil comes alive with new growth, while the air itself seems to sparkle with renewed vitality and possibility. A young Drifter stands in wonder beneath the towering bloom, their arms raised in celebration as the life-giving particles swirl around them like living stars. Other colonists emerge from their shelters to witness this miraculous transformation, their faces filled with joy and hope as they realize their world is being reborn. The Aurelian Bloom towers above them all, its light driving away the shadows and filling everyone present with an profound sense of connection to the life force that flows through all things. The scene represents pure joy and vitality, the success that comes from harmony with natural forces, and the miraculous transformation that occurs when life finds a way to flourish against all odds.
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Positivity, fun, warmth, success, vitality
+    - Joy, success, vitality, life force
   reversed:
-    - "Opposition to positivity, fun, warmth, success, vitality"
+    - "Opposition to joy, success, vitality, life force"
 
 # Keywords for quick reference
 keywords:
-  - Positivity
-  - fun
-  - warmth
+  - Joy
   - success
   - vitality
+  - life force

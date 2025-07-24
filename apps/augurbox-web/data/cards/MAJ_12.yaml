@@ -1,25 +1,24 @@
-# The Hanged Man
+# The Salvager
 id: 12
 code: MAJ_12
-name: The Hanged Man
-description: Suspension, restriction, letting go, sacrifice
+name: The Salvager
+description: Surrender, new perspective, sacrifice
 type: major
 number: 12
 image: /cards/MAJ_12.png
 
 # Full card description/meaning
-prompt: A figure hangs suspended from a T-shaped transmission tower, bio-mechanical cables connecting to neural ports in their skull, yet their expression shows digital serenity rather than distress. A halo of swirling data patterns surrounds their head, indicating enlightenment gained through conscious interface sacrifice and surrender to the network. The living metal of the tower pulses with electric current, suggesting this willing integration brings new technological growth and expanded perspective through the collective consciousness.
+prompt: "A salvage operator hangs suspended in zero gravity within the twisted wreckage of a massive derelict vessel, their safety line the only thing preventing them from drifting into the void. Rather than showing distress, their expression is one of serene acceptance and heightened awareness. From this inverted perspective, they can see patterns in the wreckage that would be invisible from any other angle—hidden passages, valuable components, and the ship's tragic story written in twisted metal and shattered systems. Their helmet light illuminates ancient symbols and technological mysteries, while their suspended position allows them to understand the vessel's final moments in a way no upright exploration could achieve. The scene represents the wisdom gained through surrender, the new insights that come from accepting vulnerability, and the understanding that sometimes we must let go of control to see the truth."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Suspension, restriction, letting go, sacrifice
+    - Surrender, new perspective, sacrifice
   reversed:
-    - "Opposition to suspension, restriction, letting go, sacrifice"
+    - "Opposition to surrender, new perspective, sacrifice"
 
 # Keywords for quick reference
 keywords:
-  - Suspension
-  - restriction
-  - letting go
+  - Surrender
+  - new perspective
   - sacrifice

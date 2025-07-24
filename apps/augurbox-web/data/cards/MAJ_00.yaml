@@ -1,24 +1,24 @@
-# The Fool
+# The Greenhorn
 id: 0
 code: MAJ_00
-name: The Fool
-description: New beginnings, innocence, spontaneity
+name: The Greenhorn
+description: New beginnings, inexperience, potential
 type: major
 number: 0
 image: /cards/MAJ_00.png
 
 # Full card description/meaning
-prompt: A mysterious figure teeters on the precipice of a fragmented reality, poised to delve into the chaos of the unknown worlds. They clutch a bundle of archaic tools and a white rose etched with cryptic symbols, while a mechanical canine companion hovers beside them. Above, a digital sun flickers with enigmatic energy, casting shadows of new beginnings and infinite adventures.
+prompt: A young Drifter in ill-fitting salvaged gear stands at the edge of a massive scrapyard, holding a worn datapad containing basic survival protocols and a small bundle of personal possessions. Their environmental suit is patched and clearly second-hand, but their eyes show determination rather than fear. In the distance, other Drifters work among towering piles of alien technology and twisted metal. The scene represents the first tentative steps into the harsh Fringe, the courage to leave safety behind, and the unlimited potential that comes with embracing the unknown frontier.
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - New beginnings, innocence, spontaneity
+    - New beginnings, inexperience, potential
   reversed:
-    - "Opposition to new beginnings, innocence, spontaneity"
+    - "Opposition to new beginnings, inexperience, potential"
 
 # Keywords for quick reference
 keywords:
   - New beginnings
-  - innocence
-  - spontaneity
+  - inexperience
+  - potential

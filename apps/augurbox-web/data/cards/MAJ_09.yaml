@@ -1,24 +1,24 @@
-# The Hermit
+# The Prospector
 id: 9
 code: MAJ_09
-name: The Hermit
-description: Soul searching, seeking inner guidance, solitude
+name: The Prospector
+description: Solitude, introspection, soul searching
 type: major
 number: 9
 image: /cards/MAJ_09.png
 
 # Full card description/meaning
-prompt: A cloaked figure stands alone atop a transmission tower peak amid a landscape of electronic debris, holding aloft a makeshift lantern containing a six-pointed LED star powered by scavenged batteries. The harsh light cuts through digital static, illuminating pathways through the electronic wasteland for other travelers while the hermit seeks inner wisdom through solitary communion with the vast data streams. Their walking staff, fashioned from antenna and cable, represents support found in spiritual discipline within the digital wilderness.
+prompt: "A solitary figure in an advanced environmental suit stands atop a high rocky outcrop, holding a glowing sensor array that casts light across the desolate alien landscape below. Their helmet's heads-up display shows resource readings and geological surveys, but their posture suggests deep contemplation beyond mere material concerns. In the distance, the lights of settlements twinkle like distant stars, while above, aurora-like energy patterns dance across the alien sky. The prospector's isolation is not loneliness but chosen solitude, representing the necessary journey inward to understand one's true purpose, the wisdom found in quiet reflection, and the inner guidance that can only be heard away from the noise of civilization."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Soul searching, seeking inner guidance, solitude
+    - Solitude, introspection, soul searching
   reversed:
-    - "Opposition to soul searching, seeking inner guidance, solitude"
+    - "Opposition to solitude, introspection, soul searching"
 
 # Keywords for quick reference
 keywords:
-  - Soul searching
-  - seeking inner guidance
-  - solitude
+  - Solitude
+  - introspection
+  - soul searching

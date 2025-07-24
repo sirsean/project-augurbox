@@ -1,25 +1,24 @@
-# Justice
+# The Contract
 id: 11
 code: MAJ_11
-name: Justice
-description: Justice, fairness, truth, cause and effect
+name: The Contract
+description: Fairness, cause and effect, accountability
 type: major
 number: 11
 image: /cards/MAJ_11.png
 
 # Full card description/meaning
-prompt: A figure in weathered judicial robes sits between two towering server racks, holding a plasma sword and digital scales that process data streams in real-time. The sword points upward toward a holographic constellation representing higher algorithmic ideals, while the scales weigh digital actions and their cascading consequences through the network. The cubic crown on their head displays scrolling code representing well-ordered logic and impartial digital judgment.
+prompt: "Two faction representatives sit across from each other at a reinforced negotiation table while a neutral arbitrator in formal robes holds an ornate scale in one hand and a plasma stylus in the other, ready to seal their agreement with legal authority. The contract itself hovers as a holographic document between them, its terms clearly visible to all parties. Behind each representative stand witnesses and legal advisors, while armed enforcers from both sides maintain watchful positions. The scene occurs in a neutral station with the insignia of interstellar law prominently displayed. The arbitrator's expression shows impartial wisdom, representing the principle that agreements made in good faith must be honored, that actions have consequences, and that justice serves as the foundation upon which civilized society can exist even in the lawless frontier."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Justice, fairness, truth, cause and effect
+    - Fairness, cause and effect, accountability
   reversed:
-    - "Opposition to justice, fairness, truth, cause and effect"
+    - "Opposition to fairness, cause and effect, accountability"
 
 # Keywords for quick reference
 keywords:
-  - Justice
-  - fairness
-  - truth
+  - Fairness
   - cause and effect
+  - accountability

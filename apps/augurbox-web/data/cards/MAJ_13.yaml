@@ -1,25 +1,24 @@
-# Death
+# Signal Lost
 id: 13
 code: MAJ_13
-name: Death
-description: Endings, beginnings, change, transformation
+name: Signal Lost
+description: Endings, transformation, rebirth
 type: major
 number: 13
 image: /cards/MAJ_13.png
 
 # Full card description/meaning
-prompt: A bio-mechanical skeleton clad in corroded black armor rides a ghost-white synthetic horse, its chassis gleaming with ceramic plates. The rider carries a tattered black flag bearing a white rose symbol etched in bioluminescent circuits. Before the horse lie deactivated android figures representing the obsolescence of old systems, while in the distance a new sun rises between twin data towers, promising digital rebirth and technological transformation through necessary systemic endings.
+prompt: "A cracked helmet lies among scattered debris on an alien shore, its communication array dark and silent, while a final message still glows faintly on the heads-up display: \"Tell them we made it this far.\" The helmet's owner is nowhere to be seen, but their equipment and personal effects tell a story of courage, sacrifice, and ultimate transformation. In the distance, the lights of a thriving settlement built on the foundation of this explorer's discoveries shine bright against the alien night, while new ships prepare to launch and continue the journey to even more distant worlds. The scene represents the profound truth that endings are also beginnings, that death and loss transform into new life and possibilities, and that the greatest pioneers live on through the paths they opened for others to follow."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Endings, beginnings, change, transformation
+    - Endings, transformation, rebirth
   reversed:
-    - "Opposition to endings, beginnings, change, transformation"
+    - "Opposition to endings, transformation, rebirth"
 
 # Keywords for quick reference
 keywords:
   - Endings
-  - beginnings
-  - change
   - transformation
+  - rebirth

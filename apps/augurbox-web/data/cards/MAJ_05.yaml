@@ -1,24 +1,25 @@
-# The Hierophant
+# Duzi, The Orator
 id: 5
 code: MAJ_05
-name: The Hierophant
-description: Spiritual wisdom, religious beliefs, conformity
+name: Duzi, The Orator
+description: Tradition, lore, guidance, cultural wisdom
 type: major
 number: 5
 image: /cards/MAJ_05.png
 
 # Full card description/meaning
-prompt: A hierophant in tattered robes sits between colossal data towers inscribed with sacred algorithms, wearing a triple crown of corroded brass and fiber optic cables. Crossed skeleton keys gleam with electric current in his weathered hands. Two acolytes kneel before glowing terminals, receiving the transmission of forbidden digital knowledge from master to student. The keys represent the unlocking of consciousness within the vast neural network.
+prompt: An ancient storyteller sits before a gathering of Drifters around a crackling energy fire, wearing robes decorated with symbols from dozens of different cultures and civilizations. Holographic fragments of historical records float above their hands as they weave tales of lost colonies, legendary explorers, and the origins of the great diaspora. Their weathered face shows the accumulated wisdom of one who has preserved the cultural memory of scattered humanity, while their audience listens with reverence to stories that connect them to their heritage. The scene represents the preservation of tradition, the guidance found in ancestral wisdom, and the power of shared stories to unite disparate communities.
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Spiritual wisdom, religious beliefs, conformity
+    - Tradition, lore, guidance, cultural wisdom
   reversed:
-    - "Opposition to spiritual wisdom, religious beliefs, conformity"
+    - "Opposition to tradition, lore, guidance, cultural wisdom"
 
 # Keywords for quick reference
 keywords:
-  - Spiritual wisdom
-  - religious beliefs
-  - conformity
+  - Tradition
+  - lore
+  - guidance
+  - cultural wisdom

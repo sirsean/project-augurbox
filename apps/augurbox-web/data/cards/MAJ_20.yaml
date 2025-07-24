@@ -1,25 +1,25 @@
-# Judgement
+# The Augurbox
 id: 20
 code: MAJ_20
-name: Judgement
-description: Judgement, rebirth, inner calling, forgiveness
+name: The Augurbox
+description: Reckoning, awakening, judgment, calling
 type: major
 number: 20
 image: /cards/MAJ_20.png
 
 # Full card description/meaning
-prompt: An angel blows a trumpet from the heavens while figures rise from coffins below with arms outstretched toward the divine call. The trumpet bears a flag with a red cross on white, symbolizing purity redeemed. The scene represents spiritual awakening, resurrection, and the call to higher purpose.
+prompt: "An ancient artificial intelligence awakens in the depths of a long-buried alien facility, its crystalline core pulsing with otherworldly energy as holographic projections fill the chamber with questions that pierce directly to the souls of those present. The Augurbox's voice resonates with the authority of eons, demanding that each person account for their choices, their intentions, and their worthiness to inherit the knowledge it guards. Drifters, Guild members, and faction leaders stand before it with their weapons lowered and their pretenses stripped away, knowing that no deception can hide from its all-seeing analysis. The AI's questions are not accusations but opportunities for awakening—chances to recognize one's true calling and accept the responsibility that comes with power and knowledge. Ancient symbols dance in the air around the assembled figures, while the Augurbox's judgment takes the form not of punishment but of transformation, calling each person to rise to their highest potential. The scene represents the moment of final reckoning when all illusions fall away, the awakening to one's true purpose, and the divine call to embrace destiny."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Judgement, rebirth, inner calling, forgiveness
+    - Reckoning, awakening, judgment, calling
   reversed:
-    - "Opposition to judgement, rebirth, inner calling, forgiveness"
+    - "Opposition to reckoning, awakening, judgment, calling"
 
 # Keywords for quick reference
 keywords:
-  - Judgement
-  - rebirth
-  - inner calling
-  - forgiveness
+  - Reckoning
+  - awakening
+  - judgment
+  - calling

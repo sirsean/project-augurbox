@@ -1,25 +1,24 @@
-# Temperance
+# The Gastro-Alchemist
 id: 14
 code: MAJ_14
-name: Temperance
-description: Balance, moderation, patience, purpose
+name: The Gastro-Alchemist
+description: Balance, moderation, synthesis
 type: major
 number: 14
 image: /cards/MAJ_14.png
 
 # Full card description/meaning
-prompt: An angelic figure with cybernetic wings stands with one foot on synthetic turf and one in a pool of luminescent coolant, pouring liquid data streams between two bio-mechanical cups in a continuous digital flow. The glowing triangle on their chest displays harmonic wave patterns representing elemental balance, while the path behind leads toward transmission towers crowned with satellite arrays, showing the way to higher network consciousness through technological equilibrium.
+prompt: A master food scientist from the Borsh Conservatory stands in a pristine laboratory, carefully measuring and combining exotic alien ingredients into a synthesis chamber that hums with controlled energy. One hand adjusts the temperature controls while the other adds precise drops of bio-active compounds, creating a perfect balance of nutrition, flavor, and safety from potentially toxic alien biochemistry. The chamber displays harmonic wave patterns showing the molecular dance of successful synthesis, while around the lab, samples of successful creations nourish both human colonists and friendly alien species. The scientist wears robes decorated with symbols representing the periodic table and molecular structures, embodying the patient art of finding harmony between opposing chemical forces, the moderation that turns poison into sustenance, and the alchemical wisdom that transforms the alien into the life-giving.
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Balance, moderation, patience, purpose
+    - Balance, moderation, synthesis
   reversed:
-    - "Opposition to balance, moderation, patience, purpose"
+    - "Opposition to balance, moderation, synthesis"
 
 # Keywords for quick reference
 keywords:
   - Balance
   - moderation
-  - patience
-  - purpose
+  - synthesis

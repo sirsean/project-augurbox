@@ -1,25 +1,25 @@
-# Wheel of Fortune
+# The Breach
 id: 10
 code: MAJ_10
-name: Wheel of Fortune
-description: Good luck, karma, life cycles, destiny
+name: The Breach
+description: Cycles, fate, change, cosmic forces
 type: major
 number: 10
 image: /cards/MAJ_10.png
 
 # Full card description/meaning
-prompt: A massive mechanical wheel rotates in a polluted sky, its surface etched with algorithmic symbols and corrupted data streams. A cybernetic sphinx with glowing optical sensors perches atop wielding an energy blade, while a bio-mechanical serpent descends on one side and a digital manifestation of Anubis rises on the other. The wheel represents the eternal cycle of technological fortune, digital karma, and the constant dance between system upgrades and obsolescence in the connected world.
+prompt: A massive dimensional rift tears through space above a barren alien world, its edges crackling with otherworldly energies that bend light and reality itself. Strange objects and fragments of different realities tumble through the breach—pieces of unknown technology, alien artifacts, and cosmic debris that speak to civilizations beyond imagination. The breach pulses with a rhythm like a cosmic heartbeat, representing the eternal cycles of creation and destruction that govern the universe. Below, scattered figures point sensors and recording devices toward the phenomenon, knowing they witness a moment of cosmic significance. The scene embodies the wheel of fortune on a galactic scale, the unpredictable forces that shape destiny, and the profound changes that come when the universe itself shifts and transforms.
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Good luck, karma, life cycles, destiny
+    - Cycles, fate, change, cosmic forces
   reversed:
-    - "Opposition to good luck, karma, life cycles, destiny"
+    - "Opposition to cycles, fate, change, cosmic forces"
 
 # Keywords for quick reference
 keywords:
-  - Good luck
-  - karma
-  - life cycles
-  - destiny
+  - Cycles
+  - fate
+  - change
+  - cosmic forces

@@ -1,24 +1,24 @@
-# The Magician
+# The Engineer
 id: 1
 code: MAJ_01
-name: The Magician
-description: Manifestation, resourcefulness, power
+name: The Engineer
+description: Manifestation, willpower, technical mastery
 type: major
 number: 1
 image: /cards/MAJ_01.png
 
 # Full card description/meaning
-prompt: An enigmatic magician stands before an altar made of recycled circuit boards, one hand reaching towards the techno-sky and the other gesturing to the neon-lit streets below, channeling the energy of the underground. The four tarot suits are reimagined as futuristic tools—metallic wands, glowing cups, digital swords, and neon pentacles, embodying digital mastery over the elements. Above, an infinity hologram glows with boundless potential and the power to materialize cybernetic dreams.
+prompt: "A skilled member of the Engineers Guild stands at a reinforced workbench surrounded by the four tools of creation: plasma cutters (Tools), bio-fluid containers (Vials), communication arrays (Comms), and precision equipment (Gear). One hand reaches toward a complex holographic blueprint floating above, while the other guides a fusion welder with perfect precision. The workshop sparkles with half-completed projects and innovative modifications, representing the power to transform raw materials into functional reality through skill, determination, and deep understanding of the relationship between mind, tool, and matter."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Manifestation, resourcefulness, power
+    - Manifestation, willpower, technical mastery
   reversed:
-    - "Opposition to manifestation, resourcefulness, power"
+    - "Opposition to manifestation, willpower, technical mastery"
 
 # Keywords for quick reference
 keywords:
   - Manifestation
-  - resourcefulness
-  - power
+  - willpower
+  - technical mastery

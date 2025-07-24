@@ -1,25 +1,25 @@
-# The Chariot
+# The Longhauler
 id: 7
 code: MAJ_07
-name: The Chariot
-description: Control, willpower, success, determination
+name: The Longhauler
+description: Drive, control, progress, determination
 type: major
 number: 7
 image: /cards/MAJ_07.png
 
 # Full card description/meaning
-prompt: A cybernetic warrior sits in an armored vehicle constructed from salvaged metal and circuitry, pulled by two mechanical sphinxes - one obsidian black with red LED eyes, one chrome white with blue optical sensors - representing opposing digital forces controlled through neural interface willpower. The dystopian cityscape behind glows with conquered territories, while overhead a holographic canopy displays infinite probability matrices.
+prompt: "A determined pilot guides a heavily-laden cargo vessel through a treacherous asteroid field, their hands steady on manual controls while navigation displays show multiple hazard warnings. The ship's hull bears the scars of previous journeys, but its cargo hold contains essential supplies for a distant outpost. Two escort vessels—one sleek and fast, one heavily armored—flank the hauler, representing the opposing forces of speed and security that must be balanced on every run. The pilot's expression shows absolute focus and determination to deliver their cargo despite the dangers. The scene represents willpower overcoming obstacles, the drive to connect isolated communities, and progress achieved through persistent effort against overwhelming odds."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Control, willpower, success, determination
+    - Drive, control, progress, determination
   reversed:
-    - "Opposition to control, willpower, success, determination"
+    - "Opposition to drive, control, progress, determination"
 
 # Keywords for quick reference
 keywords:
-  - Control
-  - willpower
-  - success
+  - Drive
+  - control
+  - progress
   - determination

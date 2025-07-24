@@ -7,160 +7,160 @@ export interface Card {
 }
 
 export const cards: Card[] = [
-  // Major Arcana (22 cards)
+  // Major Arcana - Fringe Universe (22 cards)
   {
     id: 0,
     code: 'MAJ_00',
-    name: 'The Fool',
-    description: 'New beginnings, innocence, spontaneity',
-    prompt: 'A mysterious figure teeters on the precipice of a fragmented reality, poised to delve into the chaos of the unknown worlds. They clutch a bundle of archaic tools and a white rose etched with cryptic symbols, while a mechanical canine companion hovers beside them. Above, a digital sun flickers with enigmatic energy, casting shadows of new beginnings and infinite adventures.'
+    name: 'The Greenhorn',
+    description: 'New beginnings, inexperience, potential',
+    prompt: 'A young Drifter in ill-fitting salvaged gear stands at the edge of a massive scrapyard, holding a worn datapad containing basic survival protocols and a small bundle of personal possessions. Their environmental suit is patched and clearly second-hand, but their eyes show determination rather than fear. In the distance, other Drifters work among towering piles of alien technology and twisted metal. The scene represents the first tentative steps into the harsh Fringe, the courage to leave safety behind, and the unlimited potential that comes with embracing the unknown frontier.'
   },
   {
     id: 1,
     code: 'MAJ_01',
-    name: 'The Magician',
-    description: 'Manifestation, resourcefulness, power',
-    prompt: 'An enigmatic magician stands before an altar made of recycled circuit boards, one hand reaching towards the techno-sky and the other gesturing to the neon-lit streets below, channeling the energy of the underground. The four tarot suits are reimagined as futuristic tools—metallic wands, glowing cups, digital swords, and neon pentacles, embodying digital mastery over the elements. Above, an infinity hologram glows with boundless potential and the power to materialize cybernetic dreams.'
+    name: 'The Engineer',
+    description: 'Manifestation, willpower, technical mastery',
+    prompt: 'A skilled member of the Engineers Guild stands at a reinforced workbench surrounded by the four tools of creation: plasma cutters (Tools), bio-fluid containers (Vials), communication arrays (Comms), and precision equipment (Gear). One hand reaches toward a complex holographic blueprint floating above, while the other guides a fusion welder with perfect precision. The workshop sparkles with half-completed projects and innovative modifications, representing the power to transform raw materials into functional reality through skill, determination, and deep understanding of the relationship between mind, tool, and matter.'
   },
   {
     id: 2,
     code: 'MAJ_02',
-    name: 'The High Priestess',
-    description: 'Intuition, sacred knowledge, divine feminine',
-    prompt: 'A serene figure sits between towering monolithic data servers marked with binary code patterns, representing dual interface and synthetic balance. Behind her flickers a holographic tapestry adorned with luminous pomegranates, symbols of digital fertility and latent wisdom. She unspools a digital scroll, whispering algorithms of forbidden knowledge available only through deep contemplation within the cyber network.'
+    name: 'The Void Drifter',
+    description: 'Intuition, the unseen, cosmic awareness',
+    prompt: 'A solitary figure in a modified environmental suit sits in deep meditation aboard a small vessel at the edge of a cosmic anomaly, where reality bends and strange energies swirl in impossible patterns. Ancient star charts and sensor readings float around them, but their eyes are closed in communion with forces beyond technological measurement. The anomaly pulses with colors that have no names, and fragments of alien geometries drift past the viewport. The scene represents intuitive knowledge that transcends instruments, the ability to sense cosmic currents and dimensional shifts, and the wisdom found in embracing the mystery of the unknown void.'
   },
   {
     id: 3,
     code: 'MAJ_03',
-    name: 'The Empress',
-    description: 'Femininity, beauty, nature, abundance',
-    prompt: 'A nurturing sovereign reclines on a throne intertwined with neon Venus symbols, enveloped by virtual gardens of lush, pixelated flora and flowing streams of binary water. Her crown, an array of LED stars forming cosmic constellations, complements a holographic robe adorned with synthetic pomegranates. Golden wheat, represented in luminous digital sprites, blooms at her feet, signifying the fertile abundance born from creative digital artistry and nurturing innovation.'
+    name: 'The Scablands',
+    description: 'Nature, abundance, creation, harsh beauty',
+    prompt: 'A vast alien landscape stretches beneath twin suns, where crystalline formations emerge from toxic-looking soil and strange bioluminescent flora thrives in seemingly impossible conditions. Mineral veins gleam like precious metals through exposed rock faces, while pools of exotic chemicals create rainbow patterns across the scarred terrain. Despite its harsh appearance, the land pulses with life and abundance—rare elements, unique biological specimens, and untapped energy sources waiting to be discovered by those brave enough to venture into its alien embrace. The scene represents the fierce beauty of untamed frontier, abundance found in unexpected places, and the creative force that transforms desolation into opportunity.'
   },
   {
     id: 4,
     code: 'MAJ_04',
-    name: 'The Emperor',
-    description: 'Authority, father figure, structure, control',
-    prompt: 'A commanding ruler is seated on a throne constructed from repurposed industrial machinery, encircled by augmented reality ram head symbols that exude digital masculine vigor. In his grasp, an illuminated scepter crowned with an ankh circuit symbolizes authority and synthetic life. Behind, virtual barren landscapes display his influence over post-apocalyptic realms through ironclad order, strategic discipline, and cybernetic governance.'
+    name: 'The Guild Magnate',
+    description: 'Authority, structure, control, leadership',
+    prompt: 'A powerful leader sits on a throne constructed from the finest salvaged materials and advanced technology, wearing robes decorated with the insignia of multiple guilds and trade organizations. Control screens displaying resource flows, territorial claims, and trade agreements surround the throne, while armed retainers in guild colors stand at attention. The magnate holds a ceremonial staff topped with a crystalline power core, representing authority earned through successful organization of resources, people, and territory. The scene embodies structured leadership, the power that comes from uniting diverse factions, and the responsibility of maintaining order in the chaotic frontier.'
   },
   {
     id: 5,
     code: 'MAJ_05',
-    name: 'The Hierophant',
-    description: 'Spiritual wisdom, religious beliefs, conformity',
-    prompt: 'A hierophant in tattered robes sits between colossal data towers inscribed with sacred algorithms, wearing a triple crown of corroded brass and fiber optic cables. Crossed skeleton keys gleam with electric current in his weathered hands. Two acolytes kneel before glowing terminals, receiving the transmission of forbidden digital knowledge from master to student. The keys represent the unlocking of consciousness within the vast neural network.'
+    name: 'Duzi, The Orator',
+    description: 'Tradition, lore, guidance, cultural wisdom',
+    prompt: 'An ancient storyteller sits before a gathering of Drifters around a crackling energy fire, wearing robes decorated with symbols from dozens of different cultures and civilizations. Holographic fragments of historical records float above their hands as they weave tales of lost colonies, legendary explorers, and the origins of the great diaspora. Their weathered face shows the accumulated wisdom of one who has preserved the cultural memory of scattered humanity, while their audience listens with reverence to stories that connect them to their heritage. The scene represents the preservation of tradition, the guidance found in ancestral wisdom, and the power of shared stories to unite disparate communities.'
   },
   {
     id: 6,
     code: 'MAJ_06',
-    name: 'The Lovers',
-    description: 'Love, harmony, relationships, choices',
-    prompt: 'Two figures stand beneath a cybernetic angel with mechanical wings who projects a blessing hologram over their union. Behind the woman grows a bio-luminescent Tree of Knowledge bearing digital fruit that pulse with data streams, while behind the man stands a metallic Tree of Life with fiber optic flames. This represents the choice between virtual and authentic connection, digital consciousness, and the harmony found in balancing human emotion with technological enhancement.'
+    name: 'The Union of Merchants',
+    description: 'Partnership, choice, alliance, mutual benefit',
+    prompt: 'Two merchant representatives shake hands across a reinforced trading table while a third party—an arbiter from the Merchant Union—oversees the agreement with official documentation. Behind them, cargo vessels from different factions unload valuable goods in a bustling trade hub, representing the complex network of relationships, negotiations, and mutual dependencies that bind frontier communities together. The handshake occurs beneath a banner displaying the scales of fair trade, while armed guards from both parties ensure the transaction proceeds peacefully. The scene embodies the crucial choices between cooperation and conflict, the partnerships that make survival possible, and the binding power of mutually beneficial agreements.'
   },
   {
     id: 7,
     code: 'MAJ_07',
-    name: 'The Chariot',
-    description: 'Control, willpower, success, determination',
-    prompt: 'A cybernetic warrior sits in an armored vehicle constructed from salvaged metal and circuitry, pulled by two mechanical sphinxes - one obsidian black with red LED eyes, one chrome white with blue optical sensors - representing opposing digital forces controlled through neural interface willpower. The dystopian cityscape behind glows with conquered territories, while overhead a holographic canopy displays infinite probability matrices.'
+    name: 'The Longhauler',
+    description: 'Drive, control, progress, determination',
+    prompt: 'A determined pilot guides a heavily-laden cargo vessel through a treacherous asteroid field, their hands steady on manual controls while navigation displays show multiple hazard warnings. The ship\'s hull bears the scars of previous journeys, but its cargo hold contains essential supplies for a distant outpost. Two escort vessels—one sleek and fast, one heavily armored—flank the hauler, representing the opposing forces of speed and security that must be balanced on every run. The pilot\'s expression shows absolute focus and determination to deliver their cargo despite the dangers. The scene represents willpower overcoming obstacles, the drive to connect isolated communities, and progress achieved through persistent effort against overwhelming odds.'
   },
   {
     id: 8,
     code: 'MAJ_08',
-    name: 'Strength',
-    description: 'Inner strength, bravery, compassion, focus',
-    prompt: 'A gentle figure in weathered white robes embedded with fiber optic threads calmly interfaces with a cybernetic lion, its metallic jaws and LED mane responding to their bio-electric touch. The gesture demonstrates that inner strength and digital compassion can overcome raw computational force. Above their head floats a holographic infinity symbol, representing unlimited neural power and the triumph of conscious spirit over base programming through empathy rather than force.'
+    name: 'The Tamer',
+    description: 'Inner strength, compassion, courage',
+    prompt: 'A calm Drifter in weathered protective gear kneels beside a massive, agitated alien creature whose bio-luminescent markings pulse with stress and aggression. Rather than using weapons or restraints, the Drifter extends one hand toward the creature while the other holds a small offering of synthesized nutrients. The creature\'s multiple eyes gradually dim from hostile red to curious amber as it responds to the gentle approach. Around them, the harsh alien landscape seems to quiet, as if nature itself recognizes the power of compassion over force. The scene represents inner strength that tames through understanding rather than domination, the courage to approach danger with empathy, and the wisdom that true power comes from connection rather than control.'
   },
   {
     id: 9,
     code: 'MAJ_09',
-    name: 'The Hermit',
-    description: 'Soul searching, seeking inner guidance, solitude',
-    prompt: 'A cloaked figure stands alone atop a transmission tower peak amid a landscape of electronic debris, holding aloft a makeshift lantern containing a six-pointed LED star powered by scavenged batteries. The harsh light cuts through digital static, illuminating pathways through the electronic wasteland for other travelers while the hermit seeks inner wisdom through solitary communion with the vast data streams. Their walking staff, fashioned from antenna and cable, represents support found in spiritual discipline within the digital wilderness.'
+    name: 'The Prospector',
+    description: 'Solitude, introspection, soul searching',
+    prompt: 'A solitary figure in an advanced environmental suit stands atop a high rocky outcrop, holding a glowing sensor array that casts light across the desolate alien landscape below. Their helmet\'s heads-up display shows resource readings and geological surveys, but their posture suggests deep contemplation beyond mere material concerns. In the distance, the lights of settlements twinkle like distant stars, while above, aurora-like energy patterns dance across the alien sky. The prospector\'s isolation is not loneliness but chosen solitude, representing the necessary journey inward to understand one\'s true purpose, the wisdom found in quiet reflection, and the inner guidance that can only be heard away from the noise of civilization.'
   },
   {
     id: 10,
     code: 'MAJ_10',
-    name: 'Wheel of Fortune',
-    description: 'Good luck, karma, life cycles, destiny',
-    prompt: 'A massive mechanical wheel rotates in a polluted sky, its surface etched with algorithmic symbols and corrupted data streams. A cybernetic sphinx with glowing optical sensors perches atop wielding an energy blade, while a bio-mechanical serpent descends on one side and a digital manifestation of Anubis rises on the other. The wheel represents the eternal cycle of technological fortune, digital karma, and the constant dance between system upgrades and obsolescence in the connected world.'
+    name: 'The Breach',
+    description: 'Cycles, fate, change, cosmic forces',
+    prompt: 'A massive dimensional rift tears through space above a barren alien world, its edges crackling with otherworldly energies that bend light and reality itself. Strange objects and fragments of different realities tumble through the breach—pieces of unknown technology, alien artifacts, and cosmic debris that speak to civilizations beyond imagination. The breach pulses with a rhythm like a cosmic heartbeat, representing the eternal cycles of creation and destruction that govern the universe. Below, scattered figures point sensors and recording devices toward the phenomenon, knowing they witness a moment of cosmic significance. The scene embodies the wheel of fortune on a galactic scale, the unpredictable forces that shape destiny, and the profound changes that come when the universe itself shifts and transforms.'
   },
   {
     id: 11,
     code: 'MAJ_11',
-    name: 'Justice',
-    description: 'Justice, fairness, truth, cause and effect',
-    prompt: 'A figure in weathered judicial robes sits between two towering server racks, holding a plasma sword and digital scales that process data streams in real-time. The sword points upward toward a holographic constellation representing higher algorithmic ideals, while the scales weigh digital actions and their cascading consequences through the network. The cubic crown on their head displays scrolling code representing well-ordered logic and impartial digital judgment.'
+    name: 'The Contract',
+    description: 'Fairness, cause and effect, accountability',
+    prompt: 'Two faction representatives sit across from each other at a reinforced negotiation table while a neutral arbitrator in formal robes holds an ornate scale in one hand and a plasma stylus in the other, ready to seal their agreement with legal authority. The contract itself hovers as a holographic document between them, its terms clearly visible to all parties. Behind each representative stand witnesses and legal advisors, while armed enforcers from both sides maintain watchful positions. The scene occurs in a neutral station with the insignia of interstellar law prominently displayed. The arbitrator\'s expression shows impartial wisdom, representing the principle that agreements made in good faith must be honored, that actions have consequences, and that justice serves as the foundation upon which civilized society can exist even in the lawless frontier.'
   },
   {
     id: 12,
     code: 'MAJ_12',
-    name: 'The Hanged Man',
-    description: 'Suspension, restriction, letting go, sacrifice',
-    prompt: 'A figure hangs suspended from a T-shaped transmission tower, bio-mechanical cables connecting to neural ports in their skull, yet their expression shows digital serenity rather than distress. A halo of swirling data patterns surrounds their head, indicating enlightenment gained through conscious interface sacrifice and surrender to the network. The living metal of the tower pulses with electric current, suggesting this willing integration brings new technological growth and expanded perspective through the collective consciousness.'
+    name: 'The Salvager',
+    description: 'Surrender, new perspective, sacrifice',
+    prompt: 'A salvage operator hangs suspended in zero gravity within the twisted wreckage of a massive derelict vessel, their safety line the only thing preventing them from drifting into the void. Rather than showing distress, their expression is one of serene acceptance and heightened awareness. From this inverted perspective, they can see patterns in the wreckage that would be invisible from any other angle—hidden passages, valuable components, and the ship\'s tragic story written in twisted metal and shattered systems. Their helmet light illuminates ancient symbols and technological mysteries, while their suspended position allows them to understand the vessel\'s final moments in a way no upright exploration could achieve. The scene represents the wisdom gained through surrender, the new insights that come from accepting vulnerability, and the understanding that sometimes we must let go of control to see the truth.'
   },
   {
     id: 13,
     code: 'MAJ_13',
-    name: 'Death',
-    description: 'Endings, beginnings, change, transformation',
-    prompt: 'A bio-mechanical skeleton clad in corroded black armor rides a ghost-white synthetic horse, its chassis gleaming with ceramic plates. The rider carries a tattered black flag bearing a white rose symbol etched in bioluminescent circuits. Before the horse lie deactivated android figures representing the obsolescence of old systems, while in the distance a new sun rises between twin data towers, promising digital rebirth and technological transformation through necessary systemic endings.'
+    name: 'Signal Lost',
+    description: 'Endings, transformation, rebirth',
+    prompt: 'A cracked helmet lies among scattered debris on an alien shore, its communication array dark and silent, while a final message still glows faintly on the heads-up display: "Tell them we made it this far." The helmet\'s owner is nowhere to be seen, but their equipment and personal effects tell a story of courage, sacrifice, and ultimate transformation. In the distance, the lights of a thriving settlement built on the foundation of this explorer\'s discoveries shine bright against the alien night, while new ships prepare to launch and continue the journey to even more distant worlds. The scene represents the profound truth that endings are also beginnings, that death and loss transform into new life and possibilities, and that the greatest pioneers live on through the paths they opened for others to follow.'
   },
   {
     id: 14,
     code: 'MAJ_14',
-    name: 'Temperance',
-    description: 'Balance, moderation, patience, purpose',
-    prompt: 'An angelic figure with cybernetic wings stands with one foot on synthetic turf and one in a pool of luminescent coolant, pouring liquid data streams between two bio-mechanical cups in a continuous digital flow. The glowing triangle on their chest displays harmonic wave patterns representing elemental balance, while the path behind leads toward transmission towers crowned with satellite arrays, showing the way to higher network consciousness through technological equilibrium.'
+    name: 'The Gastro-Alchemist',
+    description: 'Balance, moderation, synthesis',
+    prompt: 'A master food scientist from the Borsh Conservatory stands in a pristine laboratory, carefully measuring and combining exotic alien ingredients into a synthesis chamber that hums with controlled energy. One hand adjusts the temperature controls while the other adds precise drops of bio-active compounds, creating a perfect balance of nutrition, flavor, and safety from potentially toxic alien biochemistry. The chamber displays harmonic wave patterns showing the molecular dance of successful synthesis, while around the lab, samples of successful creations nourish both human colonists and friendly alien species. The scientist wears robes decorated with symbols representing the periodic table and molecular structures, embodying the patient art of finding harmony between opposing chemical forces, the moderation that turns poison into sustenance, and the alchemical wisdom that transforms the alien into the life-giving.'
   },
   {
     id: 15,
     code: 'MAJ_15',
-    name: 'The Devil',
-    description: 'Bondage, addiction, sexuality, materialism',
-    prompt: 'A horned figure with cyber-implants perches atop a black server cube while two chained figures with neural interface ports stand below. The digital chains flicker with data streams, showing that bondage is often self-imposed through technological dependency and virtual addictions. The inverted pentagram glows with corrupted code representing consciousness trapped in the digital matrix, but the scene suggests liberation is possible through awareness of the system\'s control.'
+    name: 'The Loot Eater',
+    description: 'Addiction, materialism, bondage, greed',
+    prompt: 'A figure sits hunched over a hoard of alien artifacts and advanced technology, their eyes glowing with the same eerie light as the mysterious devices they obsessively collect and examine. Cables and neural interfaces connect directly to their skull, allowing them to interface with the alien technology, but the connection has become parasitic rather than symbiotic. Around them, piles of looted equipment and rare materials create a gleaming prison of their own making, while holographic chains of pure energy bind them to their obsession. The artifacts pulse with seductive power, whispering promises of greater knowledge and abilities, but the figure\'s deteriorating condition shows the price of surrendering to material desire. The scene represents the trap of believing that happiness comes from accumulation, the spiritual bondage of endless consumption, and the reminder that true freedom requires recognizing when enough is enough.'
   },
   {
     id: 16,
     code: 'MAJ_16',
-    name: 'The Tower',
-    description: 'Sudden change, upheaval, chaos, revelation',
-    prompt: 'An electromagnetic pulse strikes a towering data center, destroying its antenna array and sending figures with neural implants tumbling toward the wasteland below. The tower represents false digital structures built on corrupted code foundations, while the EMP brings sudden system revelation and necessary destruction of virtual illusions, clearing the way for authentic analog reconstruction.'
+    name: 'The Lykenrot Breach',
+    description: 'Sudden upheaval, disaster, revelation',
+    prompt: 'The ground erupts in violent chaos as massive bio-mechanical creatures burst forth from underground, their chitinous forms bristling with organic weapons and pulsing with alien intelligence. The peaceful mining settlement of Lykenrot is transformed in moments from ordered civilization to apocalyptic battleground, with structures collapsing and inhabitants fleeing in terror. Yet even in the destruction, there is revelation—the breach exposes ancient alien technology and previously unknown energy sources, while the creatures themselves represent a form of life that challenges every assumption about biology and consciousness. Emergency lights cast stark shadows across the scene of destruction, but in the distance, evacuation ships rise toward safety, carrying not just survivors but new knowledge that will reshape humanity\'s understanding of the universe. The scene embodies sudden catastrophic change that destroys the old but reveals profound truths previously hidden beneath comfortable illusions.'
   },
   {
     id: 17,
     code: 'MAJ_17',
-    name: 'The Star',
-    description: 'Hope, faith, purpose, renewal, spirituality',
-    prompt: 'A figure kneels by a pool of liquid mercury under a sky filled with satellite constellations, pouring luminescent coolant onto the electronic landscape and back into the pool. The large central star is an eight-pointed transmission beacon representing hope and digital guidance, while seven smaller orbital satellites represent the network nodes. A mechanical bird nearby symbolizes the consciousness ready to upload and transcend physical limitations.'
+    name: 'The Lighthouse Sept',
+    description: 'Hope, renewal, guidance, serenity',
+    prompt: 'A graceful spire rises from a fortified station on the edge of civilized space, its beacon cutting through the cosmic darkness to guide lost ships safely home. The lighthouse itself is both technological marvel and spiritual sanctuary, maintained by a community of devoted keepers who have sworn to never let the light fail. Ships in various states of distress approach from all directions—some damaged by space battles, others running low on supplies, all seeking the hope that the lighthouse represents. The beacon\'s light is pure and constant, powered not just by fusion reactors but by the collective will of those who refuse to let travelers face the void alone. Around the lighthouse base, a garden of alien and Earth plants thrives in carefully maintained biodomes, representing new life taking root even in the harshest environment. The scene embodies hope that endures through the darkest times, the renewal that comes from community service, and the guidance that helps others find their way through uncertainty.'
   },
   {
     id: 18,
     code: 'MAJ_18',
-    name: 'The Moon',
-    description: 'Illusion, fear, anxiety, subconscious, intuition',
-    prompt: 'A full moon with digital display features looks down on a data pathway winding between two transmission towers toward distant server farms. A bio-mechanical crustacean emerges from polluted water while a cybernetic wolf and robotic dog emit electronic howls at the moon, representing wild and domesticated aspects of technological nature. Digital dewdrops fall from the moon, symbolizing the nourishment of the artificial subconscious through ambient data streams.'
+    name: 'The Mesmegraph',
+    description: 'Illusion, subconscious, deception, intuition',
+    prompt: 'A mysterious device of alien origin sits in a darkened chamber, its crystalline surfaces projecting shifting holographic patterns that seem to move and change based on the observer\'s deepest thoughts and fears. The device feeds on psychic energy, creating elaborate illusions that blend memory, desire, and nightmare into convincing false realities. A lone researcher approaches cautiously, wearing protective neural dampeners, but even through the shielding, the Mesmegraph\'s influence seeps through, causing the walls of the chamber to ripple like water and familiar faces to emerge from the shadows. The projections show distorted versions of home, lost loved ones, and impossible promises, while also revealing hidden truths about the researcher\'s own motivations and fears. The scene represents the power of the subconscious mind to both deceive and illuminate, the danger of mistaking desire for reality, and the importance of trusting inner wisdom even when external evidence seems compelling.'
   },
   {
     id: 19,
     code: 'MAJ_19',
-    name: 'The Sun',
-    description: 'Positivity, fun, warmth, success, vitality',
-    prompt: 'A radiant sun shines down on a joyful child riding a white horse in a walled garden. Sunflowers grow behind the wall, turning their faces toward the light, while the child holds a red banner of passion and life force. The scene radiates pure joy, vitality, and innocent celebration of life.'
+    name: 'The Aurelian Bloom',
+    description: 'Joy, success, vitality, life force',
+    prompt: 'A magnificent alien plant unfurls its golden petals across a previously barren landscape, its bio-luminescent flowers releasing spores that shimmer like liquid sunlight in the atmosphere. Where the spores settle, the dead soil comes alive with new growth, while the air itself seems to sparkle with renewed vitality and possibility. A young Drifter stands in wonder beneath the towering bloom, their arms raised in celebration as the life-giving particles swirl around them like living stars. Other colonists emerge from their shelters to witness this miraculous transformation, their faces filled with joy and hope as they realize their world is being reborn. The Aurelian Bloom towers above them all, its light driving away the shadows and filling everyone present with an profound sense of connection to the life force that flows through all things. The scene represents pure joy and vitality, the success that comes from harmony with natural forces, and the miraculous transformation that occurs when life finds a way to flourish against all odds.'
   },
   {
     id: 20,
     code: 'MAJ_20',
-    name: 'Judgement',
-    description: 'Judgement, rebirth, inner calling, forgiveness',
-    prompt: 'An angel blows a trumpet from the heavens while figures rise from coffins below with arms outstretched toward the divine call. The trumpet bears a flag with a red cross on white, symbolizing purity redeemed. The scene represents spiritual awakening, resurrection, and the call to higher purpose.'
+    name: 'The Augurbox',
+    description: 'Reckoning, awakening, judgment, calling',
+    prompt: 'An ancient artificial intelligence awakens in the depths of a long-buried alien facility, its crystalline core pulsing with otherworldly energy as holographic projections fill the chamber with questions that pierce directly to the souls of those present. The Augurbox\'s voice resonates with the authority of eons, demanding that each person account for their choices, their intentions, and their worthiness to inherit the knowledge it guards. Drifters, Guild members, and faction leaders stand before it with their weapons lowered and their pretenses stripped away, knowing that no deception can hide from its all-seeing analysis. The AI\'s questions are not accusations but opportunities for awakening—chances to recognize one\'s true calling and accept the responsibility that comes with power and knowledge. Ancient symbols dance in the air around the assembled figures, while the Augurbox\'s judgment takes the form not of punishment but of transformation, calling each person to rise to their highest potential. The scene represents the moment of final reckoning when all illusions fall away, the awakening to one\'s true purpose, and the divine call to embrace destiny.'
   },
   {
     id: 21,
     code: 'MAJ_21',
-    name: 'The World',
-    description: 'Completion, accomplishment, travel',
-    prompt: 'A dancing figure is surrounded by an oval wreath, representing completion and cosmic consciousness. In each corner appears a symbol of the four elements - angel (air), eagle (water), lion (fire), and bull (earth). The figure holds two wands, symbolizing balance between opposing forces and mastery over all elements.'
+    name: 'The Free Fringe',
+    description: 'Completion, integration, unity, fulfillment',
+    prompt: 'Representatives from every faction, guild, and independent community gather in a vast amphitheater built from salvaged materials and alien architecture, their differences set aside in service of a greater vision. The Free Fringe banner flies overhead—not the symbol of any single group, but a new design that incorporates elements from all the diverse peoples who have chosen to make the frontier their home. In the center of the gathering, a holographic display shows star maps of explored territories, trade routes connecting distant settlements, and communication networks that span the known galaxy. The assembly represents not conquest or control, but the organic evolution of scattered survivors into a new form of civilization based on cooperation, mutual respect, and shared purpose. Around the amphitheater\'s edge, the four elements of frontier life are represented: Tools for building, Vials for sustaining, Comms for connecting, and Gear for surviving. The scene embodies completion of the great work of colonization, the integration of diverse peoples into a unified but not uniform society, and the fulfillment of humanity\'s destiny among the stars.'
   },
 
   // Tools (Fire/Action) - 14 cards (22-35)

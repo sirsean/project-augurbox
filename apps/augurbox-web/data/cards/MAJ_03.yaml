@@ -1,25 +1,25 @@
-# The Empress
+# The Scablands
 id: 3
 code: MAJ_03
-name: The Empress
-description: Femininity, beauty, nature, abundance
+name: The Scablands
+description: Nature, abundance, creation, harsh beauty
 type: major
 number: 3
 image: /cards/MAJ_03.png
 
 # Full card description/meaning
-prompt: A nurturing sovereign reclines on a throne intertwined with neon Venus symbols, enveloped by virtual gardens of lush, pixelated flora and flowing streams of binary water. Her crown, an array of LED stars forming cosmic constellations, complements a holographic robe adorned with synthetic pomegranates. Golden wheat, represented in luminous digital sprites, blooms at her feet, signifying the fertile abundance born from creative digital artistry and nurturing innovation.
+prompt: A vast alien landscape stretches beneath twin suns, where crystalline formations emerge from toxic-looking soil and strange bioluminescent flora thrives in seemingly impossible conditions. Mineral veins gleam like precious metals through exposed rock faces, while pools of exotic chemicals create rainbow patterns across the scarred terrain. Despite its harsh appearance, the land pulses with life and abundance—rare elements, unique biological specimens, and untapped energy sources waiting to be discovered by those brave enough to venture into its alien embrace. The scene represents the fierce beauty of untamed frontier, abundance found in unexpected places, and the creative force that transforms desolation into opportunity.
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Femininity, beauty, nature, abundance
+    - Nature, abundance, creation, harsh beauty
   reversed:
-    - "Opposition to femininity, beauty, nature, abundance"
+    - "Opposition to nature, abundance, creation, harsh beauty"
 
 # Keywords for quick reference
 keywords:
-  - Femininity
-  - beauty
-  - nature
+  - Nature
   - abundance
+  - creation
+  - harsh beauty

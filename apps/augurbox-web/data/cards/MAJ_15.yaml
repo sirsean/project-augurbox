@@ -1,25 +1,25 @@
-# The Devil
+# The Loot Eater
 id: 15
 code: MAJ_15
-name: The Devil
-description: Bondage, addiction, sexuality, materialism
+name: The Loot Eater
+description: Addiction, materialism, bondage, greed
 type: major
 number: 15
 image: /cards/MAJ_15.png
 
 # Full card description/meaning
-prompt: "A horned figure with cyber-implants perches atop a black server cube while two chained figures with neural interface ports stand below. The digital chains flicker with data streams, showing that bondage is often self-imposed through technological dependency and virtual addictions. The inverted pentagram glows with corrupted code representing consciousness trapped in the digital matrix, but the scene suggests liberation is possible through awareness of the system's control."
+prompt: "A figure sits hunched over a hoard of alien artifacts and advanced technology, their eyes glowing with the same eerie light as the mysterious devices they obsessively collect and examine. Cables and neural interfaces connect directly to their skull, allowing them to interface with the alien technology, but the connection has become parasitic rather than symbiotic. Around them, piles of looted equipment and rare materials create a gleaming prison of their own making, while holographic chains of pure energy bind them to their obsession. The artifacts pulse with seductive power, whispering promises of greater knowledge and abilities, but the figure's deteriorating condition shows the price of surrendering to material desire. The scene represents the trap of believing that happiness comes from accumulation, the spiritual bondage of endless consumption, and the reminder that true freedom requires recognizing when enough is enough."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Bondage, addiction, sexuality, materialism
+    - Addiction, materialism, bondage, greed
   reversed:
-    - "Opposition to bondage, addiction, sexuality, materialism"
+    - "Opposition to addiction, materialism, bondage, greed"
 
 # Keywords for quick reference
 keywords:
-  - Bondage
-  - addiction
-  - sexuality
+  - Addiction
   - materialism
+  - bondage
+  - greed

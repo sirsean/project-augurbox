@@ -1,26 +1,25 @@
-# The Star
+# The Lighthouse Sept
 id: 17
 code: MAJ_17
-name: The Star
-description: Hope, faith, purpose, renewal, spirituality
+name: The Lighthouse Sept
+description: Hope, renewal, guidance, serenity
 type: major
 number: 17
 image: /cards/MAJ_17.png
 
 # Full card description/meaning
-prompt: A figure kneels by a pool of liquid mercury under a sky filled with satellite constellations, pouring luminescent coolant onto the electronic landscape and back into the pool. The large central star is an eight-pointed transmission beacon representing hope and digital guidance, while seven smaller orbital satellites represent the network nodes. A mechanical bird nearby symbolizes the consciousness ready to upload and transcend physical limitations.
+prompt: "A graceful spire rises from a fortified station on the edge of civilized space, its beacon cutting through the cosmic darkness to guide lost ships safely home. The lighthouse itself is both technological marvel and spiritual sanctuary, maintained by a community of devoted keepers who have sworn to never let the light fail. Ships in various states of distress approach from all directions—some damaged by space battles, others running low on supplies, all seeking the hope that the lighthouse represents. The beacon's light is pure and constant, powered not just by fusion reactors but by the collective will of those who refuse to let travelers face the void alone. Around the lighthouse base, a garden of alien and Earth plants thrives in carefully maintained biodomes, representing new life taking root even in the harshest environment. The scene embodies hope that endures through the darkest times, the renewal that comes from community service, and the guidance that helps others find their way through uncertainty."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Hope, faith, purpose, renewal, spirituality
+    - Hope, renewal, guidance, serenity
   reversed:
-    - "Opposition to hope, faith, purpose, renewal, spirituality"
+    - "Opposition to hope, renewal, guidance, serenity"
 
 # Keywords for quick reference
 keywords:
   - Hope
-  - faith
-  - purpose
   - renewal
-  - spirituality
+  - guidance
+  - serenity

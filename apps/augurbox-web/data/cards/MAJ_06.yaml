@@ -1,25 +1,25 @@
-# The Lovers
+# The Union of Merchants
 id: 6
 code: MAJ_06
-name: The Lovers
-description: Love, harmony, relationships, choices
+name: The Union of Merchants
+description: Partnership, choice, alliance, mutual benefit
 type: major
 number: 6
 image: /cards/MAJ_06.png
 
 # Full card description/meaning
-prompt: Two figures stand beneath a cybernetic angel with mechanical wings who projects a blessing hologram over their union. Behind the woman grows a bio-luminescent Tree of Knowledge bearing digital fruit that pulse with data streams, while behind the man stands a metallic Tree of Life with fiber optic flames. This represents the choice between virtual and authentic connection, digital consciousness, and the harmony found in balancing human emotion with technological enhancement.
+prompt: Two merchant representatives shake hands across a reinforced trading table while a third party—an arbiter from the Merchant Union—oversees the agreement with official documentation. Behind them, cargo vessels from different factions unload valuable goods in a bustling trade hub, representing the complex network of relationships, negotiations, and mutual dependencies that bind frontier communities together. The handshake occurs beneath a banner displaying the scales of fair trade, while armed guards from both parties ensure the transaction proceeds peacefully. The scene embodies the crucial choices between cooperation and conflict, the partnerships that make survival possible, and the binding power of mutually beneficial agreements.
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Love, harmony, relationships, choices
+    - Partnership, choice, alliance, mutual benefit
   reversed:
-    - "Opposition to love, harmony, relationships, choices"
+    - "Opposition to partnership, choice, alliance, mutual benefit"
 
 # Keywords for quick reference
 keywords:
-  - Love
-  - harmony
-  - relationships
-  - choices
+  - Partnership
+  - choice
+  - alliance
+  - mutual benefit

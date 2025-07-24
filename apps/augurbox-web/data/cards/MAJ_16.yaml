@@ -1,25 +1,24 @@
-# The Tower
+# The Lykenrot Breach
 id: 16
 code: MAJ_16
-name: The Tower
-description: Sudden change, upheaval, chaos, revelation
+name: The Lykenrot Breach
+description: Sudden upheaval, disaster, revelation
 type: major
 number: 16
 image: /cards/MAJ_16.png
 
 # Full card description/meaning
-prompt: An electromagnetic pulse strikes a towering data center, destroying its antenna array and sending figures with neural implants tumbling toward the wasteland below. The tower represents false digital structures built on corrupted code foundations, while the EMP brings sudden system revelation and necessary destruction of virtual illusions, clearing the way for authentic analog reconstruction.
+prompt: "The ground erupts in violent chaos as massive bio-mechanical creatures burst forth from underground, their chitinous forms bristling with organic weapons and pulsing with alien intelligence. The peaceful mining settlement of Lykenrot is transformed in moments from ordered civilization to apocalyptic battleground, with structures collapsing and inhabitants fleeing in terror. Yet even in the destruction, there is revelation—the breach exposes ancient alien technology and previously unknown energy sources, while the creatures themselves represent a form of life that challenges every assumption about biology and consciousness. Emergency lights cast stark shadows across the scene of destruction, but in the distance, evacuation ships rise toward safety, carrying not just survivors but new knowledge that will reshape humanity's understanding of the universe. The scene embodies sudden catastrophic change that destroys the old but reveals profound truths previously hidden beneath comfortable illusions."
 
 # Card meanings (traditional interpretations)
 meanings:
   upright:
-    - Sudden change, upheaval, chaos, revelation
+    - Sudden upheaval, disaster, revelation
   reversed:
-    - "Opposition to sudden change, upheaval, chaos, revelation"
+    - "Opposition to sudden upheaval, disaster, revelation"
 
 # Keywords for quick reference
 keywords:
-  - Sudden change
-  - upheaval
-  - chaos
+  - Sudden upheaval
+  - disaster
   - revelation
