@@ -10,3 +10,8 @@ binding = "ASSETS"
 # AI binding for Cloudflare AI
 [ai]
 binding = "AI"
+
+# Custom domain routing
+[[routes]]
+pattern = "project-augurbox.sirsean.me"
+zone_name = "sirsean.me"
