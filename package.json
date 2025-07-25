@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
-  "workspaces": ["apps/*"],
   "scripts": {
     "dev": "cd apps/augurbox-web && npm run dev",
     "build": "cd apps/augurbox-web && npm install && npm run build",
