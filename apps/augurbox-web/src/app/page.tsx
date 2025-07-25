@@ -61,33 +61,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Feature Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-surface-secondary/60 border border-border p-6 hover:bg-surface-secondary/80 transition-all duration-500 hover:shadow-lg hover:shadow-accent/10">
-            <div className="text-2xl mb-4 text-accent font-mono">◉</div>
-            <h3 className="text-lg font-bold mb-3 text-foreground tracking-wide font-mono">NEURAL SYNTHESIS</h3>
-            <p className="text-text-dim text-xs font-mono leading-relaxed">
-              AI-generated imagery channeling the aesthetic of ancient technology through modern neural networks.
-            </p>
-          </div>
-          
-          <div className="bg-surface-secondary/60 border border-border p-6 hover:bg-surface-secondary/80 transition-all duration-500 hover:shadow-lg hover:shadow-accent/10">
-            <div className="text-2xl mb-4 text-accent font-mono">⬟</div>
-            <h3 className="text-lg font-bold mb-3 text-foreground tracking-wide font-mono">FRINGE ARCANA</h3>
-            <p className="text-text-dim text-xs font-mono leading-relaxed">
-              Reconstructed divination constructs themed around Tools, Vials, Comms, and Gear from the frontier.
-            </p>
-          </div>
-
-          <div className="bg-surface-secondary/60 border border-border p-6 hover:bg-surface-secondary/80 transition-all duration-500 hover:shadow-lg hover:shadow-accent/10">
-            <div className="text-2xl mb-4 text-accent font-mono">△</div>
-            <h3 className="text-lg font-bold mb-3 text-foreground tracking-wide font-mono">QUANTUM READINGS</h3>
-            <p className="text-text-dim text-xs font-mono leading-relaxed">
-              Multiple spread patterns for comprehensive analysis of temporal probability states.
-            </p>
-          </div>
-        </div>
-
         {/* Action Buttons */}
         <div className="space-y-6">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
