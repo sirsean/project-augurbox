@@ -311,7 +311,7 @@ export default function SpreadReadingPage() {
             </button>
             
             <p className="text-text-dim font-mono text-xs mt-4">
-              Click to initialize the neural deck interface
+              initiate temporal scan sequence - construct matrix awaiting synchronization
             </p>
           </div>
         )}
@@ -351,11 +351,11 @@ export default function SpreadReadingPage() {
               onClick={drawCards}
               className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-4 px-8 text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20"
             >
-              ▶ DRAW {spread.positions.length} CARDS
+              ▶ MANIFEST {spread.positions.length} CONSTRUCTS
             </button>
             
             <p className="text-text-dim font-mono text-xs mt-4">
-            The neural deck is ready. Draw your constructs to begin the reading.
+            temporal nexus stabilized - manifest the constructs determined by your future self
             </p>
           </div>
         )}
@@ -385,7 +385,7 @@ export default function SpreadReadingPage() {
                     ⟨ AWAITING NEURAL LINK ⟩
                   </div>
                   <div className="text-text-dim font-mono text-xs">
-                    Reveal cards to receive augurbox interpretations
+                    activate constructs to receive temporal transmissions
                   </div>
                 </div>
               )}
@@ -420,7 +420,7 @@ export default function SpreadReadingPage() {
                     )}
                   </button>
                   <p className="text-text-dim font-mono text-xs mt-4">
-                    Combine all interpretations into a comprehensive analysis
+                    converge all temporal threads into final probability matrix
                   </p>
                 </div>
               )}
@@ -455,9 +455,9 @@ export default function SpreadReadingPage() {
                       </span>
                     </div>
                     <div className="text-center mt-4">
-                      <div className="text-text-dim font-mono text-sm">
-                        Analyzing probability convergence patterns...
-                      </div>
+                        <div className="text-text-dim font-mono text-sm">
+                          scanning temporal fractures... probability matrices aligning...
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -482,7 +482,7 @@ export default function SpreadReadingPage() {
                       {synthesis.retryable && (
                         <div className="space-y-4">
                           <div className="text-text-dim font-mono text-xs">
-                            This appears to be a temporary issue. You can try generating the synthesis again.
+                            temporal disruption detected - quantum matrix requires recalibration
                           </div>
                           <button
                             onClick={generateSynthesis}
@@ -496,7 +496,7 @@ export default function SpreadReadingPage() {
                       
                       {!synthesis.retryable && (
                         <div className="text-text-dim font-mono text-xs">
-                          This error cannot be automatically retried. Please try refreshing the page or contact support.
+                          critical temporal fracture - timeline reconstruction required
                         </div>
                       )}
                     </div>
@@ -563,7 +563,7 @@ export default function SpreadReadingPage() {
                                 {interpretation.retryable && (
                                   <div className="space-y-2">
                                     <div className="text-text-dim font-mono text-xs">
-                                      This appears to be a temporary issue. You can retry the interpretation.
+                                      temporal static interfering - neural pathway requires realignment
                                     </div>
                                     <button
                                       onClick={() => getAIInterpretation(interpretation.positionId)}
@@ -576,7 +576,7 @@ export default function SpreadReadingPage() {
                                 
                                 {!interpretation.retryable && (
                                   <div className="text-text-dim font-mono text-xs">
-                                    This error cannot be automatically retried. The construct may need to be revealed again.
+                                    irreversible temporal anomaly - construct manifestation corrupted
                                   </div>
                                 )}
                               </div>

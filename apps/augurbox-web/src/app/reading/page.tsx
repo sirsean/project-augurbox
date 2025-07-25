@@ -35,7 +35,7 @@ export default function ReadingPage() {
                     [{String(index + 1).padStart(2, '0')}]
                   </div>
                   <div className="text-accent text-lg">
-                    {spread.positions.length} CARDS
+                    {spread.positions.length} CONSTRUCTS
                   </div>
                 </div>
                 

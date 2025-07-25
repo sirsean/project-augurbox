@@ -138,7 +138,7 @@ export default function CardRevealModal({ card, drawnCard, position, interpretat
                   {interpretation.retryable && onRetryInterpretation ? (
                     <div className="space-y-3">
                       <div className="text-text-dim font-mono text-xs">
-                        This appears to be a temporary issue. You can retry the neural analysis.
+                        temporal static interfering - neural pathway requires realignment
                       </div>
                       <button
                         onClick={onRetryInterpretation}
@@ -149,7 +149,7 @@ export default function CardRevealModal({ card, drawnCard, position, interpretat
                     </div>
                   ) : (
                     <div className="text-text-dim font-mono text-xs">
-                      This error cannot be automatically retried. The construct may need to be revealed again during the reading.
+                      irreversible temporal anomaly - construct manifestation corrupted
                     </div>
                   )}
                 </div>
@@ -159,7 +159,7 @@ export default function CardRevealModal({ card, drawnCard, position, interpretat
                 </div>
               ) : (
                 <div className="text-text-dim italic leading-relaxed">
-                  Neural pathways are establishing connection... analysis will be available once construct is revealed during reading.
+                  temporal link establishing... augurbox transmissions will manifest upon construct activation
                 </div>
               )}
             </div>
@@ -172,7 +172,7 @@ export default function CardRevealModal({ card, drawnCard, position, interpretat
             onClick={onClose}
             className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-3 px-8 text-sm uppercase tracking-wider transition-all duration-300"
           >
-            ← CONTINUE READING
+            ← CONTINUE TEMPORAL SEQUENCE
           </button>
         </div>
       </div>
