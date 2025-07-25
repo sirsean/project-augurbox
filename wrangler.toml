@@ -1,6 +1,6 @@
 name = "augurbox-web"
 main = "./workers/index.ts"
-compatibility_date = "2025-07-22"
+compatibility_date = "2025-07-12"
 
 # Static assets configuration for Workers
 [assets]
