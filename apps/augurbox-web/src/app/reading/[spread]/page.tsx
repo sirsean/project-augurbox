@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import { SPREADS, type Spread, type DrawnCard } from '@/types/reading';
 import { getAllCards, type Card } from '@/lib/cards';
 import SpreadLayout from '@/components/SpreadLayout';
+import MysticalShuffle from '@/components/MysticalShuffle';
 
 type ReadingState = 'selecting' | 'shuffling' | 'drawing' | 'revealing' | 'complete';
 
@@ -317,20 +318,19 @@ export default function SpreadReadingPage() {
         )}
 
         {readingState === 'shuffling' && (
-          <div className="text-center mb-16">
-            <div className="mb-8">
-              <div className="inline-block relative animate-pulse">
-                <div className="w-32 h-48 bg-surface-secondary border-2 border-accent shadow-lg shadow-accent/40">
-                  <div className="w-full h-full bg-gradient-to-br from-accent/40 to-accent/10 flex items-center justify-center">
-                    <div className="text-accent font-mono text-xs transform rotate-45 animate-spin">SYNC</div>
-                  </div>
-                </div>
+          <div className="relative h-96 mb-16">
+            {/* Mystical Shuffle Animation */}
+            <MysticalShuffle isActive={readingState === 'shuffling'} />
+            
+            {/* Status Text */}
+            <div className="absolute bottom-0 left-0 right-0 text-center z-20">
+              <p className="text-accent font-mono text-sm animate-pulse mb-2">
+                SYNCHRONIZING NEURAL PATHWAYS...
+              </p>
+              <div className="text-text-dim font-mono text-xs">
+                quantum probability matrices converging... temporal vortex stabilizing...
               </div>
             </div>
-            
-            <p className="text-accent font-mono text-sm animate-pulse">
-              SYNCHRONIZING NEURAL PATHWAYS...
-            </p>
           </div>
         )}
 

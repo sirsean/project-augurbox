@@ -79,3 +79,21 @@ body {
   pointer-events: none;
   z-index: 1;
 }
+
+/* 3D Card Flip Styles */
+.card-flip-container {
+  transform-style: preserve-3d;
+}
+
+.card-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-face-front {
+  transform: rotateY(0deg);
+}
+
+.card-face-back {
+  transform: rotateY(180deg);
+}

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { type Spread, type DrawnCard, type Position } from '@/types/reading';
 import { type Card } from '@/lib/cards';
 import CardRevealModal from './CardRevealModal';
@@ -72,83 +73,190 @@ export default function SpreadLayout({
     setSelectedCard(cardData);
   };
 
-  // Component for rendering individual cards
+  // Component for rendering individual cards with 3D flip animation
   const CardComponent = ({ position, className = '', isMobile = false }: { position: Position; className?: string; isMobile?: boolean }) => {
     const cardData = getCardForPosition(position.id);
     const isRevealed = cardData?.drawnCard.is_revealed || false;
     
     return (
-      <div className={`flex flex-col items-center ${className}`}>
+      <motion.div 
+        className={`flex flex-col items-center ${className}`}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+      >
         {/* Position label */}
-        <div className="text-center mb-3">
+        <motion.div 
+          className="text-center mb-3"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+        >
           <div className="text-accent font-mono text-sm uppercase tracking-wider">
             {position.name}
           </div>
-        </div>
+        </motion.div>
         
-        {/* Card */}
+        {/* Card Container with 3D flip */}
         <div
-          className={`relative cursor-pointer transition-all duration-300 ${
+          className={`relative cursor-pointer ${
             isMobile 
               ? 'w-full max-w-sm mx-auto aspect-[2/3]' 
               : 'w-32 h-48'
-          } ${
-            isRevealed 
-              ? 'hover:scale-105 hover:shadow-lg hover:shadow-accent/20' 
-              : 'hover:shadow-lg hover:shadow-accent/30 animate-pulse'
           }`}
           onClick={() => isRevealed ? handleRevealedCardClick(position.id) : handleCardClick(position.id)}
+          style={{
+            perspective: '1000px'  // Parent needs perspective
+          }}
         >
-          {!isRevealed ? (
-            // Face-down card
-            <div className="w-full h-full bg-surface-secondary border-2 border-accent/50 shadow-lg rounded-sm">
-              <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center rounded-sm">
-                <div className="text-accent font-mono text-sm transform rotate-45">
-                  ?
-                </div>
-              </div>
+          <motion.div
+            className="relative w-full h-full card-flip-container"
+            initial={false}
+            animate={{ rotateY: isRevealed ? 180 : 0 }}
+            transition={{
+              duration: 1.2,
+              ease: [0.68, -0.55, 0.27, 1.55] as const,
+              type: "spring",
+              stiffness: 200,
+              damping: 20
+            }}
+            style={{
+              transformOrigin: "center center"
+            }}
+            whileHover={!isRevealed ? {
+              rotateY: 15,  // Slight pre-flip tease
+              scale: 1.05
+            } : {
+              scale: 1.02
+            }}
+          >
+            {/* Face-down card (front face) */}
+          <motion.div 
+            className="absolute inset-0 w-full h-full bg-surface-secondary border-2 border-accent/50 shadow-lg rounded-sm card-face card-face-front"
+            animate={!isRevealed ? { 
+              boxShadow: ["0 0 20px rgba(85, 98, 112, 0.1)", "0 0 30px rgba(85, 98, 112, 0.3)", "0 0 20px rgba(85, 98, 112, 0.1)"],
+            } : {}}
+            transition={!isRevealed ? {
+              boxShadow: {
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }
+            } : {}}
+          >
+            <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center rounded-sm">
+              <motion.div 
+                className="text-accent font-mono text-lg transform rotate-45"
+                animate={{ 
+                  rotate: [45, 90, 45],
+                  scale: [1, 1.2, 1]
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                ?
+              </motion.div>
             </div>
-          ) : (
-            // Revealed card
-            <div className={`w-full h-full border-2 border-accent shadow-lg transition-transform duration-300 rounded-sm ${
+          </motion.div>
+          
+          {/* Revealed card (back face) */}
+          <motion.div 
+            className={`absolute inset-0 w-full h-full border-2 border-accent shadow-lg rounded-sm card-face card-face-back ${
               cardData?.drawnCard.is_reversed ? 'rotate-180' : ''
-            }`}>
+            }`}
+            initial={false}
+            whileHover={isRevealed ? {
+              borderColor: "rgba(85, 98, 112, 0.8)",
+              boxShadow: "0 0 25px rgba(85, 98, 112, 0.4)"
+            } : {}}
+            transition={{ duration: 0.2 }}
+          >
+            {cardData && (
               <Image
-                src={cardData!.card.image}
-                alt={cardData!.card.name}
-                width={128}
-                height={192}
+                src={cardData.card.image}
+                alt={cardData.card.name}
+                width={isMobile ? 384 : 128}
+                height={isMobile ? 576 : 192}
                 className="w-full h-full object-cover rounded-sm"
               />
-            </div>
-          )}
+            )}
+          </motion.div>
+          </motion.div>
         </div>
         
-        {/* Card name (only shown when revealed) */}
+        {/* Card name with fade-in animation (only shown when revealed) */}
         {isRevealed && cardData && (
-          <div className="text-center mt-3 max-w-32">
+          <motion.div 
+            className="text-center mt-3 max-w-32"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             <div className="text-foreground font-mono text-sm uppercase leading-tight">
               {cardData.card.name}
             </div>
             {cardData.drawnCard.is_reversed && (
-              <div className="text-accent font-mono text-xs opacity-70 mt-1">
+              <motion.div 
+                className="text-accent font-mono text-xs opacity-70 mt-1"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.7 }}
+                transition={{ duration: 0.3, delay: 0.6 }}
+              >
                 REVERSED
-              </div>
+              </motion.div>
             )}
-          </div>
+          </motion.div>
         )}
-      </div>
+      </motion.div>
     );
+  };
+
+  // Animation variants for staggered entrance
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 30,
+      scale: 0.9
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.46, 0.45, 0.94] as const
+      }
+    }
   };
 
   // Mobile layout - vertical scrolling for all spreads
   const renderMobileLayout = () => {
     return (
-      <div className="flex flex-col gap-6 py-4">
+      <motion.div 
+        className="flex flex-col gap-6 py-4"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {spread.positions.map((position) => (
-          <CardComponent key={position.id} position={position} className="w-full" isMobile={true} />
+          <motion.div key={position.id} variants={cardVariants}>
+            <CardComponent position={position} className="w-full" isMobile={true} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     );
   };
 
@@ -157,47 +265,68 @@ export default function SpreadLayout({
     switch (spread.id) {
       case 'supply_run':
         return (
-          <div className="flex justify-center items-center gap-8 py-8">
-            <CardComponent position={spread.positions.find(p => p.id === 'past')!} />
-            <CardComponent position={spread.positions.find(p => p.id === 'present')!} />
-            <CardComponent position={spread.positions.find(p => p.id === 'future')!} />
-          </div>
+          <motion.div 
+            className="flex justify-center items-center gap-8 py-8"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div variants={cardVariants}>
+              <CardComponent position={spread.positions.find(p => p.id === 'past')!} />
+            </motion.div>
+            <motion.div variants={cardVariants}>
+              <CardComponent position={spread.positions.find(p => p.id === 'present')!} />
+            </motion.div>
+            <motion.div variants={cardVariants}>
+              <CardComponent position={spread.positions.find(p => p.id === 'future')!} />
+            </motion.div>
+          </motion.div>
         );
       
       case 'system_scan':
         return (
-          <div className="flex flex-col items-center gap-6 py-8">
+          <motion.div 
+            className="flex flex-col items-center gap-6 py-8"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {/* Top card */}
-            <div className="flex justify-center">
+            <motion.div className="flex justify-center" variants={cardVariants}>
               <CardComponent position={spread.positions.find(p => p.id === 'situation')!} />
-            </div>
+            </motion.div>
             
             {/* Middle row - 3 cards */}
-            <div className="flex justify-center items-center gap-8">
+            <motion.div className="flex justify-center items-center gap-8" variants={cardVariants}>
               <CardComponent position={spread.positions.find(p => p.id === 'obstacle')!} />
               <CardComponent position={spread.positions.find(p => p.id === 'outcome')!} />
               <CardComponent position={spread.positions.find(p => p.id === 'advice')!} />
-            </div>
+            </motion.div>
             
             {/* Bottom card */}
-            <div className="flex justify-center">
+            <motion.div className="flex justify-center" variants={cardVariants}>
               <CardComponent position={spread.positions.find(p => p.id === 'person')!} />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         );
       
       case 'deep_space_anomaly':
         return (
-          <div className="flex gap-16 py-8 justify-center">
+          <motion.div 
+            className="flex gap-16 py-8 justify-center"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {/* Left cross formation */}
             <div className="flex flex-col items-center">
               {/* Top */}
-              <div className="mb-6">
+              <motion.div className="mb-6" variants={cardVariants}>
                 <CardComponent position={spread.positions.find(p => p.id === 'possible_outcome')!} />
-              </div>
+              </motion.div>
               
               {/* Middle row with crossed cards */}
-              <div className="flex items-center gap-6 mb-6">
+              <motion.div className="flex items-center gap-6 mb-6" variants={cardVariants}>
                 <CardComponent position={spread.positions.find(p => p.id === 'recent_past')!} />
                 
                 {/* Center crossed cards */}
@@ -213,32 +342,39 @@ export default function SpreadLayout({
                 </div>
                 
                 <CardComponent position={spread.positions.find(p => p.id === 'near_future')!} />
-              </div>
+              </motion.div>
               
               {/* Bottom */}
-              <div>
+              <motion.div variants={cardVariants}>
                 <CardComponent position={spread.positions.find(p => p.id === 'distant_past')!} />
-              </div>
+              </motion.div>
             </div>
             
             {/* Right column */}
-            <div className="flex flex-col gap-4">
+            <motion.div className="flex flex-col gap-4" variants={cardVariants}>
               <CardComponent position={spread.positions.find(p => p.id === 'final_outcome')!} />
               <CardComponent position={spread.positions.find(p => p.id === 'hopes_fears')!} />
               <CardComponent position={spread.positions.find(p => p.id === 'external_influences')!} />
               <CardComponent position={spread.positions.find(p => p.id === 'your_approach')!} />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         );
       
       default:
         // Fallback to simple row layout for unknown spreads
         return (
-          <div className="flex justify-center items-center gap-8 py-8 flex-wrap">
+          <motion.div 
+            className="flex justify-center items-center gap-8 py-8 flex-wrap"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {spread.positions.map((position) => (
-              <CardComponent key={position.id} position={position} />
+              <motion.div key={position.id} variants={cardVariants}>
+                <CardComponent position={position} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         );
     }
   };
