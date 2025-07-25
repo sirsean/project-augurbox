@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
+  "workspaces": ["apps/*"],
   "scripts": {
     "dev": "cd apps/augurbox-web && npm run dev",
-    "build": "cd apps/augurbox-web && npm run build",
+    "build": "cd apps/augurbox-web && npm install && npm run build",
     "start:workers": "cd apps/augurbox-web && npm run workers:dev",
     "generate:prompts": "tsx scripts/build-prompts.ts",
     "generate:images": "tsx scripts/build-images.ts",
