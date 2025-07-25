@@ -1,4 +1,4 @@
-name = "augurbox-web"
+name = "project-augurbox"
 main = "./workers/index.ts"
 compatibility_date = "2025-07-12"
 
