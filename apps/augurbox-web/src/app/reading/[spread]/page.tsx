@@ -355,7 +355,7 @@ export default function SpreadReadingPage() {
             </button>
             
             <p className="text-text-dim font-mono text-xs mt-4">
-              The deck is ready. Draw your cards to begin the reading.
+            The neural deck is ready. Draw your constructs to begin the reading.
             </p>
           </div>
         )}
@@ -576,7 +576,7 @@ export default function SpreadReadingPage() {
                                 
                                 {!interpretation.retryable && (
                                   <div className="text-text-dim font-mono text-xs">
-                                    This error cannot be automatically retried. The card may need to be revealed again.
+                                    This error cannot be automatically retried. The construct may need to be revealed again.
                                   </div>
                                 )}
                               </div>

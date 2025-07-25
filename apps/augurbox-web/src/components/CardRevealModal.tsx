@@ -206,7 +206,7 @@ export default function CardRevealModal({ card, drawnCard, position, interpretat
                     </div>
                   ) : (
                     <div className="text-text-dim font-mono text-xs">
-                      This error cannot be automatically retried. The card may need to be revealed again during the reading.
+                      This error cannot be automatically retried. The construct may need to be revealed again during the reading.
                     </div>
                   )}
                 </div>
@@ -216,7 +216,7 @@ export default function CardRevealModal({ card, drawnCard, position, interpretat
                 </div>
               ) : (
                 <div className="text-text-dim italic leading-relaxed">
-                  Neural pathways are establishing connection... analysis will be available once card is revealed during reading.
+                  Neural pathways are establishing connection... analysis will be available once construct is revealed during reading.
                 </div>
               )}
             </div>

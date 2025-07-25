@@ -262,7 +262,7 @@ export default function SpreadLayout({
       <div className="text-center mt-8">
         {readingState === 'revealing' && (
           <p className="text-text-dim font-mono text-sm">
-            Click on face-down cards to reveal them and begin your reading
+            Click on face-down constructs to reveal them and begin your reading
           </p>
         )}
       </div>

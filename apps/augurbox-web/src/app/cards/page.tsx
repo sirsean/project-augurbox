@@ -78,7 +78,7 @@ export default function CardsPage() {
             ARCHIVE ACCESS
           </h1>
           <p className="text-lg text-text-dim max-w-2xl mx-auto font-mono leading-relaxed">
-            Complete collection of 78 neural-generated tarot constructs, each with unique synthesis protocols and traditional operational parameters.
+            Complete collection of neural-generated constructs, each with unique synthesis protocols and traditional operational parameters.
           </p>
         </div>
 

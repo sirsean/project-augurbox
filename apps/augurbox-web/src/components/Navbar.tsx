@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -7,10 +8,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-accent border border-border rounded-none flex items-center justify-center">
-                <span className="text-foreground font-bold text-sm font-mono">◉</span>
+              <div className="w-8 h-8 border border-border rounded-none flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/android-chrome-512x512.png"
+                  alt="Augurbox Logo"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
               </div>
-              <span className="text-foreground font-mono font-bold text-lg tracking-wider">AUGURBOX</span>
+              <span className="text-foreground font-mono font-bold text-lg tracking-wider">PROJECT: AUGURBOX</span>
             </Link>
           </div>
           
