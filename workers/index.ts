@@ -4,6 +4,84 @@ export interface Env {
   AI: any; // Cloudflare AI binding
 }
 
+// AI Model configurations
+interface AIModel {
+  name: string;
+  maxTokens: number;
+  temperature: number;
+}
+
+const AI_MODELS = {
+  llama4: {
+    name: '@cf/meta/llama-4-scout-17b-16e-instruct',
+    maxTokens: 800,
+    temperature: 0.8
+  },
+  llama3: {
+    name: '@cf/meta/llama-3.2-3b-instruct',
+    maxTokens: 800,
+    temperature: 0.8
+  },
+  // Fallback to the existing model if others fail
+  fallback: {
+    name: '@cf/meta/llama-3.1-8b-instruct',
+    maxTokens: 800,
+    temperature: 0.8
+  }
+} as const;
+
+// AI Service abstraction with fallback support
+class AIService {
+  private env: Env;
+  private modelOrder: (keyof typeof AI_MODELS)[] = ['llama4', 'llama3', 'fallback'];
+  
+  constructor(env: Env) {
+    this.env = env;
+  }
+  
+  async runWithFallback(
+    messages: Array<{role: string, content: string}>, 
+    options: { maxTokens?: number, temperature?: number } = {}
+  ): Promise<{ response: string, modelUsed: string }> {
+    let lastError: Error | null = null;
+    
+    for (const modelKey of this.modelOrder) {
+      const model = AI_MODELS[modelKey];
+      
+      try {
+        console.log(`Attempting AI call with model: ${model.name}`);
+        
+        const response = await this.env.AI.run(model.name, {
+          messages,
+          max_tokens: options.maxTokens || model.maxTokens,
+          temperature: options.temperature || model.temperature,
+        });
+        
+        console.log(`Successfully used model: ${model.name}`);
+        return {
+          response: response.response,
+          modelUsed: model.name
+        };
+        
+      } catch (error) {
+        console.error(`Model ${model.name} failed:`, error);
+        lastError = error as Error;
+        
+        // Only try fallback if it's a temporary/capacity error
+        if (!isTemporaryAIError(error)) {
+          throw error; // Re-throw non-temporary errors immediately
+        }
+        
+        // Continue to next model if this was a temporary error
+        continue;
+      }
+    }
+    
+    // If we get here, all models failed
+    throw lastError || new Error('All AI models failed');
+  }
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -109,18 +187,19 @@ Card Description: ${recentCard.card.description}
 
 Respond as the Augurbox with an in-character interpretation of how this newly revealed card affects the reading's probability matrix. Focus on the significance of this specific card, its orientation, and position in the context of what has been revealed so far.`;
 
-    // Call Cloudflare AI
-    const response = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
-      messages: [
+    // Use AI service with fallback
+    const aiService = new AIService(env);
+    const result = await aiService.runWithFallback(
+      [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt }
       ],
-      max_tokens: 200,
-      temperature: 0.8,
-    });
+      { maxTokens: 200, temperature: 0.8 }
+    );
 
     return new Response(JSON.stringify({ 
-      interpretation: response.response,
+      interpretation: result.response,
+      modelUsed: result.modelUsed,
       success: true 
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -207,18 +286,19 @@ ${completeReadingState}
 PROVIDE A COMPREHENSIVE SYNTHESIS:
 Analyze the complete quantum probability matrix revealed by this reading. Synthesize the individual card interpretations into a cohesive narrative that provides clear guidance and insight. This is your final transmission - make it count.`;
 
-    // Call Cloudflare AI with higher token limit for synthesis
-    const response = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
-      messages: [
+    // Use AI service with fallback for synthesis
+    const aiService = new AIService(env);
+    const result = await aiService.runWithFallback(
+      [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt }
       ],
-      max_tokens: 800,
-      temperature: 0.7,
-    });
+      { maxTokens: 800, temperature: 0.7 }
+    );
 
     return new Response(JSON.stringify({ 
-      synthesis: response.response,
+      synthesis: result.response,
+      modelUsed: result.modelUsed,
       success: true 
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -227,14 +307,8 @@ Analyze the complete quantum probability matrix revealed by this reading. Synthe
   } catch (error) {
     console.error('Error in reading-synthesis function:', error);
     
-    // Check if it's a temporary AI model error
-    const isTemporaryError = error instanceof Error && (
-      error.message.includes('model temporarily unavailable') ||
-      error.message.includes('InferenceUpstreamError') ||
-      error.message.includes('9000') ||
-      error.message.includes('3040') ||
-      error.message.includes('Capacity temporarily exceeded')
-    );
+    // Check if it's a temporary AI model error using shared function
+    const isTemporaryError = isTemporaryAIError(error);
     
     return new Response(JSON.stringify({ 
       error: isTemporaryError ? 'AI model temporarily unavailable' : 'Internal server error',
