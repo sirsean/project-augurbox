@@ -11,7 +11,7 @@ interface Props {
 }
 
 // Generate detailed lore descriptions for cards based on Fringe universe context
-function getCardLoreDescription(card: any): string {
+function getCardLoreDescription(card: { type: string; code: string; suit?: string; description: string; name: string }): string {
   const majorArcanaLore: Record<string, string> = {
     'MAJ_00': 'The Greenhorn represents the archetypal newcomer to the Fringe—those brave or foolish enough to venture beyond the safety of established territories. Every Drifter begins as a Greenhorn, carrying nothing but hope and determination into the vast unknown. In the harsh reality of the Scablands, this energy can lead to either spectacular discovery or devastating failure.',
     'MAJ_01': 'The Engineer embodies the technical mastery that keeps civilization alive in the Fringe. Members of the Engineers Guild are revered for their ability to coax life from broken machinery and create solutions from salvaged parts. This construct represents focused willpower and the transformation of raw materials into functional tools.',

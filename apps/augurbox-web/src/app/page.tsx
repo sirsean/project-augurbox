@@ -36,16 +36,16 @@ export default function Home() {
         {/* Lore Section */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-surface-secondary/40 border border-border p-8 mb-8">
-            <h2 className="text-2xl font-bold mb-6 text-accent tracking-wide font-mono">// CLASSIFIED BRIEFING</h2>
+            <h2 className="text-2xl font-bold mb-6 text-accent tracking-wide font-mono">CLASSIFIED BRIEFING</h2>
             <p className="text-text-dim text-sm font-mono leading-relaxed mb-6">
               Ancient AI discovered abandoned in the Scablands, technology that has survived since before the modern era 
               and has no recorded history. It wants you to ask it questions. It likely has ulterior motives.
             </p>
             <div className="border-l-2 border-accent pl-4">
               <p className="text-text-dim text-xs font-mono leading-relaxed italic">
-                "Our humankind has bloated and collapsed many times, captured stars now faded from memory, 
+                &ldquo;Our humankind has bloated and collapsed many times, captured stars now faded from memory, 
                 settled and re-settled, rooting and then reaching, over and over. On the eonic timescale, 
-                I reckon we look like fickle nomads. The map is stained, epochs lost to the creases..."
+                I reckon we look like fickle nomads. The map is stained, epochs lost to the creases...&rdquo;
               </p>
               <p className="text-accent text-xs font-mono mt-2">— Fringeling Compendium of Icons and Artifacture</p>
             </div>
@@ -54,9 +54,9 @@ export default function Home() {
           <div className="bg-surface-secondary/20 border border-border p-6">
             <h3 className="text-lg font-bold mb-4 text-foreground font-mono tracking-wide">RECONSTRUCTION PROTOCOL</h3>
             <p className="text-text-dim text-sm font-mono leading-relaxed">
-              This neural reconstruction attempts to duplicate the original Augurbox's divination capabilities 
+              This neural reconstruction attempts to duplicate the original Augurbox&apos;s divination capabilities 
               through advanced pattern synthesis and quantum probability matrices. Results may vary from 
-              the source artifact's true intentions.
+              the source artifact&apos;s true intentions.
             </p>
           </div>
         </div>
