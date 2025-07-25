@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'FringeV2';
+  src: url('/fonts/FringeV2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT-Pressura-Mono';
+  src: url('/fonts/GT-Pressura-Mono-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Fringe-inspired gritty dark palette */
   --background: #0d0f12;
@@ -23,17 +39,26 @@
   --color-accent-muted: var(--accent-muted);
   --color-text-dim: var(--text-dim);
   --color-warning: var(--warning);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'GT-Pressura-Mono', 'Courier New', monospace;
+  --font-mono: 'GT-Pressura-Mono', 'Courier New', monospace;
+  --font-pressura: 'GT-Pressura-Mono', 'Courier New', monospace;
+  --font-fringe: 'FringeV2', serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Courier New", monospace;
+  font-family: 'GT-Pressura-Mono', 'Courier New', monospace;
+  font-weight: 300;
   background-image: 
     radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
   background-size: 20px 20px;
+  /* Ensure proper mobile rendering */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Smooth font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Add subtle grain texture for analog feel */

@@ -74,7 +74,7 @@ export default function CardsPage() {
       
       <main className="max-w-7xl mx-auto px-4 py-8 relative z-10">
         <div className="text-center mb-16 border-b border-border pb-8">
-          <h1 className="text-3xl md:text-5xl font-bold text-accent mb-4 font-mono tracking-widest uppercase" style={{textShadow: '0 0 20px rgba(85, 98, 112, 0.3)'}}>
+          <h1 className="text-3xl md:text-5xl font-bold text-accent mb-4 font-fringe tracking-widest uppercase" style={{textShadow: '0 0 20px rgba(85, 98, 112, 0.3)'}}>
             ARCHIVE ACCESS
           </h1>
           <p className="text-lg text-text-dim max-w-2xl mx-auto font-mono leading-relaxed">

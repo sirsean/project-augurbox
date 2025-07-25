@@ -17,28 +17,31 @@ export default function Navbar() {
                   className="object-contain"
                 />
               </div>
-              <span className="text-foreground font-mono font-bold text-lg tracking-wider">PROJECT: AUGURBOX</span>
+              <span className="text-foreground font-fringe font-bold text-lg tracking-wider hidden sm:inline">PROJECT: AUGURBOX</span>
+              <span className="text-foreground font-fringe font-bold text-sm tracking-wider sm:hidden">AUGURBOX</span>
             </Link>
           </div>
           
           <div className="flex items-center space-x-1">
             <Link 
               href="/" 
-              className="text-text-dim hover:text-foreground px-4 py-2 border border-transparent hover:border-border rounded-none text-xs font-mono uppercase tracking-wider transition-all duration-300"
+              className="text-text-dim hover:text-foreground px-2 sm:px-4 py-2 border border-transparent hover:border-border rounded-none text-xs font-mono uppercase tracking-wider transition-all duration-300"
             >
               HOME
             </Link>
             <Link 
               href="/reading" 
-              className="text-text-dim hover:text-foreground px-4 py-2 border border-transparent hover:border-border rounded-none text-xs font-mono uppercase tracking-wider transition-all duration-300"
+              className="text-text-dim hover:text-foreground px-2 sm:px-4 py-2 border border-transparent hover:border-border rounded-none text-xs font-mono uppercase tracking-wider transition-all duration-300"
             >
-              READING
+              <span className="hidden sm:inline">READING</span>
+              <span className="sm:hidden">READ</span>
             </Link>
             <Link 
               href="/cards" 
-              className="text-text-dim hover:text-foreground px-4 py-2 border border-transparent hover:border-border rounded-none text-xs font-mono uppercase tracking-wider transition-all duration-300"
+              className="text-text-dim hover:text-foreground px-2 sm:px-4 py-2 border border-transparent hover:border-border rounded-none text-xs font-mono uppercase tracking-wider transition-all duration-300"
             >
-              ARCHIVE
+              <span className="hidden sm:inline">ARCHIVE</span>
+              <span className="sm:hidden">arch</span>
             </Link>
           </div>
         </div>

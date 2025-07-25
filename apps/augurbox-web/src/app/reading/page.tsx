@@ -11,7 +11,7 @@ export default function ReadingPage() {
       
       <main className="max-w-6xl mx-auto px-4 py-16 relative z-10">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-accent" style={{textShadow: '0 0 20px rgba(85, 98, 112, 0.3)'}}>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-accent font-fringe" style={{textShadow: '0 0 20px rgba(85, 98, 112, 0.3)'}}>
             CHOOSE YOUR PATH
           </h1>
           <p className="text-xl text-foreground mb-4">

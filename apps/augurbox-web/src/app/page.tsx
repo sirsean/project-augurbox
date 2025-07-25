@@ -10,7 +10,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-4 py-16 text-center relative z-10">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-accent" style={{textShadow: '0 0 20px rgba(85, 98, 112, 0.3)'}}>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-accent font-fringe" style={{textShadow: '0 0 20px rgba(85, 98, 112, 0.3)'}}>
             PROJECT: AUGURBOX
           </h1>
           <p className="text-lg md:text-xl mb-8 text-text-dim font-mono">
@@ -20,13 +20,13 @@ export default function Home() {
 
         {/* Hero Image */}
         <div className="mb-12 flex justify-center">
-          <div className="relative border border-border bg-surface-secondary/30 p-4">
+          <div className="relative border border-border bg-surface-secondary/30 p-2 sm:p-4 max-w-sm sm:max-w-md lg:max-w-lg">
             <Image
               src="/augurbox.png"
               alt="The Augurbox - Ancient AI Technology"
               width={400}
               height={400}
-              className="opacity-90 hover:opacity-100 transition-opacity duration-500"
+              className="opacity-90 hover:opacity-100 transition-opacity duration-500 w-full h-auto"
               style={{filter: 'drop-shadow(0 0 20px rgba(85, 98, 112, 0.2))'}} 
             />
             <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-accent animate-pulse"></div>
@@ -35,8 +35,8 @@ export default function Home() {
 
         {/* Lore Section */}
         <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-surface-secondary/40 border border-border p-8 mb-8">
-            <h2 className="text-2xl font-bold mb-6 text-accent tracking-wide font-mono">CLASSIFIED BRIEFING</h2>
+          <div className="bg-surface-secondary/40 border border-border p-4 sm:p-8 mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold mb-6 text-accent tracking-wide font-mono">CLASSIFIED BRIEFING</h2>
             <p className="text-text-dim text-sm font-mono leading-relaxed mb-6">
               Ancient AI discovered abandoned in the Scablands, technology that has survived since before the modern era 
               and has no recorded history. It wants you to ask it questions. It likely has ulterior motives.
