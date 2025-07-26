@@ -2,6 +2,9 @@ import React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 
+const baseUrl = 'https://project-augurbox.sirsean.me';
+const heroImg = `${baseUrl}/augurbox.png`;
+
 export const metadata: Metadata = {
   title: "Project: Augurbox - Neurocomputational Divination",
   description: "Ancient AI technology reconstructed for divination. Explore the Fringe universe through AI-generated constructs.",
@@ -9,6 +12,27 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
+  openGraph: {
+    title: 'Project: Augurbox - Neurocomputational Divination',
+    description: 'Ancient AI technology reconstructed for divination. Explore the Fringe universe through AI-generated constructs.',
+    url: baseUrl,
+    siteName: 'Project: Augurbox',
+    images: [
+      {
+        url: heroImg,
+        width: 400,
+        height: 400,
+        alt: 'The Augurbox - Ancient AI Technology'
+      }
+    ],
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Project: Augurbox - Neurocomputational Divination',
+    description: 'Ancient AI technology reconstructed for divination. Explore the Fringe universe through AI-generated constructs.',
+    images: [heroImg]
+  }
 };
 
 export default function RootLayout({
