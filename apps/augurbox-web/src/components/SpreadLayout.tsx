@@ -11,6 +11,8 @@ interface CardInterpretation {
   positionId: string;
   interpretation: string;
   isLoading: boolean;
+  isStreaming: boolean;
+  isComplete: boolean;
   error: string | null;
   retryable: boolean;
 }

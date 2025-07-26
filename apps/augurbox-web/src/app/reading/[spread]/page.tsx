@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useStreamingText } from '@/hooks/useStreamingText';
+import StreamingText from '@/components/StreamingText';
 import Navbar from '@/components/Navbar';
 import { SPREADS, type Spread, type DrawnCard } from '@/types/reading';
 import { getAllCards, type Card } from '@/lib/cards';
@@ -15,6 +17,8 @@ interface CardInterpretation {
   positionId: string;
   interpretation: string;
   isLoading: boolean;
+  isStreaming: boolean;
+  isComplete: boolean;
   error: string | null;
   retryable: boolean;
 }
@@ -22,6 +26,7 @@ interface CardInterpretation {
 interface ReadingSynthesis {
   synthesis: string;
   isLoading: boolean;
+  isStreaming: boolean;
   hasGenerated: boolean;
   error: string | null;
   retryable: boolean;
@@ -32,6 +37,9 @@ export default function SpreadReadingPage() {
   const router = useRouter();
   const spreadId = params.spread as string;
   
+  // Use streaming hook for synthesis
+  const synthesisStreaming = useStreamingText();
+
   const [spread, setSpread] = useState<Spread | null>(null);
   const [allCards, setAllCards] = useState<Card[]>([]);
   const [readingState, setReadingState] = useState<ReadingState>('selecting');
@@ -42,6 +50,7 @@ export default function SpreadReadingPage() {
   const [synthesis, setSynthesis] = useState<ReadingSynthesis>({
     synthesis: '',
     isLoading: false,
+    isStreaming: false,
     hasGenerated: false,
     error: null,
     retryable: false
@@ -101,7 +110,7 @@ export default function SpreadReadingPage() {
     setReadingState('revealing');
   };
 
-  const getAIInterpretation = async (positionId: string) => {
+  const getAIInterpretation = async (positionId: string, useStreaming: boolean = true) => {
     if (!spread) return;
     
     const revealedCard = drawnCards.find(card => card.position_id === positionId);
@@ -109,10 +118,18 @@ export default function SpreadReadingPage() {
     
     if (!revealedCard || !card) return;
     
-    // Set loading state
+    // Set loading state in interpretations
     setInterpretations(prev => [
       ...prev.filter(i => i.positionId !== positionId),
-      { positionId, interpretation: '', isLoading: true, error: null, retryable: false }
+      { 
+        positionId, 
+        interpretation: '', 
+        isLoading: true, 
+        isStreaming: false,
+        isComplete: false,
+        error: null, 
+        retryable: false 
+      }
     ]);
     
     try {
@@ -127,7 +144,6 @@ export default function SpreadReadingPage() {
           };
         });
       
-      // Map position IDs to position indices (1-based)
       const revealedPositions = drawnCards
         .filter(c => c.is_revealed && c.position_id !== positionId)
         .map(c => c.position_id);
@@ -148,30 +164,120 @@ export default function SpreadReadingPage() {
             },
             orientation: revealedCard.is_reversed ? 'Reversed' : 'Upright',
             position: positionId
-          }
+          },
+          stream: useStreaming
         })
       });
       
-      const data = await response.json();
+      // Process streaming directly to avoid shared state issues
+      const contentType = response.headers.get('content-type');
+      const transferEncoding = response.headers.get('transfer-encoding'); 
+      const isStreamingResponse = useStreaming && response.body && 
+        (contentType?.includes('text/plain') || transferEncoding === 'chunked');
       
-      if (data.success) {
-        setInterpretations(prev => [
-          ...prev.filter(i => i.positionId !== positionId),
-          { positionId, interpretation: data.interpretation, isLoading: false, error: null, retryable: false }
-        ]);
-      } else {
-        console.error('AI interpretation failed:', data.error);
-        setInterpretations(prev => [
-          ...prev.filter(i => i.positionId !== positionId),
-          { 
-            positionId, 
-            interpretation: '', 
-            isLoading: false, 
-            error: data.error || 'AI interpretation failed',
-            retryable: data.retryable || false
+      if (isStreamingResponse) {
+        // Handle streaming response directly
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder('utf-8');
+        let accumulatedText = '';
+        let buffer = '';
+        
+        // Set streaming state
+        setInterpretations(prev => prev.map(i => 
+          i.positionId === positionId ? { ...i, isStreaming: true, isLoading: false } : i
+        ));
+        
+        const processStream = async (): Promise<void> => {
+          const { done, value } = await reader.read();
+          
+          if (done) {
+            // Stream complete
+            setInterpretations(prev => prev.map(i => 
+              i.positionId === positionId ? {
+                ...i,
+                interpretation: accumulatedText,
+                isLoading: false,
+                isStreaming: false,
+                isComplete: true
+              } : i
+            ));
+            return;
           }
-        ]);
+          
+          // Decode the chunk and add to buffer
+          const chunk = decoder.decode(value, { stream: true });
+          buffer += chunk;
+          
+          // Parse SSE format: look for "data: {json}" lines
+          const lines = buffer.split('\n');
+          buffer = lines.pop() || ''; // Keep incomplete line in buffer
+          
+          for (const line of lines) {
+            if (line.startsWith('data: ') && line !== 'data: [DONE]') {
+              try {
+                const jsonStr = line.substring(6); // Remove "data: " prefix
+                const data = JSON.parse(jsonStr);
+                
+                if (data.response) {
+                  accumulatedText += data.response;
+                  
+                  // Update state with new text
+                  setInterpretations(prev => prev.map(i => 
+                    i.positionId === positionId ? {
+                      ...i,
+                      interpretation: accumulatedText,
+                      isLoading: false,
+                      isStreaming: true
+                    } : i
+                  ));
+                  
+                  // Small delay to make streaming visible
+                  await new Promise(resolve => setTimeout(resolve, 50));
+                }
+              } catch (e) {
+                console.warn('Failed to parse SSE data:', line, e);
+              }
+            }
+          }
+          
+          // Continue processing
+          await processStream();
+        };
+        
+        await processStream();
+      } else {
+        // Handle regular JSON response
+        const data = await response.json();
+        
+        if (data.success) {
+          setInterpretations(prev => [
+            ...prev.filter(i => i.positionId !== positionId),
+            { 
+              positionId, 
+              interpretation: data.interpretation,
+              isLoading: false, 
+              isStreaming: false,
+              isComplete: true,
+              error: null, 
+              retryable: false
+            }
+          ]);
+        } else {
+          setInterpretations(prev => [
+            ...prev.filter(i => i.positionId !== positionId),
+            { 
+              positionId, 
+              interpretation: '',
+              isLoading: false, 
+              isStreaming: false,
+              isComplete: false,
+              error: data.error || 'AI interpretation failed', 
+              retryable: data.retryable || false
+            }
+          ]);
+        }
       }
+
     } catch (error) {
       console.error('Failed to get AI interpretation:', error);
       setInterpretations(prev => [
@@ -180,6 +286,8 @@ export default function SpreadReadingPage() {
           positionId, 
           interpretation: '', 
           isLoading: false, 
+          isStreaming: false,
+          isComplete: false,
           error: 'Connection to the augurbox interrupted... data stream corrupted.',
           retryable: false
         }
@@ -207,14 +315,16 @@ export default function SpreadReadingPage() {
     }
   };
 
-  const generateSynthesis = async () => {
+  const generateSynthesis = async (useStreaming: boolean = true) => {
     if (!spread || synthesis.isLoading) return;
     
     setSynthesis(prev => ({ 
       ...prev, 
       isLoading: true, 
+      isStreaming: false,
       error: null, 
-      retryable: false 
+      retryable: false,
+      synthesis: ''
     }));
     
     try {
@@ -228,35 +338,30 @@ export default function SpreadReadingPage() {
           spread,
           drawnCards,
           allCards,
-          interpretations: interpretations.filter(i => !i.isLoading)
+          interpretations: interpretations.filter(i => !i.isLoading),
+          stream: useStreaming
         })
       });
       
-      const data = await response.json();
+      // Use the streaming hook to process the response
+      await synthesisStreaming.processStreamingResponse(response);
       
-      if (data.success) {
-        setSynthesis({
-          synthesis: data.synthesis,
-          isLoading: false,
-          hasGenerated: true,
-          error: null,
-          retryable: false
-        });
-      } else {
-        console.error('AI synthesis failed:', data.error);
-        setSynthesis({
-          synthesis: '',
-          isLoading: false,
-          hasGenerated: false,
-          error: data.error || 'Unknown error occurred',
-          retryable: data.retryable || false
-        });
-      }
+      // Update synthesis with final result
+      setSynthesis({
+        synthesis: synthesisStreaming.text,
+        isLoading: synthesisStreaming.isLoading,
+        isStreaming: synthesisStreaming.isStreaming,
+        hasGenerated: synthesisStreaming.isComplete,
+        error: synthesisStreaming.error,
+        retryable: synthesisStreaming.retryable
+      });
+
     } catch (error) {
       console.error('Failed to generate synthesis:', error);
       setSynthesis({
         synthesis: '',
         isLoading: false,
+        isStreaming: false,
         hasGenerated: false,
         error: 'Connection to augurbox main processor interrupted... synthesis transmission failed.',
         retryable: false
@@ -289,7 +394,7 @@ export default function SpreadReadingPage() {
           </p>
         </div>
 
-        {/* Deck and Controls */}
+        {/* Deck states - selecting, shuffling, drawing */}
         {readingState === 'selecting' && (
           <div className="text-center mb-16">
             <div className="mb-8">
@@ -319,10 +424,8 @@ export default function SpreadReadingPage() {
 
         {readingState === 'shuffling' && (
           <div className="relative h-96 mb-16">
-            {/* Mystical Shuffle Animation */}
             <MysticalShuffle isActive={readingState === 'shuffling'} />
             
-            {/* Status Text */}
             <div className="absolute bottom-0 left-0 right-0 text-center z-20">
               <p className="text-accent font-mono text-sm animate-pulse mb-2">
                 SYNCHRONIZING NEURAL PATHWAYS...
@@ -360,7 +463,7 @@ export default function SpreadReadingPage() {
           </div>
         )}
 
-        {/* Spread Layout */}
+        {/* Spread Layout and Reading Interface */}
         {(readingState === 'revealing' || readingState === 'complete') && (
           <div className="space-y-8">
             {/* Main spread area */}
@@ -378,133 +481,49 @@ export default function SpreadReadingPage() {
             
             {/* Interpretations section */}
             <div className="w-full">
-              {/* Instructions when no interpretations yet */}
-              {interpretations.length === 0 && readingState === 'revealing' && (
-                <div className="bg-surface-secondary/50 border border-border/30 p-6 text-center mb-8">
-                  <div className="text-accent font-mono text-sm mb-2">
-                    ⟨ AWAITING NEURAL LINK ⟩
-                  </div>
-                  <div className="text-text-dim font-mono text-xs">
-                    activate constructs to receive temporal transmissions
-                  </div>
-                </div>
-              )}
-              
-              {/* Show loading state */}
-              {interpretations.some(i => i.isLoading) && (
-                <div className="bg-surface-secondary border border-border p-6 mb-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
-                    <span className="text-accent font-mono text-sm animate-pulse">
-                      NEURAL ANALYSIS IN PROGRESS...
-                    </span>
-                  </div>
-                </div>
-              )}
-              
-              {/* Generate Synthesis Button - only show when all cards are revealed */}
-              {readingState === 'complete' && interpretations.filter(i => !i.isLoading).length === spread.positions.length && !synthesis.hasGenerated && (
-                <div className="text-center mb-8">
-                  <button
-                    onClick={generateSynthesis}
-                    disabled={synthesis.isLoading}
-                    className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-4 px-8 text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {synthesis.isLoading ? (
-                      <div className="flex items-center space-x-2">
-                        <div className="w-3 h-3 bg-foreground rounded-full animate-pulse"></div>
-                        <span>GENERATING SYNTHESIS...</span>
-                      </div>
-                    ) : (
-                      '⚡ GENERATE SYNTHESIS'
-                    )}
-                  </button>
-                  <p className="text-text-dim font-mono text-xs mt-4">
-                    converge all temporal threads into final probability matrix
-                  </p>
-                </div>
-              )}
-              
-              {/* Synthesis Display */}
-              {synthesis.hasGenerated && (
-                <div className="mb-8">
-                  <h3 className="text-accent font-mono text-xl uppercase tracking-wider mb-6 text-center border-b border-accent/50 pb-4">
-                    ⟨ FINAL SYNTHESIS ⟩
-                  </h3>
-                  
-                  <div className="bg-accent/10 border-2 border-accent/30 p-8 shadow-lg shadow-accent/10">
-                    <div className="text-foreground text-lg leading-relaxed whitespace-pre-wrap">
-                      {synthesis.synthesis}
+              {/* Show synthesis when complete */}
+              {readingState === 'complete' && interpretations.filter(i => !i.isLoading).length === spread.positions.length && (
+                <>
+                  {/* Generate Synthesis Button */}
+                  {!synthesisStreaming.isComplete && !synthesisStreaming.isLoading && !synthesisStreaming.isStreaming && !synthesisStreaming.text && (
+                    <div className="text-center mb-8">
+                      <button
+                        onClick={() => generateSynthesis()}
+                        className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-4 px-8 text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20"
+                      >
+                        ⚡ GENERATE SYNTHESIS
+                      </button>
+                      <p className="text-text-dim font-mono text-xs mt-4">
+                        converge all temporal threads into final probability matrix
+                      </p>
                     </div>
-                  </div>
-                </div>
-              )}
-              
-              {/* Synthesis Loading State */}
-              {synthesis.isLoading && (
-                <div className="mb-8">
-                  <h3 className="text-accent font-mono text-xl uppercase tracking-wider mb-6 text-center border-b border-accent/50 pb-4">
-                    ⟨ FINAL SYNTHESIS ⟩
-                  </h3>
+                  )}
                   
-                  <div className="bg-surface-secondary border border-border p-8">
-                    <div className="flex items-center justify-center space-x-4">
-                      <div className="w-4 h-4 bg-accent rounded-full animate-pulse"></div>
-                      <span className="text-accent font-mono text-lg animate-pulse">
-                        QUANTUM MATRIX SYNTHESIS IN PROGRESS...
-                      </span>
-                    </div>
-                    <div className="text-center mt-4">
-                        <div className="text-text-dim font-mono text-sm">
-                          scanning temporal fractures... probability matrices aligning...
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              
-              {/* Synthesis Error State */}
-              {synthesis.error && !synthesis.hasGenerated && (
-                <div className="mb-8">
-                  <h3 className="text-accent font-mono text-xl uppercase tracking-wider mb-6 text-center border-b border-accent/50 pb-4">
-                    ⟨ SYNTHESIS ERROR ⟩
-                  </h3>
-                  
-                  <div className="bg-red-900/20 border-2 border-red-500/30 p-8">
-                    <div className="text-center">
-                      <div className="text-red-400 font-mono text-sm mb-4">
-                        ⚠ NEURAL MATRIX DISRUPTION
-                      </div>
-                      <div className="text-foreground mb-6">
-                        {synthesis.error}
-                      </div>
+                  {/* Synthesis Display */}
+                  {(synthesisStreaming.isComplete || synthesisStreaming.isLoading || synthesisStreaming.isStreaming || synthesisStreaming.text) && (
+                    <div className="mb-8">
+                      <h3 className="text-accent font-mono text-xl uppercase tracking-wider mb-6 text-center border-b border-accent/50 pb-4">
+                        ⟨ FINAL SYNTHESIS ⟩
+                      </h3>
                       
-                      {synthesis.retryable && (
-                        <div className="space-y-4">
-                          <div className="text-text-dim font-mono text-xs">
-                            temporal disruption detected - quantum matrix requires recalibration
-                          </div>
-                          <button
-                            onClick={generateSynthesis}
-                            disabled={synthesis.isLoading}
-                            className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-3 px-6 text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20 disabled:opacity-50 disabled:cursor-not-allowed"
-                          >
-                            🔄 RETRY SYNTHESIS
-                          </button>
+                        <div className="bg-accent/10 border-2 border-accent/30 p-8 shadow-lg shadow-accent/10">
+                          <StreamingText
+                            text={synthesisStreaming.text}
+                            isLoading={synthesisStreaming.isLoading}
+                            isStreaming={synthesisStreaming.isStreaming}
+                            isComplete={synthesisStreaming.isComplete}
+                            error={synthesisStreaming.error}
+                            className="text-foreground text-lg leading-relaxed"
+                            showCursor={true}
+                            loadingMessage="establishing quantum entanglement with probability matrices"
+                          />
                         </div>
-                      )}
-                      
-                      {!synthesis.retryable && (
-                        <div className="text-text-dim font-mono text-xs">
-                          critical temporal fracture - timeline reconstruction required
-                        </div>
-                      )}
                     </div>
-                  </div>
-                </div>
+                  )}
+                </>
               )}
 
-              {/* Interpretations grid - newest first */}
+              {/* Interpretations List */}
               {interpretations.filter(i => !i.isLoading).length > 0 && (
                 <div>
                   <h3 className="text-accent font-mono text-lg uppercase tracking-wider mb-6 text-center border-b border-border/50 pb-4">
@@ -537,11 +556,6 @@ export default function SpreadReadingPage() {
                                 }`}>
                                   {position?.name || `Position ${interpretation.positionId}`}
                                 </div>
-                                {interpretation.error && (
-                                  <div className="text-red-400 font-mono text-xs">
-                                    ⚠ ERROR
-                                  </div>
-                                )}
                               </div>
                               <div className="text-text-dim font-mono text-xs">
                                 [{String(originalIndex).padStart(2, '0')}]
@@ -553,39 +567,15 @@ export default function SpreadReadingPage() {
                               {card?.name} {drawnCard?.is_reversed ? '(Reversed)' : '(Upright)'}
                             </div>
                             
-                            {/* Error State */}
-                            {interpretation.error ? (
-                              <div className="space-y-4">
-                                <div className="text-red-300 text-sm">
-                                  {interpretation.error}
-                                </div>
-                                
-                                {interpretation.retryable && (
-                                  <div className="space-y-2">
-                                    <div className="text-text-dim font-mono text-xs">
-                                      temporal static interfering - neural pathway requires realignment
-                                    </div>
-                                    <button
-                                      onClick={() => getAIInterpretation(interpretation.positionId)}
-                                      className="bg-accent hover:bg-accent-muted border border-border text-foreground font-mono font-bold py-2 px-4 text-xs uppercase tracking-wider transition-all duration-300 hover:shadow-md hover:shadow-accent/20"
-                                    >
-                                      🔄 RETRY INTERPRETATION
-                                    </button>
-                                  </div>
-                                )}
-                                
-                                {!interpretation.retryable && (
-                                  <div className="text-text-dim font-mono text-xs">
-                                    irreversible temporal anomaly - construct manifestation corrupted
-                                  </div>
-                                )}
-                              </div>
-                            ) : (
-                              /* Successful Interpretation */
-                              <div className="text-foreground text-base leading-relaxed">
-                                {interpretation.interpretation}
-                              </div>
-                            )}
+                            {/* Interpretation Content */}
+                            <StreamingText
+                              text={interpretation.interpretation}
+                              isLoading={interpretation.isLoading}
+                              isStreaming={interpretation.isStreaming}
+                              isComplete={interpretation.isComplete}
+                              error={null}
+                              className="text-foreground text-base leading-relaxed"
+                            />
                           </div>
                         );
                       })
@@ -610,4 +600,3 @@ export default function SpreadReadingPage() {
     </div>
   );
 }
-

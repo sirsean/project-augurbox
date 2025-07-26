@@ -5,11 +5,14 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { type Card } from '@/lib/cards';
 import { type DrawnCard, type Position } from '@/types/reading';
+import StreamingText from '@/components/StreamingText';
 
 interface CardInterpretation {
   positionId: string;
   interpretation: string;
   isLoading: boolean;
+  isStreaming: boolean;
+  isComplete: boolean;
   error: string | null;
   retryable: boolean;
 }
@@ -38,6 +41,7 @@ export default function CardRevealModal({ card, drawnCard, position, interpretat
       return () => document.removeEventListener('keydown', handleEscape);
     }
   }, [onClose]);
+
 
   // Animation variants
   const backdropVariants = {
@@ -308,7 +312,7 @@ export default function CardRevealModal({ card, drawnCard, position, interpretat
               <h3 className="text-accent font-mono text-sm uppercase tracking-wider mb-3">
                 Augurbox Neural Analysis
               </h3>
-              {interpretation?.isLoading ? (
+              {interpretation?.isLoading && !interpretation?.interpretation ? (
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
                   <span className="text-accent font-mono text-sm animate-pulse">
@@ -346,9 +350,14 @@ export default function CardRevealModal({ card, drawnCard, position, interpretat
                   )}
                 </div>
               ) : interpretation?.interpretation ? (
-                <div className="text-foreground leading-relaxed">
-                  {interpretation.interpretation}
-                </div>
+                <StreamingText
+                  text={interpretation.interpretation}
+                  isLoading={interpretation.isLoading}
+                  isStreaming={interpretation.isStreaming}
+                  isComplete={interpretation.isComplete}
+                  error={interpretation.error}
+                  className="text-foreground leading-relaxed"
+                />
               ) : (
                 <div className="text-text-dim italic leading-relaxed">
                   temporal link establishing... augurbox transmissions will manifest upon construct activation

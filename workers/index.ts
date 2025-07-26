@@ -41,8 +41,11 @@ class AIService {
   
   async runWithFallback(
     messages: Array<{role: string, content: string}>, 
-    options: { maxTokens?: number, temperature?: number } = {}
-  ): Promise<{ response: string, modelUsed: string }> {
+    options: { maxTokens?: number, temperature?: number, stream?: boolean } = {}
+  ): Promise<{ response: ReadableStream | string, modelUsed: string }> {
+    if (options.stream) {
+      return this.runStreamingWithFallback(messages, options);
+    }
     let lastError: Error | null = null;
     
     for (const modelKey of this.modelOrder) {
@@ -79,6 +82,52 @@ class AIService {
     
     // If we get here, all models failed
     throw lastError || new Error('All AI models failed');
+  }
+  
+  async runStreamingWithFallback(
+    messages: Array<{role: string, content: string}>, 
+    options: { maxTokens?: number, temperature?: number } = {}
+  ): Promise<{ response: ReadableStream | string, modelUsed: string }> {
+    let lastError: Error | null = null;
+    
+    for (const modelKey of this.modelOrder) {
+      const model = AI_MODELS[modelKey];
+      
+      try {
+        console.log(`Attempting streaming AI call with model: ${model.name}`);
+        
+        const response = await this.env.AI.run(model.name, {
+          messages,
+          max_tokens: options.maxTokens || model.maxTokens,
+          temperature: options.temperature || model.temperature,
+          stream: true,
+        });
+        
+        console.log(`Successfully used streaming model: ${model.name}`);
+        return {
+          response: response, // This will be a ReadableStream
+          modelUsed: model.name
+        };
+        
+      } catch (error) {
+        console.error(`Streaming model ${model.name} failed:`, error);
+        lastError = error as Error;
+        
+        // For authentication errors in local dev, try fallback
+        // For other temporary errors, also try fallback
+        if (isTemporaryAIError(error)) {
+          console.log(`Trying fallback due to temporary error: ${error.message}`);
+          continue;
+        } else {
+          // For non-temporary errors, re-throw immediately
+          throw error;
+        }
+      }
+    }
+    
+    // If we get here, all models failed
+    console.error('All streaming models failed, falling back to non-streaming');
+    throw lastError || new Error('All streaming AI models failed');
   }
 }
 
@@ -118,7 +167,9 @@ function isTemporaryAIError(error: unknown): boolean {
   return error instanceof Error && (
     error.message.includes('model temporarily unavailable') ||
     error.message.includes('InferenceUpstreamError') ||
+    error.message.includes('Authentication error') || // For local development
     error.message.includes('9000') ||
+    error.message.includes('10000') || // Authentication error code
     error.message.includes('3040') ||
     error.message.includes('Capacity temporarily exceeded')
   );
@@ -147,7 +198,7 @@ async function handleReadingUpdate(request: Request, env: Env): Promise<Response
   }
 
   try {
-    const { readingType, cards, positions, recentCard } = await request.json();
+    const { readingType, cards, positions, recentCard, stream } = await request.json();
 
     // Validate required fields
     if (!readingType || !cards || !positions || !recentCard) {
@@ -197,21 +248,65 @@ Respond as the Augurbox with an in-character interpretation of how this newly re
 
     // Use AI service with fallback
     const aiService = new AIService(env);
-    const result = await aiService.runWithFallback(
-      [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: userPrompt }
-      ],
-      { maxTokens: 200, temperature: 0.8 }
-    );
+    
+    if (stream) {
+      try {
+        // Try streaming first
+        const result = await aiService.runWithFallback(
+          [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: userPrompt }
+          ],
+          { maxTokens: 200, temperature: 0.8, stream: true }
+        );
+        
+        // Return streaming response
+        return new Response(result.response as ReadableStream, {
+          headers: { 
+            ...corsHeaders, 
+            'Content-Type': 'text/plain; charset=utf-8',
+            'Cache-Control': 'no-cache',
+            'Connection': 'keep-alive'
+          },
+        });
+      } catch (streamError) {
+        console.log('Streaming failed, falling back to non-streaming:', streamError);
+        
+        // Fall back to non-streaming
+        const result = await aiService.runWithFallback(
+          [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: userPrompt }
+          ],
+          { maxTokens: 200, temperature: 0.8, stream: false }
+        );
 
-    return new Response(JSON.stringify({ 
-      interpretation: result.response,
-      modelUsed: result.modelUsed,
-      success: true 
-    }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
+        return new Response(JSON.stringify({ 
+          interpretation: result.response,
+          modelUsed: result.modelUsed,
+          success: true 
+        }), {
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+    } else {
+      // Handle regular response
+      const result = await aiService.runWithFallback(
+        [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userPrompt }
+        ],
+        { maxTokens: 200, temperature: 0.8 }
+      );
+
+      return new Response(JSON.stringify({ 
+        interpretation: result.response,
+        modelUsed: result.modelUsed,
+        success: true 
+      }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
 
   } catch (error) {
     console.error('Error in reading-update function:', error);
@@ -253,7 +348,7 @@ async function handleReadingSynthesis(request: Request, env: Env): Promise<Respo
   }
 
   try {
-    const { readingType, spread, drawnCards, allCards, interpretations } = await request.json();
+    const { readingType, spread, drawnCards, allCards, interpretations, stream } = await request.json();
 
     // Validate required fields
     if (!readingType || !spread || !drawnCards || !allCards || !interpretations) {
@@ -304,21 +399,65 @@ Analyze the complete quantum probability matrix revealed by this reading. Synthe
 
     // Use AI service with fallback for synthesis
     const aiService = new AIService(env);
-    const result = await aiService.runWithFallback(
-      [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: userPrompt }
-      ],
-      { maxTokens: 800, temperature: 0.7 }
-    );
+    
+    if (stream) {
+      try {
+        // Try streaming first
+        const result = await aiService.runWithFallback(
+          [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: userPrompt }
+          ],
+          { maxTokens: 800, temperature: 0.7, stream: true }
+        );
+        
+        // Return streaming response
+        return new Response(result.response as ReadableStream, {
+          headers: { 
+            ...corsHeaders, 
+            'Content-Type': 'text/plain; charset=utf-8',
+            'Cache-Control': 'no-cache',
+            'Connection': 'keep-alive'
+          },
+        });
+      } catch (streamError) {
+        console.log('Streaming failed, falling back to non-streaming:', streamError);
+        
+        // Fall back to non-streaming
+        const result = await aiService.runWithFallback(
+          [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: userPrompt }
+          ],
+          { maxTokens: 800, temperature: 0.7, stream: false }
+        );
 
-    return new Response(JSON.stringify({ 
-      synthesis: result.response,
-      modelUsed: result.modelUsed,
-      success: true 
-    }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
+        return new Response(JSON.stringify({ 
+          synthesis: result.response,
+          modelUsed: result.modelUsed,
+          success: true 
+        }), {
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+    } else {
+      // Handle regular response
+      const result = await aiService.runWithFallback(
+        [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userPrompt }
+        ],
+        { maxTokens: 800, temperature: 0.7 }
+      );
+
+      return new Response(JSON.stringify({ 
+        synthesis: result.response,
+        modelUsed: result.modelUsed,
+        success: true 
+      }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
 
   } catch (error) {
     console.error('Error in reading-synthesis function:', error);
