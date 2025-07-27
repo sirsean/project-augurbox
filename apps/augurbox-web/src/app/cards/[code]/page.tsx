@@ -55,25 +55,44 @@ function getCardLoreDescription(card: { type: string; code: string; suit?: strin
   return card.description;
 }
 
-// Helper function to create social-friendly description
-function getSocialDescription(card: { type: string; code: string; suit?: string; description: string; name: string }): string {
-  const loreDescription = getCardLoreDescription(card);
-  // Truncate to about 160 characters for optimal social media display
-  if (loreDescription.length <= 160) {
-    return loreDescription;
+// Helper function to create social-friendly description using card keywords
+function getSocialDescription(card: { type: string; code: string; suit?: string; description: string; name: string; keywords: string[] }): string {
+  const cardTypeDisplay = card.type === 'major' 
+    ? 'Major Arcana' 
+    : `Minor Arcana`;
+  
+  // Create a description from the card's keywords/attributes
+  const keywordsList = card.keywords.join(' • ');
+  
+  // Format: "[Card Type] representing [keywords]"
+  const socialDescription = `${cardTypeDisplay} representing ${keywordsList}`;
+  
+  // Ensure it fits within social media optimal length (~160 characters)
+  if (socialDescription.length <= 160) {
+    return socialDescription;
   }
   
-  // Find the last complete sentence within ~160 characters
-  const truncated = loreDescription.substring(0, 160);
-  const lastSentence = truncated.lastIndexOf('. ');
+  // If too long, truncate keywords list intelligently
+  const baseText = `${cardTypeDisplay} representing `;
+  const availableLength = 160 - baseText.length - 3; // -3 for "..."
   
-  if (lastSentence > 100) {
-    return truncated.substring(0, lastSentence + 1);
+  let truncatedKeywords = '';
+  let currentLength = 0;
+  
+  for (let i = 0; i < card.keywords.length; i++) {
+    const keyword = card.keywords[i];
+    const separator = i > 0 ? ' • ' : '';
+    const addition = separator + keyword;
+    
+    if (currentLength + addition.length <= availableLength) {
+      truncatedKeywords += addition;
+      currentLength += addition.length;
+    } else {
+      break;
+    }
   }
   
-  // Fallback to word boundary
-  const lastSpace = truncated.lastIndexOf(' ');
-  return truncated.substring(0, lastSpace) + '...';
+  return `${baseText}${truncatedKeywords}...`;
 }
 
 // Generate metadata for individual cards
