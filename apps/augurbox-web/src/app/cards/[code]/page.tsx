@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import { getCardByCode, getSuitDisplayName } from '@/lib/cards';
 
@@ -52,6 +53,77 @@ function getCardLoreDescription(card: { type: string; code: string; suit?: strin
   }
   
   return card.description;
+}
+
+// Helper function to create social-friendly description
+function getSocialDescription(card: { type: string; code: string; suit?: string; description: string; name: string }): string {
+  const loreDescription = getCardLoreDescription(card);
+  // Truncate to about 160 characters for optimal social media display
+  if (loreDescription.length <= 160) {
+    return loreDescription;
+  }
+  
+  // Find the last complete sentence within ~160 characters
+  const truncated = loreDescription.substring(0, 160);
+  const lastSentence = truncated.lastIndexOf('. ');
+  
+  if (lastSentence > 100) {
+    return truncated.substring(0, lastSentence + 1);
+  }
+  
+  // Fallback to word boundary
+  const lastSpace = truncated.lastIndexOf(' ');
+  return truncated.substring(0, lastSpace) + '...';
+}
+
+// Generate metadata for individual cards
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { code } = await params;
+  const card = getCardByCode(code);
+
+  if (!card) {
+    return {
+      title: 'Card Not Found - Project: Augurbox',
+      description: 'The requested card could not be found in the Augurbox archive.'
+    };
+  }
+
+  const baseUrl = 'https://project-augurbox.sirsean.me';
+  const cardUrl = `${baseUrl}/cards/${card.code}`;
+  const cardImageUrl = `${baseUrl}${card.image}`;
+  
+  const cardTypeDisplay = card.type === 'major' 
+    ? 'Major Arcana' 
+    : `Minor Arcana${card.suit ? ` - ${getSuitDisplayName(card.suit)}` : ''}`;
+    
+  const socialDescription = getSocialDescription(card);
+  const title = `${card.name} - ${cardTypeDisplay} | Project: Augurbox`;
+
+  return {
+    title,
+    description: socialDescription,
+    openGraph: {
+      title,
+      description: socialDescription,
+      url: cardUrl,
+      siteName: 'Project: Augurbox',
+      images: [
+        {
+          url: cardImageUrl,
+          width: 512,
+          height: 768,
+          alt: `${card.name} - ${cardTypeDisplay} tarot card from Project: Augurbox`
+        }
+      ],
+      type: 'website'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: socialDescription,
+      images: [cardImageUrl]
+    }
+  };
 }
 
 export default async function CardPage({ params }: Props) {
